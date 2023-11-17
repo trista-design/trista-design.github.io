@@ -1,0 +1,575 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-gray);
+}
+
+//
+.item {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item-wrapper {
+  max-width: 1440px;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  .item-img {
+    display: inline-block;
+    border-radius: 10px;
+    aspect-ratio: 3/2;
+    width: 702px;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:first-child {
+      margin: 0 36px 0 0;
+    }
+  }
+}
+.modal {
+  .modal-dialog {
+    --bs-modal-bg: rgba(0, 0, 0, 0.6);
+    .modal-header {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .modal-body {
+      .img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        img {
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+.progress-bar {
+  z-index: 49;
+}
+
+// headline
+.project-info {
+  margin-bottom: 60px;
+  .pj-headline {
+    .headline-typing::before {
+      content: "Packaging Design";
+    }
+  }
+  .pj-body {
+    .body-typing {
+      &::before {
+        content: "{ 品牌包裝設計 }";
+      }
+    }
+  }
+}
+// into-area
+.intro-area {
+  font-family: "Asap", sans-serif;
+  margin: 42px auto 0 auto;
+  padding: 0;
+  width: 1200px;
+  .info-card-title {
+    display: flex;
+    margin-top: 16px;
+    .sideicon {
+      width: 18px;
+      height: 18px;
+      background-color: var(--black-500);
+      border-radius: 50px;
+      margin: 2px 6px 0 16px;
+      position: relative;
+      &::before {
+        content: " ";
+        position: absolute;
+        border-top: 7.5px solid var(--white);
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        left: 5px;
+        right: 5px;
+        top: 6px;
+      }
+    }
+    .card-title {
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 18px;
+      color: var(--black-500);
+    }
+  }
+  .pj-info {
+    .pj-sideinfo {
+      border: 1px solid var(--black-400);
+      border-radius: 10px;
+      min-width: fit-content;
+      height: fit-content;
+      display: block;
+      ul {
+        padding: 0;
+        margin: 0;
+        margin: 16px;
+        border-left: 1.5px solid var(--black-300);
+        padding-left: 12px;
+        li {
+          display: flex;
+          font-size: 16px;
+          font-weight: 400;
+          .caption {
+            font-family: "Asap", sans-serif;
+            margin-right: 6px;
+            margin-bottom: 0;
+            line-height: 16px;
+            color: var(--black-400);
+          }
+          .body {
+            line-height: 16px;
+            margin: 0;
+            color: var(--black-500);
+          }
+          &:not(:first-child) {
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+    .pj-para {
+      margin: auto 0 auto 60px;
+      p {
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 18px;
+        line-height: 1.7;
+        color: var(--black-600);
+        margin: 0;
+      }
+      .link-groups {
+        margin-top: 16px;
+        a {
+          color: var(--blue-dark);
+          margin-left: -2px;
+        }
+        .pj-link {
+          color: var(--black-500);
+          margin-right: 24px;
+        }
+        .code-link {
+          color: var(--black-500);
+          font-family: "Asap", sans-serif;
+        }
+      }
+    }
+  }
+}
+
+.end-area {
+  padding: 32px 0;
+  background-color: var(--black-200);
+  display: flex;
+  justify-content: center;
+  .end-txt {
+    font-family: "Noto Sans TC", sans-serif;
+    margin: 0;
+    font-size: 16px;
+    color: var(--black-500);
+  }
+}
+
+// animate
+.pj-headline {
+  .headline-typing::before {
+    animation: opacity0 2.8s, typingH 1.1s 2.8s;
+  }
+  .text-typing-block::before {
+    animation: opacity0 2.8s, blink 1.4s 2.8s linear;
+  }
+  .headline-content {
+    animation: opacity0 3.9s;
+  }
+}
+.pj-body {
+  .body-typing::before {
+    animation: opacity0 3.9s, typingP 0.75s 3.9s;
+  }
+  .text-typing-block::before {
+    animation: opacity0 3.9s, blink 1s 3.9s linear;
+  }
+  .body-content {
+    animation: opacity0 4.65s;
+  }
+}
+.main-area {
+  animation: opacity0 4.65s, fadeIn 1s 4.65s;
+}
+
+// Typewriter effect
+@keyframes typingH {
+  0% {
+    content: "P";
+    color: var(--black-600);
+  }
+  7.14% {
+    content: "Pa";
+    color: var(--black-600);
+  }
+  14.28% {
+    content: "Pac";
+    color: var(--black-600);
+  }
+  21.42% {
+    content: "Pack";
+    color: var(--black-600);
+  }
+  28.56% {
+    content: "Packa";
+    color: var(--black-600);
+  }
+  35.7% {
+    content: "Packag";
+    color: var(--black-600);
+  }
+  42.84% {
+    content: "Packagi";
+    color: var(--black-600);
+  }
+  49.98% {
+    content: "Packagin";
+    color: var(--black-600);
+  }
+  57.12% {
+    content: "Packaging";
+    color: var(--black-600);
+  }
+  64.26% {
+    content: "Packaging D";
+    color: var(--black-600);
+  }
+  71.4% {
+    content: "Packaging De";
+    color: var(--black-600);
+  }
+  78.54% {
+    content: "Packaging Des";
+    color: var(--black-600);
+  }
+  85.68% {
+    content: "Packaging Desi";
+    color: var(--black-600);
+  }
+  92.82% {
+    content: "Packaging Desig";
+    color: var(--black-600);
+  }
+  99.96% {
+    content: "Packaging Design";
+    color: var(--black-600);
+  }
+  // Packaging Design - 14
+}
+@keyframes typingP {
+  0% {
+    content: "{";
+    color: var(--black-600);
+  }
+  14.28% {
+    content: "{ 品";
+    color: var(--black-600);
+  }
+  28.56% {
+    content: "{ 品牌";
+    color: var(--black-600);
+  }
+  42.84% {
+    content: "{ 品牌包";
+    color: var(--black-600);
+  }
+  57.12% {
+    content: "{ 品牌包裝";
+    color: var(--black-600);
+  }
+  71.4% {
+    content: "{ 品牌包裝設";
+    color: var(--black-600);
+  }
+  85.68% {
+    content: "{ 品牌包裝設計";
+    color: var(--black-600);
+  }
+  99.96% {
+    content: "{ 品牌包裝設計 }";
+    color: var(--black-600);
+  }
+  // 品牌包裝設計 - 7
+}
+@keyframes blink {
+  0%,
+  90% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes BTTarrow {
+  0% {
+    top: 6px;
+  }
+  30% {
+    top: 12px;
+  }
+  100% {
+    top: -24px;
+  }
+}
+@keyframes opacity0 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+}
+
+// RWD
+// large screen
+@media screen and (max-width: 1760px) {
+  .item-wrapper {
+    max-width: 1360px;
+    .item-img {
+      width: 662px;
+    }
+  }
+}
+@media screen and (max-width: 1600px) {
+  .item-wrapper {
+    max-width: 1280px;
+    .item-img {
+      width: 622px;
+    }
+  }
+}
+@media screen and (max-width: 1440px) {
+  .item-wrapper {
+    max-width: 1200px;
+    .item-img {
+      width: 582px;
+    }
+  }
+  .intro-area {
+    width: 1116px;
+  }
+}
+@media screen and (max-width: 1399px) {
+  .item-wrapper {
+    max-width: 1116px;
+    .item-img {
+      width: 540px;
+    }
+  }
+  .intro-area {
+    width: 1032px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .item-wrapper {
+    max-width: 936px;
+    .item-img {
+      width: 456px;
+      &:first-child {
+        margin: 0 24px 0 0;
+      }
+    }
+  }
+  .intro-area {
+    width: 852px;
+    .pj-info {
+      .pj-para {
+        margin: auto 0 auto 42px;
+      }
+    }
+  }
+}
+
+// large screen
+@media screen and (max-width: 991px) {
+  .main-area {
+    padding: 0 36px 0 24px;
+  }
+  .item-wrapper {
+    max-width: auto;
+    .item-img {
+      width: 100%;
+      min-width: min-content;
+    }
+  }
+  .intro-area {
+    width: auto;
+  }
+}
+@media screen and (max-width: 899px) {
+  .pj-body {
+    font-size: 16px;
+  }
+  .intro-area {
+    .pj-info {
+      .pj-sideinfo {
+        .info-card-title {
+          margin-top: 12px;
+          .sideicon {
+            width: 16px;
+            height: 16px;
+            margin-left: 10px;
+            &::before {
+              border-top: 6px solid var(--white);
+              border-left: 3px solid transparent;
+              border-right: 3px solid transparent;
+              top: 5px;
+            }
+          }
+          h5 {
+            font-size: 16px;
+          }
+        }
+        .info-card-content {
+          margin: 12px;
+          padding-left: 10px;
+          li {
+            p {
+              font-size: 14px;
+            }
+            &:not(:first-child) {
+              margin-top: 12px;
+            }
+          }
+        }
+      }
+      .pj-para {
+        margin-left: 32px;
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .end-area {
+    padding: 24px 0;
+    .end-txt {
+      font-size: 14px;
+    }
+  }
+}
+
+// Medium screen
+@media screen and (max-width: 768px) {
+  .project-info {
+    margin: -12px auto 48px auto;
+  }
+  .item {
+    margin-bottom: 80px;
+    .item-wrapper {
+      .item-img:first-child {
+        margin: 0 16px 0 0;
+      }
+    }
+  }
+  .intro-area {
+    .pj-info {
+      .pj-para {
+        margin-left: 24px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .item-wrapper {
+    display: flex;
+    flex-direction: column;
+    .item-img {
+      &:first-child {
+        margin: 0;
+      }
+      &:nth-child(2) {
+        margin-top: 24px;
+      }
+    }
+  }
+  .intro-area {
+    .pj-info {
+      .pj-para {
+        margin-left: 16px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .intro-area {
+    .pj-info {
+      .pj-sideinfo {
+        padding-right: 12px;
+        .info-card-content {
+          li {
+            display: flex;
+            flex-direction: column;
+            .body {
+              margin-top: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// small screen
+@media screen and (max-width: 490px) {
+  .main-area {
+    padding: 0 12px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .item {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 356px) {
+  .intro-area {
+    .pj-info {
+      flex-direction: column;
+      .pj-sideinfo {
+        .info-card-title {
+          .sideicon {
+            margin-left: 12px;
+          }
+        }
+        .info-card-content {
+          margin: 14px;
+          li {
+            flex-direction: row;
+            align-items: center;
+            .body {
+              margin: 0;
+            }
+          }
+        }
+      }
+      .pj-para {
+        margin: 24px 0 0 0;
+      }
+    }
+  }
+}

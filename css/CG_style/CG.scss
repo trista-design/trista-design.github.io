@@ -1,0 +1,188 @@
+// font
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600&family=Source+Code+Pro:wght@300;400;500&display=swap");
+
+// color
+:root {
+  --white: #fff;
+  --background-gray: #e8e8e8;
+  --black-200: #d9d9d9;
+  --black-300: #b8b8b8;
+  --black-400: #888888;
+  --black-500: #484848;
+  --black-600: #282828;
+  --black-700: #1d1d1d;
+  --yellow-light: #fff200;
+  --blue-dark: #303481;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+.preload {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black-700);
+  z-index: 50;
+  pointer-events: none;
+  .load-wrapper {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInDown 0.5s;
+    .box {
+      border: 1px solid var(--white);
+      border-radius: 12px;
+      padding: 0 6px 12px 6px;
+      background-color: var(--black-500);
+      overflow: hidden;
+      position: relative;
+      transition: 0.2s linear;
+      margin-right: 16px;
+      transition: 0.2s linear;
+      .box-txt {
+        font-family: "Asap", sans-serif;
+        font-size: 36px;
+        line-height: 52px;
+        text-align: center;
+        font-weight: 400;
+        border: 1px solid var(--white);
+        background-color: var(--background-gray);
+        color: var(--black-600);
+        border-top: none;
+        border-radius: 7px;
+        display: block;
+        width: 54px;
+        height: 54px;
+        margin: 0;
+        transition: 0.2s linear;
+      }
+      &::before {
+        content: " ";
+        position: absolute;
+        bottom: 9px;
+        left: 0;
+        right: 56px;
+        border-top: 1px solid var(--white);
+        transform: rotate(120deg);
+        transition: 0.2s linear;
+      }
+      &::after {
+        content: " ";
+        position: absolute;
+        bottom: 9px;
+        left: 56px;
+        right: 0;
+        border-top: 1px solid var(--white);
+        transform: rotate(60deg);
+        transition: 0.2s linear;
+      }
+
+      // active樣式
+      &.active {
+        background-color: var(--background-gray);
+        border: 1px solid var(--black-200);
+        padding: 5px;
+        animation: 0.2s ease-in-out;
+      }
+      &.active .box-txt {
+        color: var(--white);
+        background-color: var(--black-600);
+        border: none;
+        width: 56px;
+      }
+      &.active::before {
+        content: " ";
+        border: none;
+      }
+      &.active::after {
+        content: " ";
+        border: none;
+      }
+    }
+  }
+}
+
+.opacity0 {
+  opacity: 0;
+}
+.disapper {
+  transition: 0.3s ease-out;
+}
+
+@media screen and (max-width: 769px) {
+  .preload {
+    .load-wrapper {
+      .box {
+        margin-right: 14px;
+        .box-txt {
+          width: 52px;
+          height: 52px;
+          font-size: 32px;
+          line-height: 50px;
+        }
+        &::before {
+          right: 52px;
+        }
+        &::after {
+          left: 53px;
+        }
+        &.active .box-txt {
+          width: 54px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 577px) {
+  .preload {
+    .load-wrapper {
+      .box {
+        padding: 0 4px 8px 4px;
+        margin-right: 12px;
+        border-radius: 11px;
+        .box-txt {
+          width: 44px;
+          height: 44px;
+          font-size: 24px;
+          line-height: 44px;
+          border-radius: 6px;
+        }
+        &::before {
+          right: 44px;
+          bottom: 6px;
+        }
+        &::after {
+          left: 44px;
+          bottom: 7px;
+        }
+        &.active {
+          padding: 4px;
+        }
+        &.active .box-txt {
+          width: 44px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 499px) {
+  .preload {
+    .load-wrapper {
+      flex-direction: column;
+      .boxes-group {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spoilview : 串流影劇評論網站 | 作品集 | TristaHung</title>
+    <meta name="autor" content="Trista" />
+    <!-- fav.io -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/favicon_io/site.webmanifest" />
+    <!-- Bootstrap - CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- font -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "qto2jzr",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <!-- headinfo -->
+    <link
+      rel="stylesheet"
+      href="/css/project_style/pj_headinfo/pj_headinfo_style.css"
+    />
+    <!-- nav-CSS -->
+    <link rel="stylesheet" href="/css/header_style/nav.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/project_style/spoilview/spoilview.css" />
+    <!-- nextWork-->
+    <link
+      rel="stylesheet"
+      href="/css/project_style/pj_nextWork/pj_nextWork.css"
+    />
+    <!-- footer-CSS -->
+    <link rel="stylesheet" href="/css/footer_style/footer.css" />
+    <!-- animation-wrapper -->
+    <link rel="stylesheet" href="/css/CG_style/CG.css" />
+  </head>
+  <body>
+    <div class="preload">
+      <div class="load-wrapper d-flex">
+        <div class="boxes-group d-flex">
+          <div class="box boxL">
+            <h1 class="box-txt">L</h1>
+          </div>
+          <div class="box boxO">
+            <h1 class="box-txt">O</h1>
+          </div>
+          <div class="box boxA">
+            <h1 class="box-txt">A</h1>
+          </div>
+          <div class="box boxD">
+            <h1 class="box-txt">D</h1>
+          </div>
+        </div>
+        <div class="boxes-group d-flex">
+          <div class="box boxI">
+            <h1 class="box-txt">I</h1>
+          </div>
+          <div class="box boxN">
+            <h1 class="box-txt">N</h1>
+          </div>
+          <div class="box boxG">
+            <h1 class="box-txt">G</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="progress-bar fixed-top">
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Example 1px high"
+        aria-valuenow="25"
+        aria-valuemin="0"
+        aria-valuemax="25"
+        style="height: 3px; border-radius: 0%"
+      >
+        <div
+          class="progress-bar"
+          id="progressBar"
+          style="width: 0%; background-color: var(--blue-dark)"
+        ></div>
+      </div>
+    </section>
+    <header>
+      <div class="nav-area container-lg">
+        <nav class="nav-second">
+          <div class="nav-second-left">
+            <a href="/"
+              ><i class="fa-solid fa-arrow-left"></i>
+              <p id="backToHome-txt">回首頁</p></a
+            >
+          </div>
+          <div class="nav-second-middle">
+            <p id="nav-middle-title" class="pj-name pj-name-EN">Spoilview</p>
+            <p id="nav-middle-txt" class="pj-info">
+              : 蒐集新鮮影劇評論，和你一起看片不踩雷！
+            </p>
+          </div>
+          <div class="nav-second-right">
+            <div class="navitem-contact">
+              <a
+                href="mailto: tristahung.design@gmail.com"
+                class="call-link d-flex align-items-center"
+              >
+                <div class="call-current">Contact</div>
+                <div class="call-hover">
+                  <i class="fa-regular fa-face-smile-wink"></i>Let's talk
+                </div>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div class="nav-project-background"></div>
+      </div>
+    </header>
+    <main class="container-fuild">
+      <div id="BTT-page" class="BTT button" onclick="BackToTop()">
+        <div class="icon"><i class="fa-solid fa-arrow-up"></i></div>
+        <p class="txt">Top</p>
+      </div>
+      <div class="project-info d-flex container-lg">
+        <div class="pj-headline d-flex">
+          <h1 class="headline-typing"></h1>
+          <div class="text-typing-block"></div>
+          <h1 class="headline-content">Spoilview</h1>
+        </div>
+        <div class="pj-body d-flex">
+          <p class="body-typing"></p>
+          <div class="text-typing-block"></div>
+          <p class="body-content">{ 串流影劇評論網站 }</p>
+        </div>
+      </div>
+      <div id="imageslider" class="slide-wrapper container-fuild">
+        <div class="slider slidefirst">
+          <img
+            src="/img/project/UIUX/Spoilview/Spoilview-cover.jpg"
+            alt="spoilview-cover"
+          />
+        </div>
+        <div class="slider slidesecond">
+          <img
+            src="/img/project/UIUX/Spoilview/slide-2.jpg"
+            alt="spoilview-img1"
+          />
+        </div>
+        <div class="slider slidethird">
+          <img
+            src="/img/project/UIUX/Spoilview/slide-3.jpg"
+            alt="spoilview-img3"
+          />
+        </div>
+        <div class="slider slidefourth">
+          <img
+            src="/img/project/UIUX/Spoilview/slide-4.jpg"
+            alt="spoilview-img4"
+          />
+        </div>
+      </div>
+      <section class="intro-area container-lg">
+        <div class="pj-info">
+          <div class="pj-sideinfo">
+            <div class="info-card-title">
+              <div class="sideicon"></div>
+              <h5 class="card-title">Spoilview</h5>
+            </div>
+            <ul class="info-card-content">
+              <li>
+                <p class="caption">Duration .</p>
+                <p class="body">2022/11 - 12</p>
+              </li>
+              <li>
+                <p class="caption">Project .</p>
+                <p class="body">Web Case Study</p>
+              </li>
+              <li>
+                <p class="caption">Role .</p>
+                <p class="body">UIUX Designer</p>
+              </li>
+            </ul>
+          </div>
+          <div class="pj-para">
+            <p>
+              是一個影評網站，統整4大影音平台的最新影劇，蒐集新鮮影劇評論，讓使用者看片不踩雷，並整理出各平台的特色與優點，讓使用者輕鬆找到適合自己的影音平台。
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="forward-area d-flex">
+        <div class="forward-wrapper d-flex">
+          <div class="forword-img">
+            <img
+              src="/img/project/UIUX/Spoilview/forward.jpg"
+              alt="forward-img"
+            />
+          </div>
+          <div class="forword-txt">
+            <div class="background txt">
+              <h2 class="pj-title">{ Background }</h2>
+              <p class="pj-body">
+                在現代快節奏的生活中，觀賞影劇已成為許多人日常的重要娛樂方式，尤其是在串流平台的普及下。但選擇影片常花費許多時間。因此我想創建這個影劇評論網站，讓影迷輕鬆做出選擇，避免失望，同時分享評論和心得，促進交流，提升觀賞體驗。
+              </p>
+            </div>
+            <div class="goal txt">
+              <h2 class="pj-title">{ The Goal }</h2>
+              <p class="pj-body">
+                我們的目標是整理四大影音平台上的熱門最新影劇，並搜集影片評分，以幫助使用者快速找到適合自己的作品。同時，我們也會分析這些平台的優劣之處，讓使用者輕鬆挑選最適合自己的影音平台。希望為影迷們打造一個便利而有趣的影劇觀賞環境，讓他們能夠無壓力地享受觀影的樂趣。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hero-area container-lg">
+        <div class="wireframe">
+          <h2 class="pj-title">{ Wireframe }</h2>
+          <p class="pj-body">
+            確認好目標後，開始繪製初步草稿，幫助我快速進入具體可行的設計方案。
+          </p>
+          <div class="wireframe inner-shadow">
+            <div class="full-img"></div>
+          </div>
+        </div>
+        <div class="mockup">
+          <h2 class="pj-title">{ Mock Up }</h2>
+          <p class="pj-body">
+            接下來，我們開始製作高保真原型，展示更多細節和概念，為後續使用性測試做好準備。
+          </p>
+          <div class="main-page odd-page page d-flex">
+            <div class="page-mockup-video">
+              <video autoplay muted loop>
+                <source
+                  src="/img/project/UIUX/Spoilview/mainpage-video.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="page-content">
+              <div
+                class="page-mockup-img"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#mockup1-modal"
+              >
+                <img
+                  src="/img/project/UIUX/Spoilview/mainpage-img.jpg"
+                  alt="mainpage-img"
+                />
+                <div
+                  class="modal fade"
+                  id="mockup1-modal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="btn-close btn-close-white"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="modal-img h-100">
+                          <img
+                            class="img"
+                            src="/img/project/UIUX/Spoilview/mainpage-img.jpg"
+                            alt="mainpage-img"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page-info">
+                <div class="page-title">
+                  <div class="arrow4-icon">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </div>
+                  <h2 class="title">主頁面</h2>
+                </div>
+                <div class="page-body">
+                  統整四大影音平台的最新影片，提供即時的影評資訊，讓您輕鬆避開雷片，成為真正的追劇高手！
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review-page even-page page d-flex">
+            <div class="page-mockup-video">
+              <video autoplay muted loop>
+                <source
+                  src="/img/project/UIUX/Spoilview/reviewpage-video.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="page-content">
+              <div
+                class="page-mockup-img"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#mockup2-modal"
+              >
+                <img
+                  src="/img/project/UIUX/Spoilview/reviewpage-img.jpg"
+                  alt="review-img"
+                />
+                <div
+                  class="modal fade"
+                  id="mockup2-modal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="btn-close btn-close-white"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="modal-img h-100">
+                          <img
+                            class="img"
+                            src="/img/project/UIUX/Spoilview/reviewpage-img.jpg"
+                            alt="review-img"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page-info">
+                <div class="page-title">
+                  <div class="arrow4-icon">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </div>
+                  <h2 class="title">評論頁面</h2>
+                </div>
+                <div class="page-body">
+                  蒐集新鮮影劇評論，從不同角度帶給你各式各樣的影劇心得，在選擇要看哪部電影、影集或綜藝前，先來看大家都怎麼說，一起討論吧！
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="compare-page odd-page page d-flex">
+            <div class="page-mockup-video">
+              <video autoplay muted loop>
+                <source
+                  src="/img/project/UIUX/Spoilview/comparepage-video.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="page-content">
+              <div
+                class="page-mockup-img"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#mockup3-modal"
+              >
+                <img
+                  src="/img/project/UIUX/Spoilview/comparepage-img.jpg"
+                  alt="comparepage-img"
+                />
+                <div
+                  class="modal fade"
+                  id="mockup3-modal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="btn-close btn-close-white"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="modal-img h-100">
+                          <img
+                            class="img"
+                            src="/img/project/UIUX/Spoilview/comparepage-img.jpg"
+                            alt="comparepage-img"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page-info">
+                <div class="page-title">
+                  <div class="arrow4-icon">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </div>
+                  <h2 class="title">平台評比</h2>
+                </div>
+                <div class="page-body">
+                  在眾多的影音平台中，要如何做出選擇呢？我們特別整理了各平台的特色與優點，讓您輕鬆找到最適合您的影音平台！
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="star-page even-page page d-flex">
+            <div class="page-mockup-video">
+              <video autoplay muted loop>
+                <source
+                  src="/img/project/UIUX/Spoilview/starpage-video.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="page-content">
+              <div
+                class="page-mockup-img"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#mockup4-modal"
+              >
+                <img
+                  src="/img/project/UIUX/Spoilview/starpage-img.jpg"
+                  alt="starpage-img"
+                />
+                <div
+                  class="modal fade"
+                  id="mockup4-modal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="btn-close btn-close-white"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="modal-img h-100">
+                          <img
+                            class="img"
+                            src="/img/project/UIUX/Spoilview/starpage-img.jpg"
+                            alt="tarpage-img"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page-info">
+                <div class="page-title">
+                  <div class="arrow4-icon">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </div>
+                  <h2 class="title">人氣明星</h2>
+                </div>
+                <div class="page-body">
+                  一覽人氣明星的所有影劇作品，可以深入瞭解您喜愛的明星在不同角色下的表現，並隨時追蹤他們的最新作品動態。
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prototype inner-shadow">
+            <div class="full-img"></div>
+            <div class="full-txt d-flex">
+              <p class="top-arrow-icon"></p>
+              <p class="txt">以上是更多頁面展示。</p>
+            </div>
+          </div>
+        </div>
+        <div class="design-system">
+          <h2 class="pj-title">{ Design System }</h2>
+          <p class="pj-body">
+            我們建立了一個設計系統，以確保在整個產品中都能保持統一的風格和視覺效果。
+          </p>
+          <div class="color-type-design d-flex">
+            <div class="color-left">
+              <div class="title-switch d-flex">
+                <h6 class="title">Color Palette</h6>
+                <p class="decorate">:</p>
+                <p class="decorate">{</p>
+                <h6 id="color-primary" class="primary subtitle active">
+                  Primary
+                </h6>
+                <p class="decorate">/</p>
+                <h6 id="color-second" class="secondary subtitle">Secondary</h6>
+                <p class="decorate">}</p>
+                <div id="color-divider" class="divider"></div>
+              </div>
+              <div id="paletteP" class="palette d-flex">
+                <p class="palette-item palette-first">#F9E866</p>
+                <p class="palette-item palette-second">#F0D173</p>
+              </div>
+              <div id="paletteS" class="palette d-none">
+                <p class="palette-item palette-first">#BB49B1</p>
+                <p class="palette-item palette-second">#7230B7</p>
+              </div>
+            </div>
+            <div class="type-right">
+              <div class="title-switch d-flex">
+                <h6 class="title">Typography</h6>
+                <p class="decorate">:</p>
+                <p class="decorate">{</p>
+                <h6 id="type-primary" class="primary subtitle active">
+                  English
+                </h6>
+                <p class="decorate">/</p>
+                <h6 id="type-second" class="secondary subtitle">繁中</h6>
+                <p class="decorate">}</p>
+                <div id="type-divider" class="divider"></div>
+              </div>
+              <p id="typetxtP" class="type-content d-flex">Heebo</p>
+              <p id="typetxtS" class="type-content d-none">思源黑體</p>
+            </div>
+          </div>
+          <div class="system-img inner-shadow">
+            <div
+              class="full-img"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#designSystem-img-modal"
+            >
+              <div
+                class="modal fade"
+                id="designSystem-img-modal"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-fullscreen">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="modal-img h-100">
+                        <img
+                          src="/img/project/UIUX/Spoilview/designSystem.jpg"
+                          alt="designSystem-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="takeaway-area">
+        <div class="takeaway-wrapper d-flex">
+          <div class="takeaway-txt">
+            <h2 class="pj-title">{ Learning <span>&</span> Takeaway }</h2>
+            <p class="pj-body">
+              在執行這專案的過程中，我也從中學到了以下幾點：
+            </p>
+            <ul class="pj-txt">
+              <li class="d-flex">
+                <p class="list-number">1.</p>
+                <p class="txt">
+                  <strong>如何處理大量資訊</strong> -
+                  在這專案中我學習到了如何有效地呈現大量的電影和電視劇資訊，同時保持介面的整潔和易於導航，在吸引用戶眼球外，也能夠快速找到所需的資訊。
+                </p>
+              </li>
+              <li class="d-flex">
+                <p class="list-number">2.</p>
+                <p class="txt">
+                  <strong>色彩和排版的選擇</strong> -
+                  選擇暗色系的設計，是出於考慮用戶在使用時的放鬆狀態。此設計能夠更好地保護用戶的眼睛，減少過於刺眼的部分，讓眼睛更能得到放鬆，同時也有助於營造出符合影評主題的環境。背景的暗色系能夠提高文字和圖片之間的對比，使內容更加凸顯。
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="takeaway-img">
+            <img
+              src="/img/project/UIUX/Spoilview/learning.jpg"
+              alt="spoilview-takeaway-img"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="nextpj-area">
+        <h2 class="pj-title">{ Next Work }</h2>
+        <div class="card-groups d-flex">
+          <div class="card pj-card" id="pj-grapic">
+            <img
+              class="pj-img"
+              src="/img/project/Graphy/grapic-cover.png"
+              alt="grapic-project"
+            />
+            <a href="/project/graphicDesign/" class="btn pj-link">View ＋</a>
+            <div class="card-body pj-txt">
+              <ul>
+                <li class="txt-first">
+                  <span class="list-number">01</span>
+                  <span class="txt-date"> 2020 - 2022 </span>
+                </li>
+                <li class="txt-second">
+                  <span class="list-number">02</span>
+                  <span class="txt-CH title"> 品牌活動主圖 </span>
+                  <span class="txt-divider"></span>
+                  <span class="info-graphy txt-info"></span>
+                </li>
+                <li class="txt-third">
+                  <span class="list-number">03</span>
+                  <span class="info-graphy txt-info"></span>
+                </li>
+              </ul>
+              <div class="tag-group">
+                <div class="tag-item d-inline-block"><p>Grapic</p></div>
+                <div class="tag-item d-inline-block"><p>Illustration</p></div>
+                <div class="tag-item d-inline-block"><p>Branding</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="card pj-card" id="pj-artfind">
+            <img
+              class="pj-img"
+              src="/img/project/UIUX/ArtFind/ArtFind-cover.jpg"
+              alt="artFind-UIUX-project"
+            />
+            <a href="/project/artfind/" class="btn pj-link">View ＋</a>
+            <div class="card-body pj-txt">
+              <ul>
+                <li class="txt-first">
+                  <span class="list-number">01</span>
+                  <span class="txt-date"> 2023/01 - 02 </span>
+                </li>
+                <li class="txt-second">
+                  <span class="list-number">02</span>
+                  <span class="txt-EN title"> Art-Find </span>
+                  <span class="txt-divider"></span>
+                  <span class="info-artfind txt-info"></span>
+                </li>
+                <li class="txt-third">
+                  <span class="list-number">03</span>
+                  <span class="info-artfind txt-info"></span>
+                </li>
+              </ul>
+              <div class="tag-group">
+                <div class="tag-item d-inline-block"><p>UIUX</p></div>
+                <div class="tag-item d-inline-block"><p>App</p></div>
+                <div class="tag-item d-inline-block"><p>Exhibition</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-area container-lg">
+      <section class="footer-content">
+        <div class="left-div">
+          <h3>Thanks for watching : )</h3>
+          <h4>如果您有任何想法，歡迎與我聯繫</h4>
+        </div>
+        <div class="right-div">
+          <div class="email-item">
+            <div class="title"><p>Email</p></div>
+            <div class="body">
+              <a href="mailto: tristahung.design@gmail.com" class="email-link"
+                >tristahung.design@gmail.com</a
+              >
+              <p>Taiwan , Taipei</p>
+            </div>
+          </div>
+          <div class="media-item">
+            <div class="title"><p>See more</p></div>
+            <div class="icons d-flex">
+              <button class="behance">
+                <a href="https://www.behance.net/shihtinghung2" target="_blank">
+                  <i class="fa-brands fa-behance"></i
+                ></a>
+              </button>
+              <button class="github">
+                <a
+                  href="https://github.com/trista-design?tab=repositories"
+                  target="_blank"
+                  >github</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="continuous-scroll row">
+        <a href="mailto: tristahung.design@gmail.com">Get in touch</a>
+        <div class="scroll">
+          <div class="first">
+            &nbsp;Get in touch <span>*</span> Get in touch <span>*</span> Get in
+            touch <span>*</span> Get in touch <span>*</span>
+          </div>
+          <div class="second">
+            &nbsp;Get in touch <span>*</span> Get in touch <span>*</span> Get in
+            touch <span>*</span> Get in touch <span>*</span>
+          </div>
+        </div>
+      </section>
+      <section class="footer-last row d-flex">
+        <p class="txt">&copy 2023</p>
+        <p class="txt">Made with love</p>
+        <div class="BTT" onclick="BackToTop()">
+          <p class="txt">Back To Top</p>
+          <div class="icon">
+            <i class="fa-solid fa-arrow-up"></i>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- bootstrap - JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS : animation-wrapper -->
+    <script src="/js/CG.js"></script>
+    <!-- JS : nav -->
+    <script src="/js/navHide.js"></script>
+    <!-- JS：imageslider -->
+    <script src="/js/project-slide.js"></script>
+    <!-- JS : designSystem-switch -->
+    <script src="/js/design-system.js"></script>
+    <!-- JS : backToTopButton  -->
+    <script src="/js/BTT_page.js"></script>
+    <!-- JS : cardInfo -->
+    <script src="/js/cardInfo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,487 @@
+.footer-area {
+  margin: 80px auto 24px auto;
+  padding: 80px 0 0 0;
+  width: 1248px;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+.footer-area::before {
+  content: " ";
+  position: absolute;
+  border-top: 1px solid var(--black-200);
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.footer-content {
+  width: auto;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 24px 32px 24px;
+  display: flex;
+}
+.footer-content .left-div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-content .left-div h3 {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Asap", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--black-700);
+}
+.footer-content .left-div h4 {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--black-600);
+}
+.footer-content .right-div {
+  display: flex;
+  width: 50%;
+  justify-content: end;
+}
+.footer-content .right-div .title {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--black-600);
+}
+.footer-content .right-div .email-item {
+  font-family: "Asap", sans-serif;
+  margin-right: 100px;
+}
+.footer-content .right-div .email-item .body .email-link {
+  font-size: 20px;
+  color: var(--black-500);
+}
+.footer-content .right-div .email-item .body .email-link:hover {
+  color: var(--blue-dark);
+  font-weight: 500;
+}
+.footer-content .right-div .email-item .body p {
+  font-size: 18px;
+  margin: 12px 0 0 0;
+  color: var(--black-500);
+}
+.footer-content .right-div .media-item .icons {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 26px;
+}
+.footer-content .right-div .media-item .icons .behance {
+  font-size: 23px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--black-500);
+  border: transparent;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.footer-content .right-div .media-item .icons .behance i {
+  text-decoration: none;
+  color: var(--white);
+}
+.footer-content .right-div .media-item .icons .behance:hover {
+  background-color: #0057ff;
+  box-shadow: 2px 2px 5px rgba(28, 28, 28, 0.5);
+}
+.footer-content .right-div .media-item .icons .github {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: transparent;
+  background-image: url(/img/SVG/github.svg);
+  background-position: center;
+  background-size: 40px;
+}
+.footer-content .right-div .media-item .icons .github a {
+  font-size: 14px;
+  color: transparent;
+  border-radius: 50%;
+}
+.footer-content .right-div .media-item .icons .github:hover {
+  background-image: url(/img/SVG/github-hover.svg);
+  box-shadow: 2px 2px 5px rgba(28, 28, 28, 0.5);
+}
+
+.continuous-scroll {
+  position: relative;
+  margin: 0 0 32px 0;
+  overflow: hidden;
+  position: relative;
+}
+.continuous-scroll .scroll {
+  display: flex;
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--black-600);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.continuous-scroll .scroll::before {
+  content: " ";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color: var(--black-600);
+  left: 0;
+}
+.continuous-scroll .scroll div {
+  font-family: "Asap", sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--black-600);
+  animation: animate 40s -40s linear infinite;
+  will-change: transform;
+}
+.continuous-scroll .scroll div:nth-child(2) {
+  animation: animate2 40s -20s linear infinite;
+}
+.continuous-scroll .scroll div span {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+}
+.continuous-scroll a {
+  position: absolute;
+  top: 0;
+  font-size: 60px;
+  color: transparent;
+  cursor: pointer;
+  z-index: 1;
+}
+.continuous-scroll:hover .scroll div {
+  color: var(--white);
+}
+.continuous-scroll:hover .scroll {
+  background-color: var(--black-600);
+}
+
+.footer-last {
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-wrap: nowrap;
+  padding: 0 12px 0 12px;
+  justify-content: space-between;
+}
+.footer-last .txt {
+  font-family: "Asap", sans-serif;
+  font-weight: 300;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  color: var(--black-500);
+}
+.footer-last .txt:not(:last-child) {
+  flex-basis: 136px;
+}
+.footer-last .txt:nth-child(2) {
+  text-align: center;
+}
+.footer-last .txt-2023 {
+  max-width: 127px;
+}
+.footer-last .BTT {
+  padding: 0;
+  align-items: center;
+  display: flex;
+  justify-content: end;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.footer-last .BTT .txt {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.footer-last .BTT .icon {
+  margin-left: 8px;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--black-500);
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.footer-last .BTT .icon .fa-arrow-up {
+  color: var(--white);
+  position: absolute;
+  font-size: 16px;
+  left: 25%;
+  top: 15%;
+}
+.footer-last .BTT:hover .txt {
+  color: var(--black-600);
+  font-weight: 500;
+}
+.footer-last .BTT:hover .icon {
+  background-color: var(--black-600);
+}
+.footer-last .BTT:hover .icon .fa-arrow-up {
+  animation: BTT 1.5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+@keyframes BTT {
+  0% {
+    top: 15%;
+  }
+  30% {
+    top: 30%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+@media screen and (max-width: 1399px) {
+  .footer-area {
+    width: 1164px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .footer-area {
+    width: 936px;
+  }
+  .footer-area .footer-content .right-div .email-item {
+    margin-right: 42px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .footer-area {
+    width: auto;
+    margin: 60px 36px 24px 24px;
+    padding: 60px 0 0 0;
+  }
+  .footer-area .footer-content {
+    margin: 0 0 32px 0;
+  }
+  .footer-area .footer-content .left-div {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .footer-area .footer-content .right-div {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 0 0 auto;
+  }
+  .footer-area .footer-content .right-div .email-item {
+    margin-right: 24px;
+  }
+}
+@media screen and (max-width: 899px) {
+  .footer-area .footer-content .left-div h3 {
+    font-size: 34px;
+  }
+  .footer-area .footer-content .left-div h4 {
+    font-size: 26px;
+  }
+  .footer-area .footer-content .right-div .title {
+    font-size: 20px;
+  }
+  .footer-area .footer-content .right-div .email-item {
+    margin-right: 16px;
+  }
+  .footer-area .footer-content .right-div .email-item .body .email-link {
+    font-size: 18px;
+  }
+  .footer-area .footer-content .right-div .media-item .icons {
+    margin-top: 20px;
+  }
+  .footer-area .footer-content .right-div .media-item .icons .behance {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+  }
+  .footer-area .footer-content .right-div .media-item .icons .github {
+    width: 36px;
+    height: 36px;
+    background-size: 36px;
+  }
+  .footer-area .continuous-scroll .scroll div {
+    font-size: 56px;
+  }
+  .footer-area .continuous-scroll a {
+    font-size: 56px;
+  }
+  .footer-area .footer-last .txt {
+    font-size: 16px;
+  }
+  .footer-area .footer-last .txt-2023 {
+    max-width: 114px;
+  }
+  .footer-area .footer-last .BTT .icon {
+    min-width: 22px;
+    height: 22px;
+  }
+  .footer-area .footer-last .BTT .icon .fa-arrow-up {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .footer-area .footer-content .left-div h4 {
+    margin: 28px 0 0 0;
+  }
+  .footer-area .footer-content .right-div .email-item {
+    display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer-area .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-area .footer-content .left-div {
+    order: 3;
+  }
+  .footer-area .footer-content .left-div h3 {
+    font-size: 32px;
+    margin: 0 auto;
+  }
+  .footer-area .footer-content .left-div h4 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .footer-area .footer-content .right-div {
+    margin: 0 auto 24px auto;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-bottom: 1px solid var(--black-300);
+    padding-bottom: 24px;
+  }
+  .footer-area .footer-content .right-div .media-item .icons {
+    margin: 0;
+  }
+  .footer-area .footer-content .right-div .media-item .title {
+    display: none;
+  }
+  .footer-area .continuous-scroll .scroll {
+    border-radius: 8px;
+  }
+  .footer-area .continuous-scroll .scroll div {
+    font-size: 52px;
+  }
+  .footer-area .continuous-scroll .scroll::before {
+    width: 14px;
+  }
+  .footer-area .continuous-scroll a {
+    font-size: 52px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .footer-area {
+    margin: 42px 12px 24px 12px;
+    padding: 42px 0 0 0;
+  }
+}
+@media screen and (max-width: 458px) {
+  .footer-area .footer-content .left-div h3 {
+    font-size: 30px;
+  }
+  .footer-area .footer-content .left-div h4 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+  .footer-area .continuous-scroll .scroll {
+    border-radius: 6px;
+  }
+  .footer-area .continuous-scroll .scroll div {
+    font-size: 48px;
+  }
+  .footer-area .continuous-scroll a {
+    font-size: 48px;
+  }
+  .footer-area .footer-last .txt-love {
+    display: none;
+  }
+}
+@media screen and (max-width: 356px) {
+  .footer-area .footer-content {
+    margin-bottom: 24px;
+  }
+  .footer-area .footer-content .left-div h3 {
+    font-size: 28px;
+  }
+  .footer-area .footer-content .left-div h4 {
+    font-size: 20px;
+    margin-top: 16px;
+  }
+  .footer-area .footer-content .right-div {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .footer-area .footer-content .right-div .media-item .icons .behance {
+    font-size: 18px;
+    width: 34px;
+    height: 34px;
+  }
+  .footer-area .footer-content .right-div .media-item .icons .github {
+    width: 34px;
+    height: 34px;
+    background-size: 34px;
+  }
+  .footer-area .continuous-scroll {
+    margin-bottom: 24px;
+  }
+  .footer-area .continuous-scroll .scroll div {
+    font-size: 44px;
+  }
+  .footer-area .continuous-scroll a {
+    font-size: 44px;
+  }
+  .footer-area .footer-last .txt {
+    font-size: 14px;
+  }
+  .footer-area .footer-last .BTT .icon {
+    min-width: 20px;
+    height: 20px;
+  }
+  .footer-area .footer-last .BTT .icon .fa-arrow-up {
+    top: 20%;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .footer-area .footer-content .left-div h3 {
+    font-size: 26px;
+  }
+  .footer-area .footer-content .left-div h4 {
+    font-size: 18px;
+  }
+  .footer-area .continuous-scroll .scroll div {
+    font-size: 40px;
+  }
+  .footer-area .continuous-scroll a {
+    font-size: 40px;
+  }
+}/*# sourceMappingURL=footer.css.map */

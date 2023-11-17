@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art_Find:尋覓藝文展覽之旅 APP | 作品集 | TristaHung</title>
+    <meta name="autor" content="Trista" />
+    <!-- fav.io -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/favicon_io/site.webmanifest" />
+    <!-- Bootstrap - CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- headinfo-->
+    <link
+      rel="stylesheet"
+      href="/css/project_style/pj_headinfo/pj_headinfo_style.css"
+    />
+    <!-- nav-CSS -->
+    <link rel="stylesheet" href="/css/header_style/nav.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/project_style/artfind/artFind.css" />
+    <!-- nextWork-->
+    <link
+      rel="stylesheet"
+      href="/css/project_style/pj_nextWork/pj_nextWork.css"
+    />
+    <!-- footer-CSS -->
+    <link rel="stylesheet" href="/css/footer_style/footer.css" />
+    <!-- animation-wrapper -->
+    <link rel="stylesheet" href="/css/CG_style/CG.css" />
+  </head>
+  <body>
+    <div class="preload">
+      <div class="load-wrapper d-flex">
+        <div class="boxes-group d-flex">
+          <div class="box boxL">
+            <h1 class="box-txt">L</h1>
+          </div>
+          <div class="box boxO">
+            <h1 class="box-txt">O</h1>
+          </div>
+          <div class="box boxA">
+            <h1 class="box-txt">A</h1>
+          </div>
+          <div class="box boxD">
+            <h1 class="box-txt">D</h1>
+          </div>
+        </div>
+        <div class="boxes-group d-flex">
+          <div class="box boxI">
+            <h1 class="box-txt">I</h1>
+          </div>
+          <div class="box boxN">
+            <h1 class="box-txt">N</h1>
+          </div>
+          <div class="box boxG">
+            <h1 class="box-txt">G</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="progress-bar fixed-top">
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Example 1px high"
+        aria-valuenow="25"
+        aria-valuemin="0"
+        aria-valuemax="25"
+        style="height: 3px; border-radius: 0%"
+      >
+        <div
+          class="progress-bar"
+          id="progressBar"
+          style="width: 0%; background-color: var(--blue-dark)"
+        ></div>
+      </div>
+    </section>
+    <header>
+      <div class="nav-area container-lg">
+        <nav class="nav-second">
+          <div class="nav-second-left">
+            <a href="/"
+              ><i class="fa-solid fa-arrow-left"></i>
+              <p id="backToHome-txt">回首頁</p></a
+            >
+          </div>
+          <div class="nav-second-middle">
+            <p id="nav-middle-title" class="pj-name pj-name-EN">Art_Find</p>
+            <p id="nav-middle-txt" class="pj-info">
+              : 最佳展覽推薦指南，一起享受看展的樂趣！
+            </p>
+          </div>
+          <div class="nav-second-right">
+            <div class="navitem-contact">
+              <a
+                href="mailto: tristahung.design@gmail.com"
+                class="call-link d-flex align-items-center"
+              >
+                <div class="call-current">Contact</div>
+                <div class="call-hover">
+                  <i class="fa-regular fa-face-smile-wink"></i>Let's talk
+                </div>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div class="nav-project-background"></div>
+      </div>
+    </header>
+    <main class="container-fuild">
+      <div id="BTT-page" class="BTT button" onclick="BackToTop()">
+        <div class="icon"><i class="fa-solid fa-arrow-up"></i></div>
+        <p class="txt">Top</p>
+      </div>
+      <div class="project-info d-flex container-lg">
+        <div class="pj-headline d-flex">
+          <h1 class="headline-typing"></h1>
+          <div class="text-typing-block"></div>
+          <h1 class="headline-content">Art_Find</h1>
+        </div>
+        <div class="pj-body d-flex">
+          <p class="body-typing"></p>
+          <div class="text-typing-block"></div>
+          <p class="body-content">{ 尋覓藝文展覽之旅 APP }</p>
+        </div>
+      </div>
+      <div id="imageslider" class="slide-wrapper container-fuild">
+        <div class="slider slidefirst">
+          <img
+            src="/img/project/UIUX/ArtFind/ArtFind-cover.jpg"
+            alt="artFind-cover"
+            draggable="false"
+          />
+        </div>
+        <div class="slider slidesecond">
+          <img
+            src="/img/project/UIUX/ArtFind/slide-2.jpg"
+            alt="artFind-img1"
+            draggable="false"
+          />
+        </div>
+        <div class="slider slidethird">
+          <img
+            src="/img/project/UIUX/ArtFind/slide-3.jpg"
+            alt="artFind-img3"
+            draggable="false"
+          />
+        </div>
+        <div class="slider slidefourth">
+          <img
+            src="/img/project/UIUX/ArtFind/slide-4-Logo.jpg"
+            alt="artFind-img4"
+            draggable="false"
+          />
+        </div>
+      </div>
+      <section class="intro-area container-lg">
+        <div class="pj-info">
+          <div class="pj-sideinfo">
+            <div class="info-card-title">
+              <div class="sideicon"></div>
+              <h5 class="card-title">Art_Find</h5>
+            </div>
+            <ul class="info-card-content">
+              <li>
+                <p class="caption">Duration .</p>
+                <p class="body">2023/01 - 02</p>
+              </li>
+              <li>
+                <p class="caption">Project .</p>
+                <p class="body">App Case Study</p>
+              </li>
+              <li>
+                <p class="caption">Role .</p>
+                <p class="body">UIUX Designer</p>
+              </li>
+            </ul>
+          </div>
+          <div class="pj-para">
+            <p>
+              是一款整合文化展覽資訊的導覽APP，輕鬆尋找藝術品和展覽的完整資訊，提供個人導覽設備和雲端導覽系統，實現實體與線上完美結合，讓您開啟藝術的奇妙之旅。
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="forward-area d-flex">
+        <div class="forward-wrapper d-flex">
+          <div class="forword-img">
+            <img
+              src="/img/project/UIUX/ArtFind/forward.jpg"
+              alt="forward-img"
+            />
+          </div>
+          <div class="forword-txt">
+            <div class="background txt">
+              <h2 class="pj-title">{ Background }</h2>
+              <p class="pj-body">
+                平常我喜歡參觀各種藝術展覽，然而漸漸發現，有些有趣的展覽會因缺乏曝光而被忽略。這引起了我的思考：如何找到展覽相關的資訊？如何更有效地計畫參觀行程？當我在展覽中漫遊時，有沒有方法可以更深入地理解每件藝術品的故事？我相信這是提升藝術愛好者在展覽中體驗的一個機會。
+              </p>
+            </div>
+            <div class="goal txt">
+              <h2 class="pj-title">{ The Goal }</h2>
+              <p class="pj-body">
+                希望創建一個簡單而貼心的APP，可以輕鬆找到全台各地的藝術畫廊和展覽活動，獲取最新的資訊。並提供便利的導覽工具，讓參訪者更深入地體驗每個藝術作品。通過這個平台，希望能夠重新點燃人們對藝術的熱情，並改善他們在藝術畫廊中的體驗，讓每次參觀都成為一段豐富的故事。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hero-area container-lg">
+        <div class="empathy-phase">
+          <div class="process-card">
+            <div class="info-card-title">
+              <div class="sideicon"></div>
+              <h5 class="card-title">Process</h5>
+            </div>
+            <ul class="info-card-content">
+              <!-- 1 -->
+              <li class="txt-items">
+                <div class="process-chips badge">Empathy</div>
+                <div class="process-txt">
+                  我們進行用戶訪談後，理解了問題並定義目標。
+                </div>
+              </li>
+              <li class="arrow-icon"></li>
+              <!-- 2 -->
+              <li class="txt-items">
+                <div class="process-chips badge">Ideate</div>
+                <div class="process-txt">
+                  頭腦風暴發想解決方案，找到最佳的設計方向。
+                </div>
+              </li>
+              <li class="arrow-icon"></li>
+              <!-- 3 -->
+              <li class="txt-items">
+                <div class="process-chips badge">Design</div>
+                <div class="process-txt">
+                  進入設計階段，繪製線框稿與製作高保真原型。
+                </div>
+              </li>
+              <li class="arrow-icon"></li>
+              <!-- 4 -->
+              <li class="txt-items">
+                <div class="process-chips badge">Test</div>
+                <div class="process-txt">
+                  進行測試階段，測試原型、收集用戶反饋。
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="personas">
+            <h2 class="pj-title">{ Personas }</h2>
+            <p class="pj-body">
+              為了更深入了解問題範疇，我們與5位對藝術感興趣的參與者進行了非正式訪談。
+              <br class="br" />
+              這個使用者群確認了我們的初始假設，並提供了寶貴的建議，以下是整理這些細節轉化成兩個人物誌。
+            </p>
+            <div class="personas-card">
+              <div class="avatars">
+                <img
+                  src="/img/project/UIUX/ArtFind/Avatars1.jpg"
+                  alt="Avatars1"
+                />
+              </div>
+              <div class="personas-content">
+                <div class="personas-body">
+                  <ul>
+                    <li class="d-flex">
+                      <span class="list-number">01</span
+                      ><span class="title"> Jennifer | 40 歲 | 會計師</span>
+                    </li>
+                    <li class="d-flex">
+                      <span class="list-number">02</span
+                      ><span class="txt"
+                        >和丈夫閒暇時喜歡參觀藝術展覽，購買獨特的設計物品。但為了參觀展覽，常常需要花費大量時間去查找資料，他們希望能更方便獲取展覽資訊，享受更豐富的畫廊參觀體驗。</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="personas-point d-flex">
+                  <span class="txt"
+                    >< 我們喜歡參觀藝術展覽，並購買獨特的設計物品。 ></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="personas-card">
+              <div class="avatars">
+                <img
+                  src="/img/project/UIUX/ArtFind/Avatars2.jpg"
+                  alt="Avatars1"
+                />
+              </div>
+              <div class="personas-content">
+                <div class="personas-body">
+                  <ul>
+                    <li class="d-flex">
+                      <span class="list-number">01</span
+                      ><span class="title"> Jackson | 25 歲 | 視覺設計師</span>
+                    </li>
+                    <li class="d-flex">
+                      <span class="list-number">02</span
+                      ><span class="txt"
+                        >對自己的工作充滿熱情，經常參觀展覽來尋找設計靈感。但有時因展覽資訊不足，讓他感到失望，無法真正了解作品。他渴望有辦法可以深入理解每件作品的背後故事。</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="personas-point d-flex">
+                  <span class="txt"
+                    >< 他熱愛從藝術展覽中汲取更多靈感，並與之互動。 ></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ideate-phase">
+          <div class="pain-point">
+            <h2 class="pj-title">{ Pain Points }</h2>
+            <p class="pj-body">
+              根據獲得的資料以及使用者訪談提出的痛點與需求，整理出三大重點。
+            </p>
+            <div class="pp-card-groups d-flex">
+              <!-- 1 -->
+              <div class="pp-card card">
+                <div class="card-header d-flex">
+                  <p class="list-number">1.</p>
+                  <p class="title">曝光度不夠</p>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    許多人因展覽曝光不足而錯過最新活動，也厭倦閱讀冗長的網絡文章，希望能更輕鬆收到資訊。
+                  </p>
+                </div>
+              </div>
+              <!-- 2 -->
+              <div class="pp-card card">
+                <div class="card-header d-flex">
+                  <p class="list-number">2.</p>
+                  <p class="title">導覽功能</p>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    有時在觀賞藝術作品時，因爲資訊不足，常難以理解藝術家真正的用意，令人感到困惑。
+                  </p>
+                </div>
+              </div>
+              <!-- 3 -->
+              <div class="pp-card card">
+                <div class="card-header d-flex">
+                  <p class="list-number">3.</p>
+                  <p class="title">等待時間過長</p>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    人們不喜歡排隊等待，這不僅不方便，還浪費寶貴時間，影響了整個參觀體驗的順暢和樂趣。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wireframe inner-shadow">
+            <div class="full-img"></div>
+            <div class="full-txt d-flex">
+              <p class="top-arrow-icon"></p>
+              <p class="txt">
+                以上是許多具體的概念和初步草稿，可以有效幫助我快速進入具體可行的設計方案。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="design-phase">
+          <div class="mockup">
+            <h2 class="pj-title">{ Mock Up }</h2>
+            <p class="pj-body">
+              在確定設計方向後，我們開始製作高保真原型，展示更多細節和概念，為後續使用性測試做好準備。
+            </p>
+            <div class="main-page page d-flex">
+              <div class="page-info">
+                <div class="page-title">
+                  <h2 class="title">主頁面</h2>
+                  <div class="arrow4-icon">
+                    <i class="fa-solid fa-chevron-right"></i
+                    ><i class="fa-solid fa-chevron-right"></i
+                    ><i class="fa-solid fa-chevron-right"></i
+                    ><i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                </div>
+                <div class="page-body">
+                  我們致力於讓一切變得簡單，讓使用者輕鬆取得所需資訊。在我們的平台上，你能輕鬆一站式尋找展覽、藝術家和畫廊的所有資訊！
+                </div>
+              </div>
+              <div class="page-content">
+                <div class="page-mockup-video">
+                  <video autoplay muted loop>
+                    <source
+                      src="/img/project/UIUX/ArtFind/mainpage-video.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div
+                  class="page-mockup-img"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#mockup1-modal"
+                >
+                  <img
+                    src="/img/project/UIUX/ArtFind/mainpage-img.jpg"
+                    alt="mainpage-img"
+                  />
+                  <div
+                    class="modal fade"
+                    id="mockup1-modal"
+                    tabindex="-1"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-fullscreen">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button
+                            type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-img h-100">
+                            <img
+                              class="img"
+                              src="/img/project/UIUX/ArtFind/mainpage-img.jpg"
+                              alt="mainpage-img"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-page page d-flex">
+              <div class="page-info">
+                <div class="page-title">
+                  <h2 class="title">展覽頁面</h2>
+                  <div class="arrow4-icon">
+                    <i class="fa-solid fa-chevron-right"></i
+                    ><i class="fa-solid fa-chevron-right"></i
+                    ><i class="fa-solid fa-chevron-right"></i
+                    ><i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                </div>
+                <div class="page-body">
+                  收錄了展覽的詳細資訊，使用者可透過評論挑選展覽，買票後更能使用導覽設備預先探索藝術的世界！
+                </div>
+              </div>
+              <div class="page-content">
+                <div class="page-mockup-video">
+                  <video autoplay muted loop>
+                    <source
+                      src="/img/project/UIUX/ArtFind/eventPage-video.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div
+                  class="page-mockup-img"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#mockup2-modal"
+                >
+                  <img
+                    src="/img/project/UIUX/ArtFind/eventpage-img.jpg"
+                    alt="evenpage-img"
+                  />
+                  <div
+                    class="modal fade"
+                    id="mockup2-modal"
+                    tabindex="-1"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-fullscreen">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button
+                            type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-img h-100">
+                            <img
+                              class="img"
+                              src="/img/project/UIUX/ArtFind/eventpage-img.jpg"
+                              alt="evenpage-img"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="guide-page page d-flex">
+              <div class="page-info">
+                <div class="page-title">
+                  <h2 class="title">導覽頁面</h2>
+                  <div class="arrow4-icon">
+                    <i class="fa-solid fa-chevron-right"></i
+                    ><i class="fa-solid fa-chevron-right"></i
+                    ><i class="fa-solid fa-chevron-right"></i
+                    ><i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                </div>
+                <div class="page-body">
+                  實體與線上的完美串連，無論何時、何地自由走逛各地展覽，你可以自由選擇聽展，或是踏入VR實境的奇幻世界，更深度地感受藝術作品的魅力。
+                </div>
+              </div>
+              <div class="page-content">
+                <div class="page-mockup-video">
+                  <video autoplay muted loop>
+                    <source
+                      src="/img/project/UIUX/ArtFind/guidePage-video.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div
+                  class="page-mockup-img"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#mockup3-modal"
+                >
+                  <img
+                    src="/img/project/UIUX/ArtFind/guidepage-img.jpg"
+                    alt="guidepage-img"
+                  />
+                  <div
+                    class="modal fade"
+                    id="mockup3-modal"
+                    tabindex="-1"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-fullscreen">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button
+                            type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-img h-100">
+                            <img
+                              class="img"
+                              src="/img/project/UIUX/ArtFind/guidepage-img.jpg"
+                              alt="guidepage-img"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="artist-page page d-flex">
+              <div class="page-info">
+                <div class="page-title">
+                  <h2 class="title">藝術家介紹</h2>
+                  <div class="arrow4-icon">
+                    <i class="fa-solid fa-chevron-right"></i
+                    ><i class="fa-solid fa-chevron-right"></i
+                    ><i class="fa-solid fa-chevron-right"></i
+                    ><i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                </div>
+                <div class="page-body">
+                  使用者可在這裡了解藝術家的設計理念以及其他作品，同時也能直接在應用程式中購買自己喜愛的藝術品。
+                </div>
+              </div>
+              <div class="page-content">
+                <div class="page-mockup-video">
+                  <video autoplay muted loop>
+                    <source
+                      src="/img/project/UIUX/ArtFind/artistPage-video.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div
+                  class="page-mockup-img"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#mockup4-modal"
+                >
+                  <img
+                    src="/img/project/UIUX/ArtFind/artistpage-img.jpg"
+                    alt="artistpage-img"
+                  />
+                  <div
+                    class="modal fade"
+                    id="mockup4-modal"
+                    tabindex="-1"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-fullscreen">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button
+                            type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-img h-100">
+                            <img
+                              class="img"
+                              src="/img/project/UIUX/ArtFind/artistpage-img.jpg"
+                              alt="artistpage-img"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="prototype inner-shadow">
+              <div class="full-img"></div>
+              <div class="full-txt d-flex">
+                <p class="top-arrow-icon"></p>
+                <p class="txt">
+                  以上是更多高保真原型設計頁面，我們呈現了對產品不同方面更細緻的設計。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="design-system">
+            <h2 class="pj-title">{ Design System }</h2>
+            <p class="pj-body">
+              我們建立了一個設計系統，以確保在整個產品中都能保持統一的風格和視覺效果。
+            </p>
+            <div class="color-type-design d-flex">
+              <div class="color-left">
+                <div class="title-switch d-flex">
+                  <h6 class="title">Color Palette</h6>
+                  <p class="decorate">:</p>
+                  <p class="decorate">{</p>
+                  <h6 id="color-primary" class="primary subtitle active">
+                    Primary
+                  </h6>
+                  <p class="decorate">/</p>
+                  <h6 id="color-second" class="secondary subtitle">
+                    Secondary
+                  </h6>
+                  <p class="decorate">}</p>
+                  <div id="color-divider" class="divider"></div>
+                </div>
+                <div id="paletteP" class="palette d-flex">
+                  <p class="palette-item palette-first">#51529C</p>
+                  <p class="palette-item palette-second">#9285F7</p>
+                </div>
+                <div id="paletteS" class="palette d-none">
+                  <p class="palette-item palette-first">#77AEFF</p>
+                  <p class="palette-item palette-second">#E5EFFE</p>
+                </div>
+              </div>
+              <div class="type-right">
+                <div class="title-switch d-flex">
+                  <h6 class="title">Typography</h6>
+                  <p class="decorate">:</p>
+                  <p class="decorate">{</p>
+                  <h6 id="type-primary" class="primary subtitle active">
+                    Primary
+                  </h6>
+                  <p class="decorate">/</p>
+                  <h6 id="type-second" class="secondary subtitle">Secondary</h6>
+                  <p class="decorate">}</p>
+                  <div id="type-divider" class="divider"></div>
+                </div>
+                <p id="typetxtP" class="type-content d-flex">El Messiri</p>
+                <p id="typetxtS" class="type-content d-none">Futura</p>
+              </div>
+            </div>
+            <div class="system-img inner-shadow">
+              <div
+                class="full-img"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#designSystem-img-modal"
+              >
+                <div
+                  class="modal fade"
+                  id="designSystem-img-modal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="btn-close btn-close-white"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="modal-img h-100">
+                          <img
+                            src="/img/project/UIUX/ArtFind/designSystem.jpg"
+                            alt="designSystem-img"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="takeaway-area">
+        <div class="takeaway-wrapper d-flex">
+          <div class="takeaway-txt">
+            <h2 class="pj-title">{ Learning <span>&</span> Takeaway }</h2>
+            <p class="pj-body">
+              在執行這專案的過程中，我也從中了解了三件最重要的事情：
+            </p>
+            <ul class="pj-txt">
+              <li class="d-flex">
+                <p class="list-number">1.</p>
+                <p class="txt">
+                  <strong>永遠要以使用者為中心思考</strong> -
+                  在設計過程中，始終要把使用者的體驗放在首位，確保他們能夠輕鬆地尋找展覽資訊，並深入參與藝術世界。
+                </p>
+              </li>
+              <li class="d-flex">
+                <p class="list-number">2.</p>
+                <p class="txt">
+                  <strong>同時解決問題和創造商業價值</strong> -
+                  良好的產品不僅能夠解決使用者的痛點，還能夠在商業層面上有所突破。這個專案讓我明白，平衡這兩者的重要性。
+                </p>
+              </li>
+              <li class="d-flex">
+                <p class="list-number">3.</p>
+                <p class="txt">
+                  <strong>沒有好只有更好</strong> -
+                  優化是一個持續的過程，隨著使用者的反饋和需求的變化，我們需要不斷地進行改進，確保產品更好地滿足使用者的期望。
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="takeaway-img">
+            <img
+              src="/img/project/UIUX/ArtFind/learning.jpg"
+              alt="artFind-img"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="nextpj-area container-lg">
+        <h2 class="pj-title">{ Next Work }</h2>
+        <div class="card-groups d-flex">
+          <div class="card pj-card" id="pj-caculator">
+            <img
+              class="pj-img"
+              src="/img/project/code/Caculator/caculator-cover.jpg"
+              alt="caculator-code-project"
+            />
+            <a href="/project/caculator/" class="btn pj-link">View ＋</a>
+            <div class="card-body pj-txt">
+              <ul>
+                <li class="txt-first">
+                  <span class="list-number">01</span>
+                  <span class="txt-date"> 2023/7/3 - 7/5 </span>
+                </li>
+                <li class="txt-second">
+                  <span class="list-number">02</span>
+                  <span class="txt-EN title"> Gpa Calculator </span>
+                  <span class="txt-divider"></span>
+                  <span class="info-caculator txt-info"></span>
+                </li>
+                <li class="txt-third">
+                  <span class="list-number txt">03</span>
+                  <span class="info-caculator txt-info"></span>
+                </li>
+              </ul>
+              <div class="tag-group">
+                <div class="tag-item d-inline-block"><p>HTML</p></div>
+                <div class="tag-item d-inline-block"><p>CSS</p></div>
+                <div class="tag-item d-inline-block"><p>JavaScript</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="card pj-card" id="pj-pet">
+            <img
+              class="pj-img"
+              src="/img/project/UIUX/Pet/Pet-cover.jpg"
+              alt="pet-uiux-project"
+            />
+            <a href="/project/straywuo/" class="btn pj-link">View ＋</a>
+            <div class="card-body pj-txt">
+              <ul>
+                <li class="txt-first">
+                  <span class="list-number">01</span>
+                  <span class="txt-date"> 2023/03 - 04 </span>
+                </li>
+                <li class="txt-second">
+                  <span class="list-number">02</span>
+                  <span class="txt-EN title"> Straywuo </span>
+                  <span class="txt-CH title"> 浪窩 </span>
+                  <span class="txt-divider"></span>
+                  <span class="info-pet txt-info"></span>
+                </li>
+                <li class="txt-third">
+                  <span class="list-number txt">03</span>
+                  <span class="info-pet txt-info"></span>
+                </li>
+              </ul>
+              <div class="tag-group">
+                <div class="tag-item d-inline-block"><p>UIUX</p></div>
+                <div class="tag-item d-inline-block"><p>RWD</p></div>
+                <div class="tag-item d-inline-block"><p>Pet Adopt</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-area container-lg">
+      <section class="footer-content">
+        <div class="left-div">
+          <h3>Thanks for watching : )</h3>
+          <h4>如果您有任何想法，歡迎與我聯繫</h4>
+        </div>
+        <div class="right-div">
+          <div class="email-item">
+            <div class="title"><p>Email</p></div>
+            <div class="body">
+              <a href="mailto: tristahung.design@gmail.com" class="email-link"
+                >tristahung.design@gmail.com</a
+              >
+              <p>Taiwan , Taipei</p>
+            </div>
+          </div>
+          <div class="media-item">
+            <div class="title"><p>See more</p></div>
+            <div class="icons d-flex">
+              <button class="behance">
+                <a href="https://www.behance.net/shihtinghung2" target="_blank">
+                  <i class="fa-brands fa-behance"></i
+                ></a>
+              </button>
+              <button class="github">
+                <a
+                  href="https://github.com/trista-design?tab=repositories"
+                  target="_blank"
+                  >github</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="continuous-scroll row">
+        <a href="mailto: tristahung.design@gmail.com">Get in touch</a>
+        <div class="scroll">
+          <div class="first">
+            &nbsp;Get in touch <span>*</span> Get in touch <span>*</span> Get in
+            touch <span>*</span> Get in touch <span>*</span>
+          </div>
+          <div class="second">
+            &nbsp;Get in touch <span>*</span> Get in touch <span>*</span> Get in
+            touch <span>*</span> Get in touch <span>*</span>
+          </div>
+        </div>
+      </section>
+      <section class="footer-last row d-flex">
+        <p class="txt">&copy 2023</p>
+        <p class="txt">Made with love</p>
+        <div class="BTT" onclick="BackToTop()">
+          <p class="txt">Back To Top</p>
+          <div class="icon">
+            <i class="fa-solid fa-arrow-up"></i>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- bootstrap - JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS : animation-wrapper -->
+    <script src="/js/CG.js"></script>
+    <!-- JS : nav -->
+    <script src="/js/navHide.js"></script>
+    <!-- JS：imageslider -->
+    <script src="/js/project-slide.js"></script>
+    <!-- JS : designSystem-switch -->
+    <script src="/js/design-system.js"></script>
+    <!-- JS : backToTopButton  -->
+    <script src="/js/BTT_page.js"></script>
+    <!-- JS : cardInfo -->
+    <script src="/js/cardInfo.js"></script>
+  </body>
+</html>
