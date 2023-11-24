@@ -939,6 +939,8 @@ main {
     }
     .mockup {
       margin-top: 60px;
+      overflow: hidden;
+      border: 1px solid red;
       .page {
         flex-direction: column;
         width: auto;
@@ -961,6 +963,7 @@ main {
       .page-mockup-video {
         margin: 32px auto 0 auto;
         width: 774px;
+        border: 1px solid green;
       }
       .odd-page {
         .page-mockup-video {
@@ -1108,8 +1111,14 @@ main {
   .hero-area {
     .mockup {
       .page-mockup-video {
-        width: 105%;
-        margin-left: -24px;
+        width: auto;
+        margin: 32px -16px 0 -20px;
+      }
+      .even-page {
+        .page-mockup-video {
+          width: auto;
+          margin: 32px -16px 0 -20px;
+        }
       }
     }
     .design-system {
@@ -1182,16 +1191,6 @@ main {
           width: 40%;
         }
       }
-      .page-mockup-video {
-        width: 110%;
-        margin-left: -36px;
-      }
-      .even-page {
-        .page-mockup-video {
-          width: 110%;
-          margin-left: -36px;
-        }
-      }
     }
     .design-system {
       .color-type-design {
@@ -1239,14 +1238,6 @@ main {
     }
     .mockup {
       margin-top: 30px;
-      .page-mockup-video {
-        margin-left: -32px;
-      }
-      .even-page {
-        .page-mockup-video {
-          margin-left: -32px;
-        }
-      }
       .prototype {
         padding-bottom: 30px;
       }
@@ -1292,8 +1283,7 @@ main {
         }
       }
       .page-mockup-video {
-        margin: 0 -36px;
-        width: auto;
+        margin: 0px -14px 0 -16px;
       }
       .main-page {
         margin-top: 32px;
@@ -1313,8 +1303,7 @@ main {
           }
         }
         .page-mockup-video {
-          margin: 0 -36px;
-          width: auto;
+          margin: 0px -14px 0 -16px;
         }
       }
     }
@@ -1373,7 +1362,7 @@ main {
       .odd-page,
       .even-page {
         .page-mockup-video {
-          margin: 0 -18px;
+          margin: 0 -12px 0 -14px;
         }
       }
     }
@@ -1426,6 +1415,16 @@ main {
     .pj-info {
       .pj-para {
         margin-left: 16px;
+      }
+    }
+  }
+  .hero-area {
+    .mockup {
+      .odd-page,
+      .even-page {
+        .page-mockup-video {
+          margin: 0 -8px 0 -10px;
+        }
       }
     }
   }

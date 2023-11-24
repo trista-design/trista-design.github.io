@@ -27,15 +27,36 @@
       }
       .pj-link {
         position: absolute;
-        width: 100%;
-        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+      }
+      .pj-mask {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         background-color: rgba(0, 0, 0, 0.5);
-        font-family: "Asap", sans-serif;
-        letter-spacing: 1px;
         color: transparent;
-        opacity: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         transition: 0.3s ease;
-        z-index: 2;
+        opacity: 0;
+        .view {
+          font-family: "Asap", sans-serif;
+          font-size: 24px;
+          color: var(--white);
+          display: block;
+          padding-top: 24px;
+          margin: 0;
+          transition: 0.3s ease;
+          opacity: 0;
+        }
       }
       .pj-txt {
         position: absolute;
@@ -100,18 +121,18 @@
         }
       }
       // 懸停
-      &:hover .pj-txt {
-        left: 12px;
-        opacity: 1;
-      }
-      &:hover .pj-link {
-        opacity: 1;
-      }
       &:hover .pj-img {
         width: 110%;
         height: 110%;
         transform: translate(-5%, 0);
         object-fit: cover;
+      }
+      &:hover .pj-mask {
+        opacity: 1;
+      }
+      &:hover .pj-txt {
+        left: 12px;
+        opacity: 1;
       }
       &:hover {
         box-shadow: 2px 2px 10px rgba(72, 72, 72, 0.5);
@@ -159,13 +180,11 @@
         .pj-img {
           height: 260px;
         }
+        .pj-mask {
+          height: 260px;
+        }
         &:nth-of-type(2) {
           margin-left: 24px;
-        }
-        .pj-link {
-          font-size: 24px;
-          padding-top: 150px;
-          transition: all 0.3s ease-in-out;
         }
         .card-body {
           left: 0;
@@ -200,10 +219,11 @@
           width: 110%;
           object-position: 50% 50%;
         }
-        &:hover .pj-link {
-          color: var(--white);
-          padding-top: 110px;
-          font-size: 24px;
+        &:hover .pj-mask {
+          .view {
+            opacity: 1;
+            padding: 0;
+          }
         }
       }
       #pj-metro {
@@ -211,10 +231,10 @@
           object-position: 50% 80%;
         }
       }
-    }
-    #pj-grapic {
-      &:hover .pj-img {
-        object-position: 50% 70%;
+      #pj-grapic {
+        &:hover .pj-img {
+          object-position: 50% 70%;
+        }
       }
     }
   }
@@ -252,16 +272,13 @@
         .pj-img {
           height: 280px;
         }
-        .pj-link {
-          padding-top: 160px;
+        .pj-mask {
+          height: 280px;
         }
         &:hover .pj-img {
           width: 110%;
           height: 320px;
           object-position: 0 50%;
-        }
-        &:hover .pj-link {
-          padding-top: 120px;
         }
       }
       #pj-caculator {
@@ -293,20 +310,25 @@
         .pj-img {
           height: 260px;
         }
-        .pj-link {
-          padding-top: 160px;
-          font-size: 22px;
-        }
-        &:hover .pj-link {
-          padding-top: 120px;
-          font-size: 22px;
+        .pj-mask {
+          height: 260px;
+          .view {
+            font-size: 22px;
+          }
         }
         &:hover .pj-img {
           height: 300px;
           object-position: 50% 80%;
         }
       }
-      #pj-caculator,
+      #pj-caculator {
+        .pj-img {
+          object-position: 50% -12px;
+        }
+        &:hover .pj-img {
+          object-position: 50% 40%;
+        }
+      }
       #pj-snakegame {
         .pj-img {
           object-position: 50% -12px;
@@ -334,7 +356,11 @@
 @media screen and (max-width: 520px) {
   .nextpj-area {
     .card-groups {
-      #pj-caculator,
+      #pj-caculator {
+        &:hover .pj-img {
+          object-position: 50% 70%;
+        }
+      }
       #pj-snakegame {
         &:hover .pj-img {
           object-position: 50% 70%;
@@ -361,30 +387,40 @@
         .pj-img {
           height: 220px;
         }
-        .pj-link {
-          padding-top: 140px;
+        .pj-mask {
+          height: 220px;
         }
         &:hover .pj-img {
-          height: 260px;
-          object-position: 50% 70%;
-        }
-        &:hover .pj-link {
-          padding-top: 100px;
+          height: 230px;
+          width: 100%;
+          transform: translate(0, 0);
+          object-position: 50% 55%;
         }
       }
       #pj-caculator {
+        .pj-img {
+          object-position: 50% 20%;
+        }
         &:hover .pj-img {
-          object-position: 50% 40%;
+          object-position: 50% 20%;
         }
       }
       #pj-snakegame {
+        .pj-img {
+          object-position: 50% 15%;
+        }
         &:hover .pj-img {
-          object-position: 50% 25%;
+          object-position: 50% 15%;
+        }
+      }
+      #pj-metro {
+        &:hover .pj-img {
+          object-position: 50% 65%;
         }
       }
       #pj-grapic {
         &:hover .pj-img {
-          object-position: 50% 80%;
+          object-position: 50% 60%;
         }
       }
     }
@@ -398,8 +434,8 @@
         .pj-img {
           height: 200px;
         }
-        .pj-link {
-          padding-top: 130px;
+        .pj-mask {
+          height: 200px;
         }
         .pj-txt {
           padding: 16px;
@@ -410,23 +446,7 @@
           }
         }
         &:hover .pj-img {
-          height: 240px;
-        }
-        &:hover .pj-link {
-          padding-top: 90px;
-        }
-      }
-      #pj-snakegame {
-        &:hover .pj-img {
-          object-position: 50% 30%;
-        }
-      }
-      #pj-grapic {
-        .pj-img {
-          object-position: 50% 55%;
-        }
-        &:hover .pj-img {
-          object-position: 50% 85%;
+          height: 210px;
         }
       }
     }
@@ -436,26 +456,34 @@
   .nextpj-area {
     .card-groups {
       .pj-card {
-        .pj-link {
+        .pj-mask .view {
           font-size: 20px;
         }
-        &:hover .pj-link {
-          font-size: 20px;
+      }
+      #pj-caculator {
+        &:hover .pj-img {
+          object-position: 50% 30%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 356px) {
+  .nextpj-area {
+    .card-groups {
+      .pj-card {
+        &:hover .pj-img {
+          object-position: 50% 60%;
+        }
+      }
+      #pj-caculator {
+        &:hover .pj-img {
+          object-position: 50% 40%;
         }
       }
       #pj-metro {
         &:hover .pj-img {
-          object-position: 50% -36px;
-        }
-      }
-      #pj-spoilview {
-        &:hover .pj-img {
-          object-position: 50% 100%;
-        }
-      }
-      #pj-grapic {
-        &:hover .pj-img {
-          object-position: 50% 120%;
+          object-position: 50% 90%;
         }
       }
     }
@@ -488,30 +516,25 @@
             }
           }
         }
-        &:hover .pj-img {
-          object-position: 50% -12px;
-        }
-      }
-      #pj-caculator {
-        &:hover .pj-img {
-          object-position: 50% -12px;
-        }
       }
       #pj-metro {
+        .pj-img {
+          object-position: 50% 50%;
+        }
         &:hover .pj-img {
-          object-position: 50% -24px;
+          object-position: 50% 60%;
         }
       }
-      #pj-spoilview {
-        &:hover .pj-img {
-          object-position: 50% -16px;
-        }
-      }
-      #pj-grapic {
-        &:hover .pj-img {
-          object-position: 50% -20px;
-        }
-      }
+      // #pj-spoilview {
+      //   &:hover .pj-img {
+      //     object-position: 50% -16px;
+      //   }
+      // }
+      // #pj-grapic {
+      //   &:hover .pj-img {
+      //     object-position: 50% -20px;
+      //   }
+      // }
     }
   }
 }

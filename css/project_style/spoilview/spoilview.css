@@ -845,6 +845,8 @@ main {
   }
   .hero-area .mockup {
     margin-top: 60px;
+    overflow: hidden;
+    border: 1px solid red;
   }
   .hero-area .mockup .page {
     flex-direction: column;
@@ -868,6 +870,7 @@ main {
   .hero-area .mockup .page-mockup-video {
     margin: 32px auto 0 auto;
     width: 774px;
+    border: 1px solid green;
   }
   .hero-area .mockup .odd-page .page-mockup-video {
     order: 2;
@@ -979,8 +982,12 @@ main {
 }
 @media screen and (max-width: 820px) {
   .hero-area .mockup .page-mockup-video {
-    width: 105%;
-    margin-left: -24px;
+    width: auto;
+    margin: 32px -16px 0 -20px;
+  }
+  .hero-area .mockup .even-page .page-mockup-video {
+    width: auto;
+    margin: 32px -16px 0 -20px;
   }
   .hero-area .design-system .color-type-design .title-switch {
     align-items: center;
@@ -1031,14 +1038,6 @@ main {
   .hero-area .mockup .page-content .page-info {
     width: 40%;
   }
-  .hero-area .mockup .page-mockup-video {
-    width: 110%;
-    margin-left: -36px;
-  }
-  .hero-area .mockup .even-page .page-mockup-video {
-    width: 110%;
-    margin-left: -36px;
-  }
   .hero-area .design-system .color-type-design {
     flex-direction: column;
     margin: 42px 0 0 0;
@@ -1077,12 +1076,6 @@ main {
   }
   .hero-area .mockup {
     margin-top: 30px;
-  }
-  .hero-area .mockup .page-mockup-video {
-    margin-left: -32px;
-  }
-  .hero-area .mockup .even-page .page-mockup-video {
-    margin-left: -32px;
   }
   .hero-area .mockup .prototype {
     padding-bottom: 30px;
@@ -1124,8 +1117,7 @@ main {
     width: 100%;
   }
   .hero-area .mockup .page-mockup-video {
-    margin: 0 -36px;
-    width: auto;
+    margin: 0px -14px 0 -16px;
   }
   .hero-area .mockup .main-page {
     margin-top: 32px;
@@ -1144,8 +1136,7 @@ main {
     margin: 0;
   }
   .hero-area .mockup .even-page .page-mockup-video {
-    margin: 0 -36px;
-    width: auto;
+    margin: 0px -14px 0 -16px;
   }
 }
 @media screen and (max-width: 540px) {
@@ -1189,7 +1180,7 @@ main {
   }
   .hero-area .mockup .odd-page .page-mockup-video,
   .hero-area .mockup .even-page .page-mockup-video {
-    margin: 0 -18px;
+    margin: 0 -12px 0 -14px;
   }
   .takeaway-area {
     margin-top: 42px;
@@ -1220,6 +1211,10 @@ main {
 @media screen and (max-width: 390px) {
   .intro-area .pj-info .pj-para {
     margin-left: 16px;
+  }
+  .hero-area .mockup .odd-page .page-mockup-video,
+  .hero-area .mockup .even-page .page-mockup-video {
+    margin: 0 -8px 0 -10px;
   }
 }
 @media screen and (max-width: 356px) {

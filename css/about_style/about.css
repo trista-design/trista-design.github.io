@@ -627,6 +627,7 @@ body {
   .intro {
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
   }
   .intro .intro-content {
     order: 2;
@@ -736,6 +737,9 @@ body {
   }
 }
 @media screen and (max-width: 690px) {
+  .intro {
+    margin-top: 0;
+  }
   .intro .intro-content {
     width: auto;
   }
@@ -899,6 +903,9 @@ body {
 @media screen and (max-width: 458px) {
   .pj-title {
     font-size: 24px;
+  }
+  .intro {
+    margin-top: -24px;
   }
   .intro .intro-img {
     min-width: 270px;

@@ -149,7 +149,7 @@ body {
         margin: 0 24px;
       }
       .line-decoration {
-        height: 1.5px;
+        height: 1px;
         background-color: var(--black-300);
         margin: auto;
       }
@@ -255,15 +255,34 @@ body {
       .pj-link {
         position: absolute;
         top: 0;
+        bottom: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        color: transparent;
-        font-family: "Asap", sans-serif;
+        right: 0;
+        z-index: 3;
+      }
+      .pj-mask {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 1;
+        display: flex;
         opacity: 0;
-        transition: 0.2s 0.2s ease-in-out;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease;
+        .view {
+          font-family: "Asap", sans-serif;
+          font-size: 24px;
+          color: var(--white);
+          display: block;
+          opacity: 0;
+          padding-top: 24px;
+          margin: 0;
+          transition: 0.3s ease;
+        }
       }
       .pj-txt {
         position: absolute;
@@ -328,17 +347,17 @@ body {
         }
       }
       // 懸停
-      &:hover .pj-txt {
-        left: 12px;
-        opacity: 1;
-      }
-      &:hover .pj-link {
-        opacity: 1;
-      }
       &:hover .pj-img {
         width: 110%;
         height: 110%;
         transform: translate(-5%, -5%);
+      }
+      &:hover .pj-mask {
+        opacity: 1;
+      }
+      &:hover .pj-txt {
+        left: 12px;
+        opacity: 1;
       }
       &:hover {
         box-shadow: 2px 2px 10px rgba(72, 72, 72, 0.5);
@@ -683,6 +702,9 @@ body {
           object-fit: cover;
           object-position: 50% 50%;
         }
+        .pj-mask {
+          height: 260px;
+        }
         .pj-txt {
           left: 0;
           bottom: 0;
@@ -707,20 +729,17 @@ body {
             }
           }
         }
-        .pj-link {
-          font-size: 24px;
-          padding-top: 150px;
-          transition: all 0.3s ease;
-        }
         &:hover .pj-img {
           height: 308px;
           width: 110%;
           object-position: 50% 50%;
           object-fit: cover;
         }
-        &:hover .pj-link {
-          padding-top: 110px;
-          color: var(--white);
+        &:hover .pj-mask {
+          .view {
+            opacity: 1;
+            padding: 0;
+          }
         }
         &:hover .pj-txt {
           left: 0;
@@ -833,15 +852,12 @@ body {
           .pj-img {
             height: 280px;
           }
-          .pj-link {
-            padding-top: 160px;
+          .pj-mask {
+            height: 280px;
           }
           &:hover .pj-img {
             width: 110%;
             height: 320px;
-          }
-          &:hover .pj-link {
-            padding-top: 120px;
           }
         }
         #pj-caculator {
@@ -923,10 +939,10 @@ body {
           margin-bottom: 16px;
         }
         .heading {
-          font-size: 36px;
+          font-size: 38px;
           .typewriter::after {
-            width: 24px;
-            height: 24px;
+            width: 26px;
+            height: 26px;
           }
         }
         .hero-txt {
@@ -972,12 +988,11 @@ body {
             object-fit: cover;
             object-position: 50% 50%;
           }
-          .pj-link {
-            font-size: 22px;
-            padding-top: 160px;
-          }
-          &:hover .pj-link {
-            padding-top: 120px;
+          .pj-mask {
+            height: 260px;
+            .view {
+              font-size: 22px;
+            }
           }
           &:hover .pj-img {
             width: 110%;
@@ -985,7 +1000,11 @@ body {
             object-fit: cover;
           }
         }
-        #pj-caculator,
+        #pj-caculator {
+          .pj-img {
+            object-position: 50% -12px;
+          }
+        }
         #pj-snakegame {
           .pj-img {
             object-position: 50% -12px;
@@ -998,6 +1017,17 @@ body {
 @media screen and (max-width: 490px) {
   .main-area {
     padding: 0 12px;
+    .hero-section {
+      .hero-heading {
+        .heading {
+          font-size: 8vw;
+          .typewriter::after {
+            width: 5vw;
+            height: 5vw;
+          }
+        }
+      }
+    }
     .work-section {
       margin: 60px 0 -24px 0;
       .headline {
@@ -1016,24 +1046,28 @@ body {
           .pj-img {
             height: 220px;
           }
-          .pj-link {
-            padding-top: 140px;
+          .pj-mask {
+            height: 220px;
           }
           &:hover .pj-img {
-            height: 260px;
+            height: 230px;
+            width: 100%;
+            transform: translate(0, 0);
+            object-position: 50% 55%;
           }
-          &:hover .pj-link {
-            padding-top: 100px;
+        }
+        #pj-caculator {
+          &:hover .pj-img {
+            height: 230px;
+            object-position: 50% 15%;
           }
         }
         #pj-grapic {
           .pj-img {
             object-position: 50% 60%;
           }
-        }
-        #pj-caculator {
           &:hover .pj-img {
-            object-position: 50% 20%;
+            object-position: 50% 65%;
           }
         }
         #pj-snakegame {
@@ -1053,12 +1087,7 @@ body {
           font-size: 18px;
         }
         .heading {
-          font-size: 32px;
           padding: 0 0 0 24px;
-          .typewriter::after {
-            width: 20px;
-            height: 20px;
-          }
         }
         .hero-txt {
           padding: 14px;
@@ -1098,8 +1127,8 @@ body {
           .pj-img {
             height: 200px;
           }
-          .pj-link {
-            padding-top: 130px;
+          .pj-mask {
+            height: 200px;
           }
           .pj-txt {
             padding: 16px;
@@ -1110,15 +1139,7 @@ body {
             }
           }
           &:hover .pj-img {
-            height: 240px;
-          }
-          &:hover .pj-link {
-            padding-top: 90px;
-          }
-        }
-        #pj-snakegame {
-          &:hover .pj-img {
-            object-position: 50% 50%;
+            height: 210px;
           }
         }
       }
@@ -1128,11 +1149,31 @@ body {
 
 @media screen and (max-width: 390px) {
   .main-area {
+    .hero-section {
+      .hero-heading {
+        .hero-txt {
+          ul {
+            li {
+              .list-number {
+                font-size: 3.6vw;
+              }
+              .txt {
+                font-size: 4.1vw;
+              }
+              .txt-end {
+                font-size: 3.6vw;
+              }
+            }
+          }
+        }
+      }
+    }
     .work-section {
       .headline {
         .button-groups {
           .btn {
             border-radius: 6px;
+            padding: 0 3px 6px 3px;
             .btn-txt {
               font-size: 14px;
               width: 64px;
@@ -1148,15 +1189,29 @@ body {
               margin-left: 12px;
             }
           }
+          .btn-active {
+            padding: 3px;
+          }
         }
       }
       .pj-card-area {
         .pj-card {
-          .pj-link {
+          .pj-mask .view {
             font-size: 20px;
           }
-          &:hover .pj-link {
-            font-size: 20px;
+          &:hover .pj-img {
+            object-position: 50% 60%;
+          }
+        }
+        #pj-caculator {
+          &:hover .pj-img {
+            height: 210px;
+            object-position: 50% 30%;
+          }
+        }
+        #pj-grapic {
+          &:hover .pj-img {
+            object-position: 50% 80%;
           }
         }
       }
@@ -1171,12 +1226,7 @@ body {
           margin-bottom: 12px;
         }
         .heading {
-          font-size: 30px;
           padding: 0 0 0 20px;
-          .typewriter::after {
-            width: 18px;
-            height: 18px;
-          }
         }
       }
     }
@@ -1186,12 +1236,15 @@ body {
   .main-area {
     .hero-section {
       .hero-heading {
+        .heading4 {
+          font-size: 16px;
+        }
         .heading {
-          font-size: 28px;
           padding: 0 0 0 18px;
+          font-size: 8.2vw;
           .typewriter::after {
-            width: 16px;
-            height: 16px;
+            width: 5.2vw;
+            height: 5.2vw;
           }
         }
         .hero-txt {
@@ -1223,10 +1276,14 @@ body {
     }
     .work-section {
       .headline {
+        h2 {
+          font-size: 22px;
+        }
         .button-groups {
           .btn {
             .btn-txt {
               width: 56px;
+              padding: 8px 0;
             }
             &::before {
               right: 56px;
@@ -1234,6 +1291,19 @@ body {
             &::after {
               left: 56px;
             }
+          }
+        }
+      }
+      .pj-card-area {
+        .pj-card {
+          &:hover .pj-img {
+            object-position: 50% 60%;
+          }
+        }
+        #pj-caculator {
+          &:hover .pj-img {
+            height: 210px;
+            object-position: 50% 90%;
           }
         }
       }

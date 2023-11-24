@@ -508,7 +508,7 @@
             </p>
             <div class="main-page odd-page page d-flex">
               <div class="page-mockup-video">
-                <video autoplay muted loop>
+                <video autoplay muted loop defaultMuted playsinline>
                   <source
                     src="/img/project/UIUX/Pet/mainpage-video.mp4"
                     type="video/mp4"
@@ -573,7 +573,7 @@
             </div>
             <div class="adopt-page even-page page d-flex">
               <div class="page-mockup-video">
-                <video autoplay muted loop>
+                <video autoplay muted loop defaultMuted playsinline>
                   <source
                     src="/img/project/UIUX/Pet/adoptpage-video.mp4"
                     type="video/mp4"
@@ -638,7 +638,7 @@
             </div>
             <div class="vet-page odd-page page d-flex">
               <div class="page-mockup-video">
-                <video autoplay muted loop>
+                <video autoplay muted loop defaultMuted playsinline>
                   <source
                     src="/img/project/UIUX/Pet/vetpage-video.mp4"
                     type="video/mp4"
@@ -703,7 +703,7 @@
             </div>
             <div class="care-page even-page page d-flex">
               <div class="page-mockup-video">
-                <video autoplay muted loop>
+                <video autoplay muted loop defaultMuted playsinline>
                   <source
                     src="/img/project/UIUX/Pet/carepage-video.mp4"
                     type="video/mp4"
@@ -897,12 +897,15 @@
         <h2 class="pj-title">{ Next Work }</h2>
         <div class="card-groups d-flex">
           <div class="card pj-card" id="pj-snakegame">
+            <a href="/project/snackgame/" class="btn pj-link"></a>
             <img
               class="pj-img"
               src="/img/project/code/snakegame/slide-1.jpg"
               alt="snakegame-code-project"
             />
-            <a href="/project/snackgame/" class="btn pj-link">View ＋</a>
+            <div class="pj-mask">
+              <p class="view">View ＋</p>
+            </div>
             <div class="card-body pj-txt">
               <ul>
                 <li class="txt-first">
@@ -928,12 +931,15 @@
             </div>
           </div>
           <div class="card pj-card" id="pj-metro">
+            <a href="/project/metro/" class="btn pj-link"></a>
             <img
               class="pj-img"
               src="/img/project/UIUX/Metro/metro-cover.jpg"
               alt="metro-uiux-project"
             />
-            <a href="/project/metro/" class="btn pj-link">View ＋</a>
+            <div class="pj-mask">
+              <p class="view">View ＋</p>
+            </div>
             <div class="card-body pj-txt">
               <ul>
                 <li class="txt-first">
@@ -1010,10 +1016,10 @@
         </div>
       </section>
       <section class="footer-last row d-flex">
-        <p class="txt">&copy 2023</p>
-        <p class="txt">Made with love</p>
-        <div class="BTT" onclick="BackToTop()">
-          <p class="txt">Back To Top</p>
+        <p class="txt txt-2023">&copy 2023</p>
+        <p class="txt txt-love">Made with love</p>
+        <div id="BTT-footer" class="BTT" onclick="BackToTop()">
+          <p class="txt txt-BTT">Back To Top</p>
           <div class="icon">
             <i class="fa-solid fa-arrow-up"></i>
           </div>

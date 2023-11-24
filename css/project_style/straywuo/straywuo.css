@@ -1204,6 +1204,7 @@ main {
   }
   .hero-area .design-phase {
     margin-top: 60px;
+    overflow-x: hidden;
   }
   .hero-area .design-phase .page {
     flex-direction: column;
@@ -1502,13 +1503,13 @@ main {
        object-position: -12px 30%;
   }
   .hero-area .design-phase .page-mockup-video {
-    margin: 32px -28px 0 -32px;
+    margin: 32px -20px 0 -24px;
   }
   .hero-area .design-phase .page-content {
     margin: 0;
   }
   .hero-area .design-phase .even-page .page-mockup-video {
-    margin: 32px -28px 0 -32px;
+    margin: 32px -20px 0 -24px;
   }
   .hero-area .design-phase .even-page .page-content {
     margin: 0;
@@ -1766,6 +1767,7 @@ main {
   }
   .hero-area .design-phase .page-mockup-video {
     margin-top: 0;
+    margin: 0 -16px 0 -20px;
   }
   .hero-area .design-phase .page {
     margin-top: 80px;
@@ -1774,7 +1776,7 @@ main {
     margin-top: 32px;
   }
   .hero-area .design-phase .even-page .page-mockup-video {
-    margin: 0 -32px 0 -28px;
+    margin: 0 -16px 0 -20px;
   }
   .hero-area .design-phase .even-page .page-content {
     margin-top: 24px;
@@ -1892,10 +1894,10 @@ main {
     border-radius: 8px;
   }
   .hero-area .design-phase .page-mockup-video {
-    margin: 0 -24px;
+    margin: 0 -16px 0 -20px;
   }
   .hero-area .design-phase .even-page .page-mockup-video {
-    margin: 0 -24px;
+    margin: 0 -16px 0 -20px;
   }
   .takeaway-area {
     margin-top: 42px;
@@ -1970,6 +1972,12 @@ main {
   .hero-area .design-phase .page-content .page-info .page-title .arrow4-icon {
     margin-top: 4px;
   }
+  .hero-area .design-phase .page-mockup-video {
+    margin: 0 -12px 0 -16px;
+  }
+  .hero-area .design-phase .even-page .page-mockup-video {
+    margin: 0 -12px 0 -16px;
+  }
 }
 @media screen and (max-width: 440px) {
   .hero-area .empathy-phase .process-card .info-card-content .txt-items {
@@ -1990,10 +1998,10 @@ main {
     margin-left: 16px;
   }
   .hero-area .design-phase .page-mockup-video {
-    margin: 0 -20px;
+    margin: 0 -12px 0 -14px;
   }
   .hero-area .design-phase .even-page .page-mockup-video {
-    margin: 0 -20px;
+    margin: 0 -12px 0 -14px;
   }
 }
 @media screen and (max-width: 356px) {
@@ -2029,6 +2037,12 @@ main {
   }
   .hero-area .ideate-phase .pain-point .pp-card-groups .pp-card {
     box-shadow: 6px 6px 0 var(--black-300);
+  }
+  .hero-area .design-phase .page-mockup-video {
+    margin: 0 -6px 0 -8px;
+  }
+  .hero-area .design-phase .even-page .page-mockup-video {
+    margin: 0 -6px 0 -8px;
   }
 }
 @media screen and (max-width: 340px) {

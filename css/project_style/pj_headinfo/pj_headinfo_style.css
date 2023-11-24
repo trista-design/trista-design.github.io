@@ -299,58 +299,11 @@
     font-size: 16px;
   }
   .slide-wrapper {
-    height: 444px;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .slide-wrapper .slider {
-    width: 630px;
-  }
-}
-@media screen and (max-width: 699px) {
-  .slide-wrapper {
-    height: 404px;
-  }
-  .slide-wrapper .slider {
-    width: 570px;
-  }
-}
-@media screen and (max-width: 670px) {
-  .slide-wrapper {
-    height: 384px;
-  }
-  .slide-wrapper .slider {
-    width: 540px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .slide-wrapper {
-    height: 364px;
-  }
-  .slide-wrapper .slider {
-    width: 510px;
-  }
-}
-@media screen and (max-width: 599px) {
-  .slide-wrapper {
-    height: 344px;
-  }
-  .slide-wrapper .slider {
-    width: 480px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .slide-wrapper {
-    height: 324px;
-  }
-  .slide-wrapper .slider {
-    width: 450px;
-  }
-}
-@media screen and (max-width: 540px) {
-  .slide-wrapper {
-    height: 304px;
-  }
-  .slide-wrapper .slider {
-    width: 420px;
+    width: 85vw;
   }
 }
 @media screen and (max-width: 490px) {
@@ -364,11 +317,8 @@
   #BTT-page .txt {
     font-size: 14px;
   }
-  .slide-wrapper {
-    height: 284px;
-  }
   .slide-wrapper .slider {
-    width: 390px;
+    width: 90vw;
   }
   .slide-wrapper .slider:not(:first-child) {
     margin-right: 12px;
@@ -395,20 +345,6 @@
   .project-info .pj-headline .headline-content {
     font-size: 32px;
   }
-  .slide-wrapper {
-    height: 264px;
-  }
-  .slide-wrapper .slider {
-    width: 360px;
-  }
-}
-@media screen and (max-width: 420px) {
-  .slide-wrapper {
-    height: 244px;
-  }
-  .slide-wrapper .slider {
-    width: 330px;
-  }
 }
 @media screen and (max-width: 390px) {
   .project-info .pj-headline {
@@ -424,20 +360,11 @@
   .project-info .pj-headline .headline-content {
     font-size: 30px;
   }
-  .slide-wrapper {
-    height: 234px;
-  }
   .slide-wrapper .slider {
-    width: 315px;
+    width: 88vw;
   }
 }
 @media screen and (max-width: 340px) {
-  .slide-wrapper {
-    height: 214px;
-  }
-  .slide-wrapper .slider {
-    width: 285px;
-  }
   .slide-wrapper .slider:first-child {
     margin-right: 8px;
   }

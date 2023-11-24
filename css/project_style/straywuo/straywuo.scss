@@ -1353,6 +1353,7 @@ main {
     }
     .design-phase {
       margin-top: 60px;
+      overflow-x: hidden;
       .page {
         flex-direction: column;
         margin-top: 80px;
@@ -1744,14 +1745,14 @@ main {
     }
     .design-phase {
       .page-mockup-video {
-        margin: 32px -28px 0 -32px;
+        margin: 32px -20px 0 -24px;
       }
       .page-content {
         margin: 0;
       }
       .even-page {
         .page-mockup-video {
-          margin: 32px -28px 0 -32px;
+          margin: 32px -20px 0 -24px;
         }
         .page-content {
           margin: 0;
@@ -2086,6 +2087,7 @@ main {
       }
       .page-mockup-video {
         margin-top: 0;
+        margin: 0 -16px 0 -20px;
       }
       .page {
         margin-top: 80px;
@@ -2095,7 +2097,7 @@ main {
       }
       .even-page {
         .page-mockup-video {
-          margin: 0 -32px 0 -28px;
+          margin: 0 -16px 0 -20px;
         }
         .page-content {
           margin-top: 24px;
@@ -2255,11 +2257,11 @@ main {
     }
     .design-phase {
       .page-mockup-video {
-        margin: 0 -24px;
+        margin: 0 -16px 0 -20px;
       }
       .even-page {
         .page-mockup-video {
-          margin: 0 -24px;
+          margin: 0 -16px 0 -20px;
         }
       }
     }
@@ -2363,6 +2365,14 @@ main {
           }
         }
       }
+      .page-mockup-video {
+        margin: 0 -12px 0 -16px;
+      }
+      .even-page {
+        .page-mockup-video {
+          margin: 0 -12px 0 -16px;
+        }
+      }
     }
   }
 }
@@ -2400,11 +2410,11 @@ main {
   .hero-area {
     .design-phase {
       .page-mockup-video {
-        margin: 0 -20px;
+        margin: 0 -12px 0 -14px;
       }
       .even-page {
         .page-mockup-video {
-          margin: 0 -20px;
+          margin: 0 -12px 0 -14px;
         }
       }
     }
@@ -2452,6 +2462,16 @@ main {
           .pp-card {
             box-shadow: 6px 6px 0 var(--black-300);
           }
+        }
+      }
+    }
+    .design-phase {
+      .page-mockup-video {
+        margin: 0 -6px 0 -8px;
+      }
+      .even-page {
+        .page-mockup-video {
+          margin: 0 -6px 0 -8px;
         }
       }
     }

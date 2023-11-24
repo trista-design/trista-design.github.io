@@ -393,8 +393,8 @@ body {
 @media screen and (max-width: 899px) {
   .pj-image .image {
     width: 150%;
-    -o-object-position: -7rem 100%;
-       object-position: -7rem 100%;
+    -o-object-position: -7.5rem 100%;
+       object-position: -7.5rem 100%;
   }
   .item-wrapper .pj-sideinfo .info-card-title .card-title,
   .item-wrapper .pj-sideinfo .info-card-title .card-txt {
@@ -480,8 +480,8 @@ body {
 @media screen and (max-width: 390px) {
   .pj-image .image {
     width: 280%;
-    -o-object-position: -2rem 100%;
-       object-position: -2rem 100%;
+    -o-object-position: -2.5rem 100%;
+       object-position: -2.5rem 100%;
   }
 }
 @media screen and (max-width: 358px) {

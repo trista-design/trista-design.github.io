@@ -5,8 +5,18 @@ let prevScrollpos = window.scrollY;
 
 window.onscroll = function () {
   scrollHide();
+  scrollFixTop();
   progressBarScroll();
 };
+
+function scrollFixTop() {
+  if (prevScrollpos <= 144) {
+    navsecond.classList.remove("slideUp");
+    pjBackground.classList.remove("slideUp");
+    navsecond.classList.remove("slideDown");
+    pjBackground.classList.remove("slideDown");
+  }
+}
 
 function scrollHide() {
   let currentScrollPos = window.scrollY;

@@ -1,5 +1,5 @@
 .footer-area {
-  margin: 80px auto 24px auto;
+  margin: 80px auto 42px auto;
   padding: 80px 0 0 0;
   width: 1248px;
   height: -moz-fit-content;
@@ -280,7 +280,7 @@
 @media screen and (max-width: 991px) {
   .footer-area {
     width: auto;
-    margin: 60px 36px 24px 24px;
+    margin: 60px 36px 32px 24px;
     padding: 60px 0 0 0;
   }
   .footer-area .footer-content {
@@ -400,7 +400,7 @@
 }
 @media screen and (max-width: 490px) {
   .footer-area {
-    margin: 42px 12px 24px 12px;
+    margin: 42px 12px 32px 12px;
     padding: 42px 0 0 0;
   }
 }
