@@ -940,7 +940,6 @@ main {
     .mockup {
       margin-top: 60px;
       overflow: hidden;
-      border: 1px solid red;
       .page {
         flex-direction: column;
         width: auto;
@@ -963,7 +962,6 @@ main {
       .page-mockup-video {
         margin: 32px auto 0 auto;
         width: 774px;
-        border: 1px solid green;
       }
       .odd-page {
         .page-mockup-video {

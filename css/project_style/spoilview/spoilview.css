@@ -846,7 +846,6 @@ main {
   .hero-area .mockup {
     margin-top: 60px;
     overflow: hidden;
-    border: 1px solid red;
   }
   .hero-area .mockup .page {
     flex-direction: column;
@@ -870,7 +869,6 @@ main {
   .hero-area .mockup .page-mockup-video {
     margin: 32px auto 0 auto;
     width: 774px;
-    border: 1px solid green;
   }
   .hero-area .mockup .odd-page .page-mockup-video {
     order: 2;
