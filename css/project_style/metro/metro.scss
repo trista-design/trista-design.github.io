@@ -748,7 +748,7 @@ main {
         video {
           height: 100%;
           width: 100%;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
     }
@@ -2516,15 +2516,16 @@ main {
           flex-direction: column;
           width: auto;
           .avatars {
-            min-width: 50%;
+            min-width: 40%;
             min-height: 200px;
             border-right: none;
             margin: 0 auto;
+            overflow: hidden;
             img {
               margin: 0;
               width: 100%;
-              height: 100%;
-              object-position: 20% 50%;
+              height: 200px;
+              object-position: 50% 10%;
             }
           }
           .personas-content {
@@ -2766,11 +2767,12 @@ main {
       .page-before {
         flex-direction: column;
         .page-before-img {
-          margin: 0 auto;
+          margin: 56px auto 0 auto;
           display: flex;
           flex-direction: column;
           align-items: center;
           height: 450px;
+          position: relative;
           &::before {
             content: "Before";
             font-size: 16px;
@@ -2780,7 +2782,8 @@ main {
             width: fit-content;
             background-color: var(--black-400);
             color: var(--white);
-            margin-bottom: 24px;
+            position: absolute;
+            top: -56px;
           }
         }
         .page-info {
@@ -2798,11 +2801,12 @@ main {
         flex-direction: column;
         .page-after-img {
           order: 1;
-          margin: 0 auto;
+          margin: 56px auto 0 auto;
           display: flex;
           flex-direction: column;
           align-items: center;
           height: 500px;
+          position: relative;
           &::before {
             content: "After";
             font-size: 16px;
@@ -2812,7 +2816,8 @@ main {
             width: fit-content;
             background-color: var(--metro-green);
             color: var(--white);
-            margin-bottom: 24px;
+            position: absolute;
+            top: -56px;
           }
         }
         .page-wrapper {
@@ -2835,6 +2840,15 @@ main {
     .tool-page {
       .page-before {
         margin-top: 16px;
+      }
+      .page-after {
+        .after-wrapper {
+          .page-after-img {
+            img {
+              object-fit: contain;
+            }
+          }
+        }
       }
     }
     .page-card {
@@ -2985,6 +2999,15 @@ main {
     .pj-info {
       .pj-para {
         margin-left: 16px;
+      }
+    }
+  }
+  .hero-area {
+    .tool-page {
+      .page-after {
+        .page-mockup-video {
+          height: 500px;
+        }
       }
     }
   }

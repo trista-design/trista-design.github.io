@@ -725,8 +725,8 @@ main {
 .hero-area .tool-page .page-after .page-mockup-video video {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .hero-area .travelTicket-page,
 .hero-area .trainMember-page {
@@ -2129,17 +2129,18 @@ main {
     width: auto;
   }
   .design-area .empathy-phase .personas .personas-card .avatars {
-    min-width: 50%;
+    min-width: 40%;
     min-height: 200px;
     border-right: none;
     margin: 0 auto;
+    overflow: hidden;
   }
   .design-area .empathy-phase .personas .personas-card .avatars img {
     margin: 0;
     width: 100%;
-    height: 100%;
-    -o-object-position: 20% 50%;
-       object-position: 20% 50%;
+    height: 200px;
+    -o-object-position: 50% 10%;
+       object-position: 50% 10%;
   }
   .design-area .empathy-phase .personas .personas-card .personas-content {
     min-height: -moz-fit-content;
@@ -2315,11 +2316,12 @@ main {
     flex-direction: column;
   }
   .hero-area .main-page .page-before .page-before-img {
-    margin: 0 auto;
+    margin: 56px auto 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 450px;
+    position: relative;
   }
   .hero-area .main-page .page-before .page-before-img::before {
     content: "Before";
@@ -2331,7 +2333,8 @@ main {
     width: fit-content;
     background-color: var(--black-400);
     color: var(--white);
-    margin-bottom: 24px;
+    position: absolute;
+    top: -56px;
   }
   .hero-area .main-page .page-before .page-info {
     width: auto;
@@ -2348,11 +2351,12 @@ main {
   }
   .hero-area .main-page .page-after .page-after-img {
     order: 1;
-    margin: 0 auto;
+    margin: 56px auto 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 500px;
+    position: relative;
   }
   .hero-area .main-page .page-after .page-after-img::before {
     content: "After";
@@ -2364,7 +2368,8 @@ main {
     width: fit-content;
     background-color: var(--metro-green);
     color: var(--white);
-    margin-bottom: 24px;
+    position: absolute;
+    top: -56px;
   }
   .hero-area .main-page .page-after .page-wrapper .page-info {
     width: auto;
@@ -2381,6 +2386,10 @@ main {
   }
   .hero-area .tool-page .page-before {
     margin-top: 16px;
+  }
+  .hero-area .tool-page .page-after .after-wrapper .page-after-img img {
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .hero-area .page-card {
     flex-direction: column;
@@ -2496,6 +2505,9 @@ main {
 @media screen and (max-width: 390px) {
   .intro-area .pj-info .pj-para {
     margin-left: 16px;
+  }
+  .hero-area .tool-page .page-after .page-mockup-video {
+    height: 500px;
   }
 }
 @media screen and (max-width: 356px) {
