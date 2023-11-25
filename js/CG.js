@@ -79,3 +79,11 @@ function reshow() {
     box.classList.remove("active");
   });
 }
+
+// 修正 100vh 在手機上
+const appHeight = () => {
+  const doc = document.documentElement;
+  doc.style.setProperty("--app-height", `${window.innerHeight}px`);
+};
+window.addEventListener("resize", appHeight);
+appHeight();

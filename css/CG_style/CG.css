@@ -10,6 +10,13 @@
   --black-700: #1d1d1d;
   --yellow-light: #fff200;
   --blue-dark: #303481;
+  --app-height: 100%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  height: var(--app-height);
 }
 
 h1,
