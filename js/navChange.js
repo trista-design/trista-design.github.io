@@ -2,7 +2,6 @@
 const menu = document.querySelector(".nav-menu");
 const background = document.querySelector(".nav-background");
 const pageBTN = document.querySelectorAll(".page-btn");
-console.log(pageBTN);
 
 window.onscroll = function () {
   scrollChange();

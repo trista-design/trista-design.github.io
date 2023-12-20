@@ -80,10 +80,38 @@ function reshow() {
   });
 }
 
-// 修正 100vh 在手機上
-const appHeight = () => {
-  const doc = document.documentElement;
-  doc.style.setProperty("--app-height", `${window.innerHeight}px`);
+// bodyWidth - scrollbarWidth
+const getScrollbarWidth = () => {
+  const container = document.createElement("div");
+  document.body.appendChild(container);
+  container.style.overflow = "scroll";
+
+  const inner = document.createElement("div");
+  container.appendChild(inner);
+
+  const width = container.offsetWidth - inner.offsetWidth;
+  document.body.removeChild(container);
+
+  return width;
 };
-window.addEventListener("resize", appHeight);
-appHeight();
+
+const scrollbarWidth = getScrollbarWidth();
+document.documentElement.style.setProperty(
+  "--scrollbar",
+  `${scrollbarWidth}px`
+);
+
+console.log("bodyWidth = " + (document.body.clientWidth - scrollbarWidth));
+
+// restart footer animate
+function restartAnimation() {
+  const animate = document.querySelectorAll(".animate");
+
+  animate.forEach((animate) => {
+    animate.classList.remove("animate");
+    void animate.offsetWidth;
+    animate.classList.add("animate");
+  });
+}
+
+window.addEventListener("resize", restartAnimation);

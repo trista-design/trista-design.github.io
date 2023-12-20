@@ -8,11 +8,14 @@
 body {
   overflow-x: hidden;
   background-color: var(--background-gray);
+  padding-right: 0 !important;
+  overflow: auto !important;
 }
 
 //
 .pj-image {
-  width: 1440px;
+  width: 1280px;
+  height: fit-content;
   margin: 0 auto 80px auto;
   overflow: hidden;
   .image {
@@ -44,10 +47,29 @@ body {
     transition: all 0.3s ease-in-out;
     overflow: hidden;
     cursor: pointer;
+    position: relative;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    .page-modal {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: transparent;
+      .modal-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        z-index: 2;
+      }
     }
   }
   .pj-sideinfo {
@@ -132,22 +154,40 @@ body {
   }
 }
 .modal {
+  padding: 0 !important;
   .modal-dialog {
     --bs-modal-bg: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    overflow: hidden;
     .modal-header {
       border-bottom: none;
       padding-bottom: 0;
+      .btn-close {
+        font-size: 20px;
+      }
     }
     .modal-body {
-      .img {
+      .modal-img {
         display: flex;
         justify-content: center;
-        width: 100%;
-        height: 100%;
-        img {
-          height: 100%;
+        align-items: center;
+        width: fit-content;
+        margin: 0 auto;
+        .img {
+          height: 95%;
+          width: 95%;
+          object-position: 50% 50%;
           object-fit: contain;
         }
+      }
+      .mask-close {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
       }
     }
   }
@@ -329,17 +369,6 @@ body {
 }
 
 // RWD
-// large screen
-@media screen and (max-width: 1760px) {
-  .pj-image {
-    width: 1360px;
-  }
-}
-@media screen and (max-width: 1600px) {
-  .pj-image {
-    width: 1280px;
-  }
-}
 @media screen and (max-width: 1440px) {
   .item {
     width: 1200px;
@@ -347,7 +376,7 @@ body {
 }
 @media screen and (max-width: 1399px) {
   .pj-image {
-    width: 1156px;
+    width: 1196px;
   }
   .item {
     width: 1116px;
@@ -355,7 +384,7 @@ body {
 }
 @media screen and (max-width: 1199px) {
   .pj-image {
-    width: 976px;
+    width: 1016px;
   }
   .item {
     width: 936px;
@@ -369,22 +398,24 @@ body {
 }
 @media screen and (max-width: 1030px) {
   .pj-image {
+    width: 90%;
+  }
+  .pj-image {
     width: 956px;
   }
 }
-
-// large screen
+//
 @media screen and (max-width: 991px) {
   .main-area {
-    padding: 0 36px 0 24px;
+    padding: 0 24px;
   }
   .pj-image {
-    width: 100%;
+    width: auto;
     height: 340px;
-    padding: 0 auto;
+    display: flex;
+    justify-content: center;
     .image {
       width: 120%;
-      object-position: -6em 100%;
     }
   }
   .item {
@@ -410,8 +441,7 @@ body {
 @media screen and (max-width: 899px) {
   .pj-image {
     .image {
-      width: 150%;
-      object-position: -7.5rem 100%;
+      width: 140%;
     }
   }
   .item-wrapper {
@@ -455,16 +485,13 @@ body {
     }
   }
 }
-
-// Medium screen
 @media screen and (max-width: 768px) {
   .project-info {
     margin: -12px auto 48px auto;
   }
   .pj-image {
     .image {
-      width: 180%;
-      object-position: -12rem 100%;
+      width: 160%;
     }
   }
   .item-wrapper {
@@ -474,35 +501,45 @@ body {
 @media screen and (max-width: 699px) {
   .pj-image {
     .image {
-      width: 200%;
-      object-position: -2rem 100%;
+      width: 180%;
     }
   }
   .item-wrapper {
     width: 48%;
   }
 }
-
-// small screen
 @media screen and (max-width: 576px) {
   .pj-image {
     .image {
-      width: 220%;
-      object-position: -4rem 100%;
+      width: 240%;
     }
   }
   .item-wrapper {
     width: auto;
   }
 }
+//
 @media screen and (max-width: 490px) {
   .main-area {
     padding: 0 12px;
   }
-  .pj-image {
-    .image {
-      width: 250%;
-      object-position: 0 100%;
+  .modal {
+    .modal-dialog {
+      .modal-header {
+        padding: 12px;
+        .btn-close {
+          font-size: 16px;
+        }
+      }
+      .modal-body {
+        padding: 12px;
+        .modal-img {
+          .img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }
@@ -510,19 +547,23 @@ body {
   .item-wrapper {
     margin-bottom: 60px;
   }
+  .end-area {
+    .end-txt {
+      font-size: 12px;
+    }
+  }
 }
 @media screen and (max-width: 390px) {
   .pj-image {
     .image {
-      width: 280%;
-      object-position: -2.5rem 100%;
+      width: 300%;
     }
   }
 }
 @media screen and (max-width: 358px) {
   .pj-image {
     .image {
-      object-position: -4rem 100%;
+      width: 360%;
     }
   }
 }

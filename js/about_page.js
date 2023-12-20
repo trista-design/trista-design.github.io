@@ -53,3 +53,21 @@ slider.addEventListener("wheel", (e) => {
 function BackToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+// rightspace
+function updateRightSpace() {
+  const exWrapper = document.querySelector(".ex-wrapper");
+  const experience = document.querySelector(".experience");
+
+  const rightSpace = (experience.offsetWidth - exWrapper.offsetWidth) / 2;
+  document.documentElement.style.setProperty(
+    "--rightspace",
+    `-${rightSpace}px`
+  );
+
+  // console.log("右邊寬度為：", rightSpace);
+}
+
+window.addEventListener("resize", updateRightSpace);
+
+updateRightSpace();

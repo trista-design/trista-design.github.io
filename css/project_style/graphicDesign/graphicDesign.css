@@ -9,10 +9,14 @@
 body {
   overflow-x: hidden;
   background-color: var(--background-gray);
+  padding-right: 0 !important;
+  overflow: auto !important;
 }
 
 .pj-image {
-  width: 1440px;
+  width: 1280px;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 0 auto 80px auto;
   overflow: hidden;
 }
@@ -49,12 +53,31 @@ body {
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   cursor: pointer;
+  position: relative;
 }
 .item-wrapper .item-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.item-wrapper .item-img .page-modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+}
+.item-wrapper .item-img .page-modal .modal-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  z-index: 2;
 }
 .item-wrapper .pj-sideinfo {
   border: 1px solid var(--black-400);
@@ -137,23 +160,45 @@ body {
   transform: rotate(180deg);
 }
 
+.modal {
+  padding: 0 !important;
+}
 .modal .modal-dialog {
   --bs-modal-bg: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  overflow: hidden;
 }
 .modal .modal-dialog .modal-header {
   border-bottom: none;
   padding-bottom: 0;
 }
-.modal .modal-dialog .modal-body .img {
+.modal .modal-dialog .modal-header .btn-close {
+  font-size: 20px;
+}
+.modal .modal-dialog .modal-body .modal-img {
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
-.modal .modal-dialog .modal-body .img img {
-  height: 100%;
+.modal .modal-dialog .modal-body .modal-img .img {
+  height: 95%;
+  width: 95%;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.modal .modal-dialog .modal-body .mask-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
 }
 
 .progress-bar {
@@ -315,16 +360,6 @@ body {
     opacity: 0;
   }
 }
-@media screen and (max-width: 1760px) {
-  .pj-image {
-    width: 1360px;
-  }
-}
-@media screen and (max-width: 1600px) {
-  .pj-image {
-    width: 1280px;
-  }
-}
 @media screen and (max-width: 1440px) {
   .item {
     width: 1200px;
@@ -332,7 +367,7 @@ body {
 }
 @media screen and (max-width: 1399px) {
   .pj-image {
-    width: 1156px;
+    width: 1196px;
   }
   .item {
     width: 1116px;
@@ -340,7 +375,7 @@ body {
 }
 @media screen and (max-width: 1199px) {
   .pj-image {
-    width: 976px;
+    width: 1016px;
   }
   .item {
     width: 936px;
@@ -354,22 +389,24 @@ body {
 }
 @media screen and (max-width: 1030px) {
   .pj-image {
+    width: 90%;
+  }
+  .pj-image {
     width: 956px;
   }
 }
 @media screen and (max-width: 991px) {
   .main-area {
-    padding: 0 36px 0 24px;
+    padding: 0 24px;
   }
   .pj-image {
-    width: 100%;
+    width: auto;
     height: 340px;
-    padding: 0 auto;
+    display: flex;
+    justify-content: center;
   }
   .pj-image .image {
     width: 120%;
-    -o-object-position: -6em 100%;
-       object-position: -6em 100%;
   }
   .item {
     width: auto;
@@ -391,9 +428,7 @@ body {
 }
 @media screen and (max-width: 899px) {
   .pj-image .image {
-    width: 150%;
-    -o-object-position: -7.5rem 100%;
-       object-position: -7.5rem 100%;
+    width: 140%;
   }
   .item-wrapper .pj-sideinfo .info-card-title .card-title,
   .item-wrapper .pj-sideinfo .info-card-title .card-txt {
@@ -433,9 +468,7 @@ body {
     margin: -12px auto 48px auto;
   }
   .pj-image .image {
-    width: 180%;
-    -o-object-position: -12rem 100%;
-       object-position: -12rem 100%;
+    width: 160%;
   }
   .item-wrapper {
     margin-bottom: 80px;
@@ -443,9 +476,7 @@ body {
 }
 @media screen and (max-width: 699px) {
   .pj-image .image {
-    width: 200%;
-    -o-object-position: -2rem 100%;
-       object-position: -2rem 100%;
+    width: 180%;
   }
   .item-wrapper {
     width: 48%;
@@ -453,9 +484,7 @@ body {
 }
 @media screen and (max-width: 576px) {
   .pj-image .image {
-    width: 220%;
-    -o-object-position: -4rem 100%;
-       object-position: -4rem 100%;
+    width: 240%;
   }
   .item-wrapper {
     width: auto;
@@ -465,27 +494,35 @@ body {
   .main-area {
     padding: 0 12px;
   }
-  .pj-image .image {
-    width: 250%;
-    -o-object-position: 0 100%;
-       object-position: 0 100%;
+  .modal .modal-dialog .modal-header {
+    padding: 12px;
+  }
+  .modal .modal-dialog .modal-header .btn-close {
+    font-size: 16px;
+  }
+  .modal .modal-dialog .modal-body {
+    padding: 12px;
+  }
+  .modal .modal-dialog .modal-body .modal-img .img {
+    height: 100%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 470px) {
   .item-wrapper {
     margin-bottom: 60px;
   }
+  .end-area .end-txt {
+    font-size: 12px;
+  }
 }
 @media screen and (max-width: 390px) {
   .pj-image .image {
-    width: 280%;
-    -o-object-position: -2.5rem 100%;
-       object-position: -2.5rem 100%;
+    width: 300%;
   }
 }
 @media screen and (max-width: 358px) {
   .pj-image .image {
-    -o-object-position: -4rem 100%;
-       object-position: -4rem 100%;
+    width: 360%;
   }
 }/*# sourceMappingURL=graphicDesign.css.map */

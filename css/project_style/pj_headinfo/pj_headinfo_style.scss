@@ -37,6 +37,7 @@
       left: 0;
       .headline-EN {
         font-family: "Asap", sans-serif;
+        width: fit-content;
       }
       .headline-CH {
         font-family: "Noto Sans TC", sans-serif;
@@ -135,7 +136,7 @@
   align-items: center;
   position: fixed;
   bottom: 24px;
-  right: 36px;
+  right: 24px;
   background-color: rgba(233, 233, 233, 0.5);
   box-shadow: 0 5px 10px rgba(136, 136, 136, 0.5);
   backdrop-filter: blur(5px);
@@ -231,7 +232,7 @@
         margin-left: 24px;
       }
       &:last-child {
-        margin-right: 36px;
+        margin-right: 24px;
       }
     }
   }

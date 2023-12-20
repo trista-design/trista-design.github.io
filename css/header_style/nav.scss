@@ -12,8 +12,9 @@ header {
 // nav導覽列
 .nav-area {
   position: fixed;
-  left: 0;
-  right: 0;
+  left: -8px;
+  right: 8px;
+  padding: 0;
   z-index: 10;
   font-family: "Asap", sans-serif;
   animation: opacity0 2s, fadeInDown 1s 2s;
@@ -376,6 +377,8 @@ header {
 @media screen and (max-width: 991px) {
   .nav-area {
     padding: 0 24px 0 24px;
+    left: 0;
+    right: 0;
   }
   .nav-menu {
     width: auto;
@@ -383,7 +386,7 @@ header {
   .nav-background {
     left: 0px;
     right: 0px;
-    margin: 24px 20px 0 24px;
+    margin: 24px 24px 0 24px;
   }
   .nav-second {
     left: 36px;
@@ -391,7 +394,7 @@ header {
   }
   .nav-project-background {
     left: 24px;
-    right: 20px;
+    right: 24px;
   }
 }
 @media screen and (max-width: 830px) {
@@ -518,6 +521,30 @@ header {
 }
 
 @media screen and (max-width: 576px) {
+  .navitem-contact {
+    &:hover .call-current {
+      opacity: 1;
+      visibility: visible;
+    }
+    &:hover .call-hover {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+    &:active .call-current {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:active .call-hover {
+      opacity: 1;
+      visibility: visible;
+    }
+    &:active {
+      background-color: var(--white);
+    }
+  }
   .nav-second {
     .nav-second-right {
       .navitem-contact {

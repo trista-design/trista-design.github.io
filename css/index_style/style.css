@@ -6,8 +6,6 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   background-color: var(--background-gray);
   overflow-x: hidden;
 }
@@ -232,27 +230,45 @@ body {
   border-radius: 10px;
   width: 48.5%;
   aspect-ratio: 3/2;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-bottom: 42px;
   padding: 0;
+  border: 1px solid var(--black-200);
   overflow: hidden;
   position: relative;
   display: none;
   cursor: pointer;
+  transition: all 0.25s linear;
 }
 .work-section .pj-card-area .pj-card .pj-img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s linear;
+}
+.work-section .pj-card-area .pj-card .pj-img img {
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  aspect-ratio: 3/2;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
-  height: 100%;
-  transition: 0.3s ease;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  transition: all 0.25s linear;
 }
 .work-section .pj-card-area .pj-card .pj-link {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
-  z-index: 3;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
 }
 .work-section .pj-card-area .pj-card .pj-mask {
   position: absolute;
@@ -261,7 +277,8 @@ body {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  border-radius: 10px;
+  z-index: 2;
   display: flex;
   opacity: 0;
   justify-content: center;
@@ -284,7 +301,7 @@ body {
   bottom: 12px;
   background-color: var(--white);
   border-radius: 10px;
-  z-index: 2;
+  z-index: 3;
   opacity: 0;
   transition: 0.5s ease-in-out;
 }
@@ -338,10 +355,14 @@ body {
   background-color: var(--background-gray);
   border-radius: 5px;
 }
-.work-section .pj-card-area .pj-card:hover .pj-img {
-  width: 110%;
-  height: 110%;
-  transform: translate(-5%, -5%);
+.work-section .pj-card-area .pj-card:hover {
+  box-shadow: 2px 2px 10px rgba(72, 72, 72, 0.5);
+  transition: 0.25s linear;
+}
+.work-section .pj-card-area .pj-card:hover .pj-img img {
+  min-width: 110%;
+  min-height: 110%;
+  aspect-ratio: 3/2;
 }
 .work-section .pj-card-area .pj-card:hover .pj-mask {
   opacity: 1;
@@ -349,10 +370,6 @@ body {
 .work-section .pj-card-area .pj-card:hover .pj-txt {
   left: 12px;
   opacity: 1;
-}
-.work-section .pj-card-area .pj-card:hover {
-  box-shadow: 2px 2px 10px rgba(72, 72, 72, 0.5);
-  transition: 0.3s ease;
 }
 .work-section .pj-card-area #pj-pet .card-body .txt-CH {
   padding-left: 4px;
@@ -638,7 +655,7 @@ body {
 }
 @media screen and (max-width: 991px) {
   .main-area {
-    padding: 0 36px 0 24px;
+    padding: 0 24px;
   }
   .main-area .hero-section {
     align-items: center;
@@ -668,20 +685,23 @@ body {
   }
   .work-section .pj-card-area .pj-card .pj-img {
     height: 260px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 50% 50%;
-       object-position: 50% 50%;
+  }
+  .work-section .pj-card-area .pj-card .pj-img img {
+    min-height: 260px;
+    -o-object-position: top 50% left 50%;
+       object-position: top 50% left 50%;
   }
   .work-section .pj-card-area .pj-card .pj-mask {
     height: 260px;
+    border-radius: 10px 10px 0 0;
   }
   .work-section .pj-card-area .pj-card .pj-txt {
+    position: relative;
     left: 0;
     bottom: 0;
     opacity: 1;
     width: 100%;
-    border-radius: 0;
+    border-radius: 0 0 10px 10px;
   }
   .work-section .pj-card-area .pj-card .pj-txt ul .txt-third {
     display: none;
@@ -698,13 +718,9 @@ body {
   .work-section .pj-card-area .pj-card .pj-txt ul .txt-second .txt-info {
     display: block;
   }
-  .work-section .pj-card-area .pj-card:hover .pj-img {
-    height: 308px;
-    width: 110%;
-    -o-object-position: 50% 50%;
-       object-position: 50% 50%;
-    -o-object-fit: cover;
-       object-fit: cover;
+  .work-section .pj-card-area .pj-card:hover .pj-img img {
+    min-width: 110%;
+    min-height: 110%;
   }
   .work-section .pj-card-area .pj-card:hover .pj-mask .view {
     opacity: 1;
@@ -712,6 +728,18 @@ body {
   }
   .work-section .pj-card-area .pj-card:hover .pj-txt {
     left: 0;
+    border-radius: 0 0 10px 10px;
+  }
+  .work-section .pj-card-area .pj-card:active .pj-mask {
+    opacity: 1;
+  }
+  .work-section .pj-card-area .pj-card:active .pj-mask .view {
+    opacity: 1;
+    padding: 0;
+  }
+  .work-section .pj-card-area .pj-card:active .pj-img img {
+    min-width: 110%;
+    min-height: 110%;
   }
 }
 @media screen and (max-width: 899px) {
@@ -786,24 +814,25 @@ body {
   .main-area .work-section .pj-card-area .pj-card .pj-img {
     height: 280px;
   }
+  .main-area .work-section .pj-card-area .pj-card .pj-img img {
+    min-height: 280px;
+  }
   .main-area .work-section .pj-card-area .pj-card .pj-mask {
     height: 280px;
   }
-  .main-area .work-section .pj-card-area .pj-card:hover .pj-img {
-    width: 110%;
-    height: 320px;
+  .main-area .work-section .pj-card-area .pj-card:hover .pj-img img,
+  .main-area .work-section .pj-card-area .pj-card :active .pj-img img {
+    min-height: 110%;
   }
-  .main-area .work-section .pj-card-area #pj-caculator .pj-img {
-    -o-object-position: 0 -56px;
-       object-position: 0 -56px;
+  .main-area .work-section .pj-card-area #pj-caculator .pj-img img,
+  .main-area .work-section .pj-card-area #pj-spoilview .pj-img img {
+    -o-object-position: top 30% left 50%;
+       object-position: top 30% left 50%;
   }
-  .main-area .work-section .pj-card-area #pj-snakegame .pj-img {
-    -o-object-position: 0 -44px;
-       object-position: 0 -44px;
-  }
-  .main-area .work-section .pj-card-area #pj-metro:hover .pj-img {
-    -o-object-position: 50% 60%;
-       object-position: 50% 60%;
+  .main-area .work-section .pj-card-area #pj-snakegame .pj-img img,
+  .main-area .work-section .pj-card-area #pj-pet .pj-img img {
+    -o-object-position: top 25% left 50%;
+       object-position: top 25% left 50%;
   }
 }
 @media screen and (max-width: 716px) {
@@ -887,12 +916,10 @@ body {
     height: 400px;
   }
   .main-area .work-section .pj-card-area .pj-card .pj-img {
-    width: 100%;
     height: 260px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 50% 50%;
-       object-position: 50% 50%;
+  }
+  .main-area .work-section .pj-card-area .pj-card .pj-img img {
+    min-height: 260px;
   }
   .main-area .work-section .pj-card-area .pj-card .pj-mask {
     height: 260px;
@@ -900,19 +927,10 @@ body {
   .main-area .work-section .pj-card-area .pj-card .pj-mask .view {
     font-size: 22px;
   }
-  .main-area .work-section .pj-card-area .pj-card:hover .pj-img {
-    width: 110%;
-    height: 300px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .main-area .work-section .pj-card-area #pj-caculator .pj-img {
-    -o-object-position: 50% -12px;
-       object-position: 50% -12px;
-  }
-  .main-area .work-section .pj-card-area #pj-snakegame .pj-img {
-    -o-object-position: 50% -12px;
-       object-position: 50% -12px;
+  .main-area .work-section .pj-card-area #pj-pet .pj-img img,
+  .main-area .work-section .pj-card-area #pj-spoilview .pj-img img {
+    -o-object-position: top 50% left 50%;
+       object-position: top 50% left 50%;
   }
 }
 @media screen and (max-width: 490px) {
@@ -941,32 +959,19 @@ body {
   .main-area .work-section .pj-card-area .pj-card .pj-img {
     height: 220px;
   }
+  .main-area .work-section .pj-card-area .pj-card .pj-img img {
+    min-height: 220px;
+  }
   .main-area .work-section .pj-card-area .pj-card .pj-mask {
     height: 220px;
   }
-  .main-area .work-section .pj-card-area .pj-card:hover .pj-img {
-    height: 230px;
-    width: 100%;
-    transform: translate(0, 0);
-    -o-object-position: 50% 55%;
-       object-position: 50% 55%;
+  .main-area .work-section .pj-card-area #pj-caculator .pj-img img {
+    -o-object-position: top 20% left 50%;
+       object-position: top 20% left 50%;
   }
-  .main-area .work-section .pj-card-area #pj-caculator:hover .pj-img {
-    height: 230px;
-    -o-object-position: 50% 15%;
-       object-position: 50% 15%;
-  }
-  .main-area .work-section .pj-card-area #pj-grapic .pj-img {
-    -o-object-position: 50% 60%;
-       object-position: 50% 60%;
-  }
-  .main-area .work-section .pj-card-area #pj-grapic:hover .pj-img {
-    -o-object-position: 50% 65%;
-       object-position: 50% 65%;
-  }
-  .main-area .work-section .pj-card-area #pj-snakegame .pj-img {
-    -o-object-position: 50% 10%;
-       object-position: 50% 10%;
+  .main-area .work-section .pj-card-area #pj-snakegame .pj-img img {
+    -o-object-position: top 10% left 50%;
+       object-position: top 10% left 50%;
   }
 }
 @media screen and (max-width: 458px) {
@@ -1001,6 +1006,9 @@ body {
   .main-area .work-section .pj-card-area .pj-card .pj-img {
     height: 200px;
   }
+  .main-area .work-section .pj-card-area .pj-card .pj-img img {
+    min-height: 200px;
+  }
   .main-area .work-section .pj-card-area .pj-card .pj-mask {
     height: 200px;
   }
@@ -1009,9 +1017,6 @@ body {
   }
   .main-area .work-section .pj-card-area .pj-card .pj-txt ul li {
     padding-bottom: 8px;
-  }
-  .main-area .work-section .pj-card-area .pj-card:hover .pj-img {
-    height: 210px;
   }
 }
 @media screen and (max-width: 390px) {
@@ -1047,19 +1052,6 @@ body {
   }
   .main-area .work-section .pj-card-area .pj-card .pj-mask .view {
     font-size: 20px;
-  }
-  .main-area .work-section .pj-card-area .pj-card:hover .pj-img {
-    -o-object-position: 50% 60%;
-       object-position: 50% 60%;
-  }
-  .main-area .work-section .pj-card-area #pj-caculator:hover .pj-img {
-    height: 210px;
-    -o-object-position: 50% 30%;
-       object-position: 50% 30%;
-  }
-  .main-area .work-section .pj-card-area #pj-grapic:hover .pj-img {
-    -o-object-position: 50% 80%;
-       object-position: 50% 80%;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1116,15 +1108,6 @@ body {
   .main-area .work-section .headline .button-groups .btn::after {
     left: 56px;
   }
-  .main-area .work-section .pj-card-area .pj-card:hover .pj-img {
-    -o-object-position: 50% 60%;
-       object-position: 50% 60%;
-  }
-  .main-area .work-section .pj-card-area #pj-caculator:hover .pj-img {
-    height: 210px;
-    -o-object-position: 50% 90%;
-       object-position: 50% 90%;
-  }
 }
 @media screen and (max-width: 340px) {
   .main-area .work-section .pj-card-area .pj-card {
@@ -1147,9 +1130,5 @@ body {
   }
   .main-area .work-section .pj-card-area .pj-card .pj-txt .tag-group .tag-item p {
     font-size: 12px;
-  }
-  .main-area .work-section .pj-card-area #pj-spoilview:hover .pj-img {
-    -o-object-position: 50% -4px;
-       object-position: 50% -4px;
   }
 }/*# sourceMappingURL=style.css.map */
