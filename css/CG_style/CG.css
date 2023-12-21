@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Asap:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600&family=Source+Code+Pro:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600&family=Source+Code+Pro:wght@300;400;500;600&display=swap");
 :root {
   --white: #fff;
   --background-gray: #e8e8e8;
@@ -10,6 +10,14 @@
   --black-700: #1d1d1d;
   --yellow-light: #fff200;
   --blue-dark: #303481;
+  --app-height: 100%;
+  --scrollbar: 0px;
+}
+
+body {
+  width: 100vw;
+  width: calc(100vw - var(--scrollbar));
+  height: 100%;
 }
 
 h1,

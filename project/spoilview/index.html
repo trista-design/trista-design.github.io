@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spoilview : 串流影劇評論網站 | 作品集 | TristaHung</title>
     <meta name="autor" content="Trista" />
+    <meta name="theme-color" content="#e8e8e8" />
     <!-- fav.io -->
     <link
       rel="apple-touch-icon"
@@ -85,6 +86,7 @@
     <!-- nav-CSS -->
     <link rel="stylesheet" href="/css/header_style/nav.css" />
     <!-- CSS -->
+    <link rel="stylesheet" href="/css/project_style/1_unistyle/unistyle.css" />
     <link rel="stylesheet" href="/css/project_style/spoilview/spoilview.css" />
     <!-- nextWork-->
     <link
@@ -134,7 +136,7 @@
         aria-valuenow="25"
         aria-valuemin="0"
         aria-valuemax="25"
-        style="height: 3px; border-radius: 0%"
+        style="height: 4px; border-radius: 0%; background-color: transparent"
       >
         <div
           class="progress-bar"
@@ -272,7 +274,7 @@
         </div>
       </section>
       <section class="hero-area container-lg">
-        <div class="wireframe">
+        <div class="wireframe-area">
           <h2 class="pj-title">{ Wireframe }</h2>
           <p class="pj-body">
             確認好目標後，開始繪製初步草稿，幫助我快速進入具體可行的設計方案。
@@ -281,358 +283,361 @@
             <div class="full-img"></div>
           </div>
         </div>
-        <div class="mockup">
-          <h2 class="pj-title">{ Mock Up }</h2>
-          <p class="pj-body">
-            接下來，我們開始製作高保真原型，展示更多細節和概念，為後續使用性測試做好準備。
-          </p>
-          <div class="main-page odd-page page d-flex">
-            <div class="page-mockup-video">
-              <video autoplay muted loop>
-                <source
-                  src="/img/project/UIUX/Spoilview/mainpage-video.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-            <div class="page-content">
-              <div
-                class="page-mockup-img"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#mockup1-modal"
-              >
-                <img
-                  src="/img/project/UIUX/Spoilview/mainpage-img.jpg"
-                  alt="mainpage-img"
-                />
-                <div
-                  class="modal fade"
-                  id="mockup1-modal"
-                  tabindex="-1"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button
-                          type="button"
-                          class="btn-close btn-close-white"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="modal-img h-100">
-                          <img
-                            class="img"
-                            src="/img/project/UIUX/Spoilview/mainpage-img.jpg"
-                            alt="mainpage-img"
-                          />
+        <div class="design-phase">
+          <div class="mockup">
+            <h2 class="pj-title">{ Mock Up }</h2>
+            <p class="pj-body">
+              接下來，我們開始製作高保真原型，展示更多細節和概念，為後續使用性測試做好準備。
+            </p>
+            <div class="main-page odd-page page d-flex">
+              <div class="page-mockup-video">
+                <video autoplay muted loop defaultMuted playsinline>
+                  <source
+                    src="/img/project/UIUX/Spoilview/mainpage-video.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="page-content">
+                <div class="page-mockup-img">
+                  <div class="img-modal">
+                    <!-- Button trigger modal -->
+                    <button
+                      class="modal-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#mockup1-modal"
+                    ></button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="mockup1-modal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close btn-close-white"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-img h-100">
+                              <img
+                                class="img"
+                                src="/img/project/UIUX/Spoilview/mainpage-img.jpg"
+                                alt="mainpage-img"
+                              />
+                            </div>
+                            <button
+                              class="mask-close"
+                              data-bs-dismiss="modal"
+                            ></button>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <img
+                    src="/img/project/UIUX/Spoilview/mainpage-img.jpg"
+                    alt="mainpage-img"
+                  />
                 </div>
-              </div>
-              <div class="page-info">
-                <div class="page-title">
-                  <div class="arrow4-icon">
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-left"></i>
+                <div class="page-info">
+                  <div class="page-title">
+                    <div class="arrow4-icon">
+                      <i class="fa-solid fa-chevron-left"></i>
+                      <i class="fa-solid fa-chevron-left"></i>
+                      <i class="fa-solid fa-chevron-left"></i>
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <h2 class="title">主頁面</h2>
                   </div>
-                  <h2 class="title">主頁面</h2>
-                </div>
-                <div class="page-body">
-                  統整四大影音平台的最新影片，提供即時的影評資訊，讓您輕鬆避開雷片，成為真正的追劇高手！
+                  <div class="page-body">
+                    統整四大影音平台的最新影片，提供即時的影評資訊，讓您輕鬆避開雷片，成為真正的追劇高手！
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="review-page even-page page d-flex">
-            <div class="page-mockup-video">
-              <video autoplay muted loop>
-                <source
-                  src="/img/project/UIUX/Spoilview/reviewpage-video.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-            <div class="page-content">
-              <div
-                class="page-mockup-img"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#mockup2-modal"
-              >
-                <img
-                  src="/img/project/UIUX/Spoilview/reviewpage-img.jpg"
-                  alt="review-img"
-                />
-                <div
-                  class="modal fade"
-                  id="mockup2-modal"
-                  tabindex="-1"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button
-                          type="button"
-                          class="btn-close btn-close-white"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="modal-img h-100">
-                          <img
-                            class="img"
-                            src="/img/project/UIUX/Spoilview/reviewpage-img.jpg"
-                            alt="review-img"
-                          />
+            <div class="review-page even-page page d-flex">
+              <div class="page-mockup-video">
+                <video autoplay muted loop defaultMuted playsinline>
+                  <source
+                    src="/img/project/UIUX/Spoilview/reviewpage-video.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="page-content">
+                <div class="page-mockup-img">
+                  <div class="img-modal">
+                    <!-- Button trigger modal -->
+                    <button
+                      class="modal-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#mockup2-modal"
+                    ></button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="mockup2-modal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close btn-close-white"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-img h-100">
+                              <img
+                                class="img"
+                                src="/img/project/UIUX/Spoilview/reviewpage-img.jpg"
+                                alt="review-img"
+                              />
+                            </div>
+                            <button
+                              class="mask-close"
+                              data-bs-dismiss="modal"
+                            ></button>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <img
+                    src="/img/project/UIUX/Spoilview/reviewpage-img.jpg"
+                    alt="review-img"
+                  />
                 </div>
-              </div>
-              <div class="page-info">
-                <div class="page-title">
-                  <div class="arrow4-icon">
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-left"></i>
+                <div class="page-info">
+                  <div class="page-title">
+                    <div class="arrow4-icon">
+                      <i class="fa-solid fa-chevron-left"></i>
+                      <i class="fa-solid fa-chevron-left"></i>
+                      <i class="fa-solid fa-chevron-left"></i>
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <h2 class="title">評論頁面</h2>
                   </div>
-                  <h2 class="title">評論頁面</h2>
-                </div>
-                <div class="page-body">
-                  蒐集新鮮影劇評論，從不同角度帶給你各式各樣的影劇心得，在選擇要看哪部電影、影集或綜藝前，先來看大家都怎麼說，一起討論吧！
+                  <div class="page-body">
+                    蒐集新鮮影劇評論，從不同角度帶給你各式各樣的影劇心得，在選擇要看哪部電影、影集或綜藝前，先來看大家都怎麼說，一起討論吧！
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="compare-page odd-page page d-flex">
-            <div class="page-mockup-video">
-              <video autoplay muted loop>
-                <source
-                  src="/img/project/UIUX/Spoilview/comparepage-video.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-            <div class="page-content">
-              <div
-                class="page-mockup-img"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#mockup3-modal"
-              >
-                <img
-                  src="/img/project/UIUX/Spoilview/comparepage-img.jpg"
-                  alt="comparepage-img"
-                />
-                <div
-                  class="modal fade"
-                  id="mockup3-modal"
-                  tabindex="-1"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button
-                          type="button"
-                          class="btn-close btn-close-white"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="modal-img h-100">
-                          <img
-                            class="img"
-                            src="/img/project/UIUX/Spoilview/comparepage-img.jpg"
-                            alt="comparepage-img"
-                          />
+            <div class="compare-page odd-page page d-flex">
+              <div class="page-mockup-video">
+                <video autoplay muted loop defaultMuted playsinline>
+                  <source
+                    src="/img/project/UIUX/Spoilview/comparepage-video.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="page-content">
+                <div class="page-mockup-img">
+                  <div class="img-modal">
+                    <!-- Button trigger modal -->
+                    <button
+                      class="modal-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#mockup3-modal"
+                    ></button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="mockup3-modal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close btn-close-white"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-img h-100">
+                              <img
+                                class="img"
+                                src="/img/project/UIUX/Spoilview/comparepage-img.jpg"
+                                alt="comparepage-img"
+                              />
+                            </div>
+                            <button
+                              class="mask-close"
+                              data-bs-dismiss="modal"
+                            ></button>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <img
+                    src="/img/project/UIUX/Spoilview/comparepage-img.jpg"
+                    alt="comparepage-img"
+                  />
                 </div>
-              </div>
-              <div class="page-info">
-                <div class="page-title">
-                  <div class="arrow4-icon">
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-left"></i>
+                <div class="page-info">
+                  <div class="page-title">
+                    <div class="arrow4-icon">
+                      <i class="fa-solid fa-chevron-left"></i>
+                      <i class="fa-solid fa-chevron-left"></i>
+                      <i class="fa-solid fa-chevron-left"></i>
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <h2 class="title">平台評比</h2>
                   </div>
-                  <h2 class="title">平台評比</h2>
-                </div>
-                <div class="page-body">
-                  在眾多的影音平台中，要如何做出選擇呢？我們特別整理了各平台的特色與優點，讓您輕鬆找到最適合您的影音平台！
+                  <div class="page-body">
+                    在眾多的影音平台中，要如何做出選擇呢？我們特別整理了各平台的特色與優點，讓您輕鬆找到最適合您的影音平台！
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="star-page even-page page d-flex">
-            <div class="page-mockup-video">
-              <video autoplay muted loop>
-                <source
-                  src="/img/project/UIUX/Spoilview/starpage-video.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-            <div class="page-content">
-              <div
-                class="page-mockup-img"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#mockup4-modal"
-              >
-                <img
-                  src="/img/project/UIUX/Spoilview/starpage-img.jpg"
-                  alt="starpage-img"
-                />
-                <div
-                  class="modal fade"
-                  id="mockup4-modal"
-                  tabindex="-1"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button
-                          type="button"
-                          class="btn-close btn-close-white"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="modal-img h-100">
-                          <img
-                            class="img"
-                            src="/img/project/UIUX/Spoilview/starpage-img.jpg"
-                            alt="tarpage-img"
-                          />
+            <div class="star-page even-page page d-flex">
+              <div class="page-mockup-video">
+                <video autoplay muted loop defaultMuted playsinline>
+                  <source
+                    src="/img/project/UIUX/Spoilview/starpage-video.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="page-content">
+                <div class="page-mockup-img">
+                  <div class="img-modal">
+                    <!-- Button trigger modal -->
+                    <button
+                      class="modal-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#mockup4-modal"
+                    ></button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="mockup4-modal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close btn-close-white"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-img h-100">
+                              <img
+                                class="img"
+                                src="/img/project/UIUX/Spoilview/starpage-img.jpg"
+                                alt="tarpage-img"
+                              />
+                            </div>
+                            <button
+                              class="mask-close"
+                              data-bs-dismiss="modal"
+                            ></button>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <img
+                    src="/img/project/UIUX/Spoilview/starpage-img.jpg"
+                    alt="starpage-img"
+                  />
                 </div>
-              </div>
-              <div class="page-info">
-                <div class="page-title">
-                  <div class="arrow4-icon">
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-left"></i>
+                <div class="page-info">
+                  <div class="page-title">
+                    <div class="arrow4-icon">
+                      <i class="fa-solid fa-chevron-left"></i>
+                      <i class="fa-solid fa-chevron-left"></i>
+                      <i class="fa-solid fa-chevron-left"></i>
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <h2 class="title">人氣明星</h2>
                   </div>
-                  <h2 class="title">人氣明星</h2>
-                </div>
-                <div class="page-body">
-                  一覽人氣明星的所有影劇作品，可以深入瞭解您喜愛的明星在不同角色下的表現，並隨時追蹤他們的最新作品動態。
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="prototype inner-shadow">
-            <div class="full-img"></div>
-            <div class="full-txt d-flex">
-              <p class="top-arrow-icon"></p>
-              <p class="txt">以上是更多頁面展示。</p>
-            </div>
-          </div>
-        </div>
-        <div class="design-system">
-          <h2 class="pj-title">{ Design System }</h2>
-          <p class="pj-body">
-            我們建立了一個設計系統，以確保在整個產品中都能保持統一的風格和視覺效果。
-          </p>
-          <div class="color-type-design d-flex">
-            <div class="color-left">
-              <div class="title-switch d-flex">
-                <h6 class="title">Color Palette</h6>
-                <p class="decorate">:</p>
-                <p class="decorate">{</p>
-                <h6 id="color-primary" class="primary subtitle active">
-                  Primary
-                </h6>
-                <p class="decorate">/</p>
-                <h6 id="color-second" class="secondary subtitle">Secondary</h6>
-                <p class="decorate">}</p>
-                <div id="color-divider" class="divider"></div>
-              </div>
-              <div id="paletteP" class="palette d-flex">
-                <p class="palette-item palette-first">#F9E866</p>
-                <p class="palette-item palette-second">#F0D173</p>
-              </div>
-              <div id="paletteS" class="palette d-none">
-                <p class="palette-item palette-first">#BB49B1</p>
-                <p class="palette-item palette-second">#7230B7</p>
-              </div>
-            </div>
-            <div class="type-right">
-              <div class="title-switch d-flex">
-                <h6 class="title">Typography</h6>
-                <p class="decorate">:</p>
-                <p class="decorate">{</p>
-                <h6 id="type-primary" class="primary subtitle active">
-                  English
-                </h6>
-                <p class="decorate">/</p>
-                <h6 id="type-second" class="secondary subtitle">繁中</h6>
-                <p class="decorate">}</p>
-                <div id="type-divider" class="divider"></div>
-              </div>
-              <p id="typetxtP" class="type-content d-flex">Heebo</p>
-              <p id="typetxtS" class="type-content d-none">思源黑體</p>
-            </div>
-          </div>
-          <div class="system-img inner-shadow">
-            <div
-              class="full-img"
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#designSystem-img-modal"
-            >
-              <div
-                class="modal fade"
-                id="designSystem-img-modal"
-                tabindex="-1"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog modal-fullscreen">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button
-                        type="button"
-                        class="btn-close btn-close-white"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="modal-img h-100">
-                        <img
-                          src="/img/project/UIUX/Spoilview/designSystem.jpg"
-                          alt="designSystem-img"
-                        />
-                      </div>
-                    </div>
+                  <div class="page-body">
+                    一覽人氣明星的所有影劇作品，可以深入瞭解您喜愛的明星在不同角色下的表現，並隨時追蹤他們的最新作品動態。
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="prototype inner-shadow">
+              <div class="full-img"></div>
+              <div class="full-txt d-flex">
+                <p class="top-arrow-icon"></p>
+                <p class="txt">以上是更多頁面展示。</p>
+              </div>
+            </div>
+          </div>
+          <div class="design-system">
+            <h2 class="pj-title">{ Design System }</h2>
+            <p class="pj-body">
+              我們建立了一個設計系統，以確保在整個產品中都能保持統一的風格和視覺效果。
+            </p>
+            <div class="color-type-design d-flex">
+              <div class="color-left">
+                <div class="title-switch d-flex">
+                  <h6 class="title">Color Palette</h6>
+                  <p class="decorate">:</p>
+                  <p class="decorate">{</p>
+                  <h6 id="color-primary" class="primary subtitle active">
+                    Primary
+                  </h6>
+                  <p class="decorate">/</p>
+                  <h6 id="color-second" class="secondary subtitle">
+                    Secondary
+                  </h6>
+                  <p class="decorate">}</p>
+                  <div id="color-divider" class="divider"></div>
+                </div>
+                <div id="paletteP" class="palette d-flex">
+                  <p class="palette-item palette-first">#F9E866</p>
+                  <p class="palette-item palette-second">#F0D173</p>
+                </div>
+                <div id="paletteS" class="palette d-none">
+                  <p class="palette-item palette-first">#BB49B1</p>
+                  <p class="palette-item palette-second">#7230B7</p>
+                </div>
+              </div>
+              <div class="type-right">
+                <div class="title-switch d-flex">
+                  <h6 class="title">Typography</h6>
+                  <p class="decorate">:</p>
+                  <p class="decorate">{</p>
+                  <h6 id="type-primary" class="primary subtitle active">
+                    English
+                  </h6>
+                  <p class="decorate">/</p>
+                  <h6 id="type-second" class="secondary subtitle">繁中</h6>
+                  <p class="decorate">}</p>
+                  <div id="type-divider" class="divider"></div>
+                </div>
+                <p id="typetxtP" class="type-content d-flex">Heebo</p>
+                <p id="typetxtS" class="type-content d-none">思源黑體</p>
+              </div>
+            </div>
+            <div class="system-img inner-shadow">
+              <div class="full-img"></div>
             </div>
           </div>
         </div>
@@ -673,12 +678,17 @@
         <h2 class="pj-title">{ Next Work }</h2>
         <div class="card-groups d-flex">
           <div class="card pj-card" id="pj-grapic">
-            <img
-              class="pj-img"
-              src="/img/project/Graphy/grapic-cover.png"
-              alt="grapic-project"
-            />
-            <a href="/project/graphicDesign/" class="btn pj-link">View ＋</a>
+            <a href="/project/graphicDesign/" class="btn pj-link"></a>
+            <div class="pj-img">
+              <img
+                class="pj-img"
+                src="/img/project/Graphy/grapic-cover.png"
+                alt="grapic-project"
+              />
+            </div>
+            <div class="pj-mask">
+              <p class="view">View ＋</p>
+            </div>
             <div class="card-body pj-txt">
               <ul>
                 <li class="txt-first">
@@ -704,12 +714,17 @@
             </div>
           </div>
           <div class="card pj-card" id="pj-artfind">
-            <img
-              class="pj-img"
-              src="/img/project/UIUX/ArtFind/ArtFind-cover.jpg"
-              alt="artFind-UIUX-project"
-            />
-            <a href="/project/artfind/" class="btn pj-link">View ＋</a>
+            <a href="/project/artfind/" class="btn pj-link"></a>
+            <div class="pj-img">
+              <img
+                class="pj-img"
+                src="/img/project/UIUX/ArtFind/ArtFind-cover.jpg"
+                alt="artFind-UIUX-project"
+              />
+            </div>
+            <div class="pj-mask">
+              <p class="view">View ＋</p>
+            </div>
             <div class="card-body pj-txt">
               <ul>
                 <li class="txt-first">
@@ -772,24 +787,58 @@
           </div>
         </div>
       </section>
-      <section class="continuous-scroll row">
-        <a href="mailto: tristahung.design@gmail.com">Get in touch</a>
-        <div class="scroll">
-          <div class="first">
-            &nbsp;Get in touch <span>*</span> Get in touch <span>*</span> Get in
-            touch <span>*</span> Get in touch <span>*</span>
+      <section class="marquee-area">
+        <a href="mailto: tristahung.design@gmail.com"></a>
+        <div class="marquee-inner animate">
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
           </div>
-          <div class="second">
-            &nbsp;Get in touch <span>*</span> Get in touch <span>*</span> Get in
-            touch <span>*</span> Get in touch <span>*</span>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+        </div>
+        <div class="marquee-inner animate">
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
           </div>
         </div>
       </section>
       <section class="footer-last row d-flex">
-        <p class="txt">&copy 2023</p>
-        <p class="txt">Made with love</p>
-        <div class="BTT" onclick="BackToTop()">
-          <p class="txt">Back To Top</p>
+        <p class="txt txt-2023">&copy 2023</p>
+        <p class="txt txt-love">Made with love</p>
+        <div id="BTT-footer" class="BTT" onclick="BackToTop()">
+          <p class="txt txt-BTT">Back To Top</p>
           <div class="icon">
             <i class="fa-solid fa-arrow-up"></i>
           </div>

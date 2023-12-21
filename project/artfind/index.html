@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Art_Find:尋覓藝文展覽之旅 APP | 作品集 | TristaHung</title>
     <meta name="autor" content="Trista" />
+    <meta name="theme-color" content="#e8e8e8" />
     <!-- fav.io -->
     <link
       rel="apple-touch-icon"
@@ -53,6 +54,7 @@
     <!-- nav-CSS -->
     <link rel="stylesheet" href="/css/header_style/nav.css" />
     <!-- CSS -->
+    <link rel="stylesheet" href="/css/project_style/1_unistyle/unistyle.css" />
     <link rel="stylesheet" href="/css/project_style/artfind/artFind.css" />
     <!-- nextWork-->
     <link
@@ -102,7 +104,7 @@
         aria-valuenow="25"
         aria-valuemin="0"
         aria-valuemax="25"
-        style="height: 3px; border-radius: 0%"
+        style="height: 4px; border-radius: 0%; background-color: transparent"
       >
         <div
           class="progress-bar"
@@ -412,7 +414,7 @@
             <p class="pj-body">
               在確定設計方向後，我們開始製作高保真原型，展示更多細節和概念，為後續使用性測試做好準備。
             </p>
-            <div class="main-page page d-flex">
+            <div class="main-page page odd-page d-flex">
               <div class="page-info">
                 <div class="page-title">
                   <h2 class="title">主頁面</h2>
@@ -429,55 +431,63 @@
               </div>
               <div class="page-content">
                 <div class="page-mockup-video">
-                  <video autoplay muted loop>
+                  <video autoplay muted loop defaultMuted playsinline>
                     <source
                       src="/img/project/UIUX/ArtFind/mainpage-video.mp4"
                       type="video/mp4"
                     />
                   </video>
                 </div>
-                <div
-                  class="page-mockup-img"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#mockup1-modal"
-                >
-                  <img
-                    src="/img/project/UIUX/ArtFind/mainpage-img.jpg"
-                    alt="mainpage-img"
-                  />
-                  <div
-                    class="modal fade"
-                    id="mockup1-modal"
-                    tabindex="-1"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-fullscreen">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button
-                            type="button"
-                            class="btn-close btn-close-white"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="modal-img h-100">
-                            <img
-                              class="img"
-                              src="/img/project/UIUX/ArtFind/mainpage-img.jpg"
-                              alt="mainpage-img"
-                            />
+                <div class="page-mockup-img">
+                  <div class="img-modal">
+                    <!-- Button trigger modal -->
+                    <button
+                      class="modal-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#mockup1-modal"
+                    ></button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="mockup1-modal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close btn-close-white"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-img h-100">
+                              <img
+                                class="img"
+                                src="/img/project/UIUX/ArtFind/eventpage-img.jpg"
+                                alt="evenpage-img"
+                              />
+                            </div>
+                            <button
+                              class="mask-close"
+                              data-bs-dismiss="modal"
+                            ></button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <img
+                    src="/img/project/UIUX/ArtFind/mainpage-img.jpg"
+                    alt="mainpage-img"
+                  />
                 </div>
               </div>
             </div>
-            <div class="event-page page d-flex">
+            <div class="event-page page even-page d-flex">
               <div class="page-info">
                 <div class="page-title">
                   <h2 class="title">展覽頁面</h2>
@@ -494,55 +504,63 @@
               </div>
               <div class="page-content">
                 <div class="page-mockup-video">
-                  <video autoplay muted loop>
+                  <video autoplay muted loop defaultMuted playsinline>
                     <source
                       src="/img/project/UIUX/ArtFind/eventPage-video.mp4"
                       type="video/mp4"
                     />
                   </video>
                 </div>
-                <div
-                  class="page-mockup-img"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#mockup2-modal"
-                >
-                  <img
-                    src="/img/project/UIUX/ArtFind/eventpage-img.jpg"
-                    alt="evenpage-img"
-                  />
-                  <div
-                    class="modal fade"
-                    id="mockup2-modal"
-                    tabindex="-1"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-fullscreen">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button
-                            type="button"
-                            class="btn-close btn-close-white"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="modal-img h-100">
-                            <img
-                              class="img"
-                              src="/img/project/UIUX/ArtFind/eventpage-img.jpg"
-                              alt="evenpage-img"
-                            />
+                <div class="page-mockup-img">
+                  <div class="img-modal">
+                    <!-- Button trigger modal -->
+                    <button
+                      class="modal-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#mockup2-modal"
+                    ></button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="mockup2-modal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close btn-close-white"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-img h-100">
+                              <img
+                                class="img"
+                                src="/img/project/UIUX/ArtFind/eventpage-img.jpg"
+                                alt="evenpage-img"
+                              />
+                            </div>
+                            <button
+                              class="mask-close"
+                              data-bs-dismiss="modal"
+                            ></button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <img
+                    src="/img/project/UIUX/ArtFind/eventpage-img.jpg"
+                    alt="evenpage-img"
+                  />
                 </div>
               </div>
             </div>
-            <div class="guide-page page d-flex">
+            <div class="guide-page page odd-page d-flex">
               <div class="page-info">
                 <div class="page-title">
                   <h2 class="title">導覽頁面</h2>
@@ -559,55 +577,63 @@
               </div>
               <div class="page-content">
                 <div class="page-mockup-video">
-                  <video autoplay muted loop>
+                  <video autoplay muted loop defaultMuted playsinline>
                     <source
                       src="/img/project/UIUX/ArtFind/guidePage-video.mp4"
                       type="video/mp4"
                     />
                   </video>
                 </div>
-                <div
-                  class="page-mockup-img"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#mockup3-modal"
-                >
-                  <img
-                    src="/img/project/UIUX/ArtFind/guidepage-img.jpg"
-                    alt="guidepage-img"
-                  />
-                  <div
-                    class="modal fade"
-                    id="mockup3-modal"
-                    tabindex="-1"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-fullscreen">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button
-                            type="button"
-                            class="btn-close btn-close-white"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="modal-img h-100">
-                            <img
-                              class="img"
-                              src="/img/project/UIUX/ArtFind/guidepage-img.jpg"
-                              alt="guidepage-img"
-                            />
+                <div class="page-mockup-img">
+                  <div class="img-modal">
+                    <!-- Button trigger modal -->
+                    <button
+                      class="modal-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#mockup3-modal"
+                    ></button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="mockup3-modal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close btn-close-white"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-img h-100">
+                              <img
+                                class="img"
+                                src="/img/project/UIUX/ArtFind/guidepage-img.jpg"
+                                alt="guidepage-img"
+                              />
+                            </div>
+                            <button
+                              class="mask-close"
+                              data-bs-dismiss="modal"
+                            ></button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <img
+                    src="/img/project/UIUX/ArtFind/guidepage-img.jpg"
+                    alt="guidepage-img"
+                  />
                 </div>
               </div>
             </div>
-            <div class="artist-page page d-flex">
+            <div class="artist-page page even-page d-flex">
               <div class="page-info">
                 <div class="page-title">
                   <h2 class="title">藝術家介紹</h2>
@@ -624,51 +650,59 @@
               </div>
               <div class="page-content">
                 <div class="page-mockup-video">
-                  <video autoplay muted loop>
+                  <video autoplay muted loop defaultMuted playsinline>
                     <source
                       src="/img/project/UIUX/ArtFind/artistPage-video.mp4"
                       type="video/mp4"
                     />
                   </video>
                 </div>
-                <div
-                  class="page-mockup-img"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#mockup4-modal"
-                >
-                  <img
-                    src="/img/project/UIUX/ArtFind/artistpage-img.jpg"
-                    alt="artistpage-img"
-                  />
-                  <div
-                    class="modal fade"
-                    id="mockup4-modal"
-                    tabindex="-1"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-fullscreen">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button
-                            type="button"
-                            class="btn-close btn-close-white"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="modal-img h-100">
-                            <img
-                              class="img"
-                              src="/img/project/UIUX/ArtFind/artistpage-img.jpg"
-                              alt="artistpage-img"
-                            />
+                <div class="page-mockup-img">
+                  <div class="img-modal">
+                    <!-- Button trigger modal -->
+                    <button
+                      class="modal-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#mockup4-modal"
+                    ></button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="mockup4-modal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close btn-close-white"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-img h-100">
+                              <img
+                                class="img"
+                                src="/img/project/UIUX/ArtFind/artistpage-img.jpg"
+                                alt="artistpage-img"
+                              />
+                            </div>
+                            <button
+                              class="mask-close"
+                              data-bs-dismiss="modal"
+                            ></button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <img
+                    src="/img/project/UIUX/ArtFind/artistpage-img.jpg"
+                    alt="artistpage-img"
+                  />
                 </div>
               </div>
             </div>
@@ -730,40 +764,7 @@
               </div>
             </div>
             <div class="system-img inner-shadow">
-              <div
-                class="full-img"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#designSystem-img-modal"
-              >
-                <div
-                  class="modal fade"
-                  id="designSystem-img-modal"
-                  tabindex="-1"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button
-                          type="button"
-                          class="btn-close btn-close-white"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="modal-img h-100">
-                          <img
-                            src="/img/project/UIUX/ArtFind/designSystem.jpg"
-                            alt="designSystem-img"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="full-img"></div>
             </div>
           </div>
         </div>
@@ -811,12 +812,17 @@
         <h2 class="pj-title">{ Next Work }</h2>
         <div class="card-groups d-flex">
           <div class="card pj-card" id="pj-caculator">
-            <img
-              class="pj-img"
-              src="/img/project/code/Caculator/caculator-cover.jpg"
-              alt="caculator-code-project"
-            />
-            <a href="/project/caculator/" class="btn pj-link">View ＋</a>
+            <a href="/project/caculator/" class="btn pj-link"></a>
+            <div class="pj-img">
+              <img
+                class="pj-img"
+                src="/img/project/code/Caculator/caculator-cover.jpg"
+                alt="caculator-code-project"
+              />
+            </div>
+            <div class="pj-mask">
+              <p class="view">View ＋</p>
+            </div>
             <div class="card-body pj-txt">
               <ul>
                 <li class="txt-first">
@@ -842,12 +848,17 @@
             </div>
           </div>
           <div class="card pj-card" id="pj-pet">
-            <img
-              class="pj-img"
-              src="/img/project/UIUX/Pet/Pet-cover.jpg"
-              alt="pet-uiux-project"
-            />
-            <a href="/project/straywuo/" class="btn pj-link">View ＋</a>
+            <a href="/project/straywuo/" class="btn pj-link"></a>
+            <div class="pj-img">
+              <img
+                class="pj-img"
+                src="/img/project/UIUX/Pet/Pet-cover.jpg"
+                alt="pet-uiux-project"
+              />
+            </div>
+            <div class="pj-mask">
+              <p class="view">View ＋</p>
+            </div>
             <div class="card-body pj-txt">
               <ul>
                 <li class="txt-first">
@@ -911,24 +922,58 @@
           </div>
         </div>
       </section>
-      <section class="continuous-scroll row">
-        <a href="mailto: tristahung.design@gmail.com">Get in touch</a>
-        <div class="scroll">
-          <div class="first">
-            &nbsp;Get in touch <span>*</span> Get in touch <span>*</span> Get in
-            touch <span>*</span> Get in touch <span>*</span>
+      <section class="marquee-area">
+        <a href="mailto: tristahung.design@gmail.com"></a>
+        <div class="marquee-inner animate">
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
           </div>
-          <div class="second">
-            &nbsp;Get in touch <span>*</span> Get in touch <span>*</span> Get in
-            touch <span>*</span> Get in touch <span>*</span>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+        </div>
+        <div class="marquee-inner animate">
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
           </div>
         </div>
       </section>
       <section class="footer-last row d-flex">
-        <p class="txt">&copy 2023</p>
-        <p class="txt">Made with love</p>
-        <div class="BTT" onclick="BackToTop()">
-          <p class="txt">Back To Top</p>
+        <p class="txt txt-2023">&copy 2023</p>
+        <p class="txt txt-love">Made with love</p>
+        <div id="BTT-footer" class="BTT" onclick="BackToTop()">
+          <p class="txt txt-BTT">Back To Top</p>
           <div class="icon">
             <i class="fa-solid fa-arrow-up"></i>
           </div>

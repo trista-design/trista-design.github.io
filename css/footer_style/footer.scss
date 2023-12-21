@@ -1,5 +1,5 @@
 .footer-area {
-  margin: 80px auto 24px auto;
+  margin: 80px auto 32px auto;
   padding: 80px 0 0 0;
   width: 1248px;
   height: fit-content;
@@ -94,6 +94,7 @@
           width: 40px;
           height: 40px;
           border: transparent;
+          background-color: white;
           background-image: url(/img/SVG/github.svg);
           background-position: center;
           background-size: 40px;
@@ -112,59 +113,95 @@
   }
 }
 
-.continuous-scroll {
-  position: relative;
-  margin: 0 0 32px 0;
+.marquee-area {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid var(--black-600);
+  background: var(--white);
+  border-radius: 10px;
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  margin: 0 0 32px 0;
   position: relative;
-  .scroll {
-    display: flex;
-    width: 100%;
-    background-color: var(--white);
-    border: 1px solid var(--black-600);
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    &::before {
-      content: " ";
-      position: absolute;
-      width: 20px;
-      height: 100%;
-      background-color: var(--black-600);
-      left: 0;
-    }
-    div {
-      font-family: "Asap", sans-serif;
-      font-size: 60px;
-      font-weight: 500;
-      white-space: nowrap;
-      color: var(--black-600);
-      animation: animate 40s -40s linear infinite;
-      will-change: transform;
-      &:nth-child(2) {
-        animation: animate2 40s -20s linear infinite;
-      }
-      span {
-        font-family: "Source Code Pro", monospace;
-        font-weight: 600;
-      }
-    }
+  display: flex;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    background: var(--black-600);
+    z-index: 0;
   }
-  // link
   a {
     position: absolute;
     top: 0;
-    font-size: 60px;
-    color: transparent;
-    cursor: pointer;
-    z-index: 1;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    // background: rgba(85, 85, 85, 0.5);
   }
-  // 懸停
-  &:hover .scroll div {
-    color: var(--white);
+  .marquee-inner {
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    .marquee-part {
+      display: flex;
+      line-height: 1;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      padding: 8px 0;
+      color: var(--black-600);
+      font-smooth: always;
+      -webkit-font-smoothing: antialiased;
+      .marquee-text {
+        font-family: "Asap", sans-serif;
+        font-weight: 500;
+        font-size: m#{i}n(m#{a}x(8vw, 32px), 60px);
+        white-space: nowrap;
+        margin: auto 0 auto 1.6vw;
+      }
+      .text-star {
+        font-family: "Source Code Pro", monospace;
+        font-weight: 600;
+        font-size: m#{i}n(m#{a}x(9vw, 36px), 64px);
+        margin: auto 0 auto 1.6vw;
+      }
+    }
   }
-  &:hover .scroll {
-    background-color: var(--black-600);
+  .animate {
+    -webkit-animation: animate 40s linear infinite;
+    animation: animate 40s linear infinite;
+    &:nth-of-type(2) {
+      -webkit-animation: animate2 40s -20s linear infinite;
+      animation: animate2 40s -20s linear infinite;
+    }
+  }
+  &:hover,
+  :focus {
+    background: var(--black-600);
+    .marquee-inner {
+      animation-play-state: paused;
+      .marquee-part {
+        .marquee-text,
+        .text-star {
+          background: transparent;
+          color: var(--white);
+        }
+      }
+    }
+    &::before {
+      content: "";
+      z-index: 0;
+      background: transparent;
+    }
   }
 }
 
@@ -182,15 +219,13 @@
     padding: 0;
     font-size: 18px;
     color: var(--black-500);
-    &:not(:last-child) {
-      flex-basis: 136px;
-    }
     &:nth-child(2) {
       text-align: center;
     }
   }
   .txt-2023 {
-    max-width: 127px;
+    max-width: 123px;
+    width: 123px;
   }
   .BTT {
     padding: 0;
@@ -204,8 +239,9 @@
     }
     .icon {
       margin-left: 8px;
-      min-width: 24px;
-      height: 24px;
+      min-width: 20px;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
       background-color: var(--black-500);
       position: relative;
@@ -214,9 +250,10 @@
       .fa-arrow-up {
         color: var(--white);
         position: absolute;
-        font-size: 16px;
-        left: 25%;
+        font-size: 12px;
+        left: 50%;
         top: 15%;
+        transform: translateX(-50%);
       }
     }
     &:hover .txt {
@@ -233,20 +270,36 @@
 }
 
 // 跑馬燈動畫
-@keyframes animate {
+@-webkit-keyframes animate {
   0% {
-    transform: translateX(100%);
+    transform: translateX(calc(100% - 0.51em));
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% - 0.51em));
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translateX(calc(100% - 0.51em));
+  }
+  100% {
+    transform: translateX(calc(-100% - 0.51em));
+  }
+}
+@-webkit-keyframes animate2 {
+  0% {
+    transform: translateX(calc(0% - 0.51em));
+  }
+  100% {
+    transform: translateX(calc(-200% - 0.51em));
   }
 }
 @keyframes animate2 {
   0% {
-    transform: translateX(0);
+    transform: translateX(calc(0% - 0.51em));
   }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(calc(-200% - 0.51em));
   }
 }
 
@@ -286,7 +339,7 @@
 @media screen and (max-width: 991px) {
   .footer-area {
     width: auto;
-    margin: 60px 36px 24px 24px;
+    margin: 60px 24px 32px 24px;
     padding: 60px 0 0 0;
     .footer-content {
       margin: 0 0 32px 0;
@@ -343,16 +396,6 @@
         }
       }
     }
-    .continuous-scroll {
-      .scroll {
-        div {
-          font-size: 56px;
-        }
-      }
-      a {
-        font-size: 56px;
-      }
-    }
     .footer-last {
       .txt {
         font-size: 16px;
@@ -362,10 +405,12 @@
       }
       .BTT {
         .icon {
-          min-width: 22px;
-          height: 22px;
+          min-width: 18px;
+          width: 18px;
+          height: 18px;
           .fa-arrow-up {
-            font-size: 14px;
+            font-size: 10px;
+            top: 18%;
           }
         }
       }
@@ -420,26 +465,58 @@
         }
       }
     }
-    .continuous-scroll {
-      .scroll {
-        border-radius: 8px;
-        div {
-          font-size: 52px;
-        }
-        &::before {
-          width: 14px;
-        }
+    .marquee-area {
+      border-radius: 8px;
+      &::before {
+        width: 16px;
       }
-      a {
-        font-size: 52px;
+    }
+    .footer-last {
+      .BTT {
+        &:hover .txt {
+          color: var(--black-500);
+          font-weight: 300;
+        }
+        &:hover .icon {
+          background-color: var(--black-500);
+        }
+        &:hover .icon .fa-arrow-up {
+          animation: none;
+        }
+        &:active .txt {
+          color: var(--black-600);
+          font-weight: 500;
+        }
+        &:active .icon {
+          background-color: var(--black-600);
+        }
+        &:active .icon .fa-arrow-up {
+          animation: BTT 1.5s linear infinite;
+        }
       }
     }
   }
 }
 @media screen and (max-width: 490px) {
   .footer-area {
-    margin: 42px 12px 24px 12px;
+    margin: 42px 12px 32px 12px;
     padding: 42px 0 0 0;
+    .footer-last {
+      .txt-love {
+        display: none;
+      }
+      .BTT {
+        .icon {
+          min-width: 16px;
+          width: 16px;
+          height: 16px;
+          margin-left: 4px;
+          .fa-arrow-up {
+            top: 15%;
+          }
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 458px) {
@@ -455,20 +532,10 @@
         }
       }
     }
-    .continuous-scroll {
-      .scroll {
-        border-radius: 6px;
-        div {
-          font-size: 48px;
-        }
-      }
-      a {
-        font-size: 48px;
-      }
-    }
-    .footer-last {
-      .txt-love {
-        display: none;
+    .marquee-area {
+      border-radius: 6px;
+      &::before {
+        width: 12px;
       }
     }
   }
@@ -505,16 +572,8 @@
         }
       }
     }
-    .continuous-scroll {
+    .marquee-area {
       margin-bottom: 24px;
-      .scroll {
-        div {
-          font-size: 44px;
-        }
-      }
-      a {
-        font-size: 44px;
-      }
     }
     .footer-last {
       .txt {
@@ -522,11 +581,12 @@
       }
       .BTT {
         .icon {
-          min-width: 20px;
-          height: 20px;
+          min-width: 14px;
+          width: 14px;
+          height: 14px;
           .fa-arrow-up {
-            top: 20%;
-            font-size: 12px;
+            top: 18%;
+            font-size: 8px;
           }
         }
       }
@@ -543,16 +603,6 @@
         h4 {
           font-size: 18px;
         }
-      }
-    }
-    .continuous-scroll {
-      .scroll {
-        div {
-          font-size: 40px;
-        }
-      }
-      a {
-        font-size: 40px;
       }
     }
   }

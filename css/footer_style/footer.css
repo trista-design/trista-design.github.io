@@ -1,5 +1,5 @@
 .footer-area {
-  margin: 80px auto 24px auto;
+  margin: 80px auto 32px auto;
   padding: 80px 0 0 0;
   width: 1248px;
   height: -moz-fit-content;
@@ -100,6 +100,7 @@
   width: 40px;
   height: 40px;
   border: transparent;
+  background-color: white;
   background-image: url(/img/SVG/github.svg);
   background-position: center;
   background-size: 40px;
@@ -114,58 +115,93 @@
   box-shadow: 2px 2px 5px rgba(28, 28, 28, 0.5);
 }
 
-.continuous-scroll {
-  position: relative;
-  margin: 0 0 32px 0;
-  overflow: hidden;
-  position: relative;
-}
-.continuous-scroll .scroll {
-  display: flex;
+.marquee-area {
   width: 100%;
-  background-color: var(--white);
+  height: -moz-fit-content;
+  height: fit-content;
   border: 1px solid var(--black-600);
+  background: var(--white);
   border-radius: 10px;
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  margin: 0 0 32px 0;
   position: relative;
+  display: flex;
 }
-.continuous-scroll .scroll::before {
-  content: " ";
-  position: absolute;
-  width: 20px;
-  height: 100%;
-  background-color: var(--black-600);
-  left: 0;
-}
-.continuous-scroll .scroll div {
-  font-family: "Asap", sans-serif;
-  font-size: 60px;
-  font-weight: 500;
-  white-space: nowrap;
-  color: var(--black-600);
-  animation: animate 40s -40s linear infinite;
-  will-change: transform;
-}
-.continuous-scroll .scroll div:nth-child(2) {
-  animation: animate2 40s -20s linear infinite;
-}
-.continuous-scroll .scroll div span {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 600;
-}
-.continuous-scroll a {
+.marquee-area::before {
+  content: "";
   position: absolute;
   top: 0;
-  font-size: 60px;
-  color: transparent;
-  cursor: pointer;
-  z-index: 1;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: var(--black-600);
+  z-index: 0;
 }
-.continuous-scroll:hover .scroll div {
+.marquee-area a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+.marquee-area .marquee-inner {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+}
+.marquee-area .marquee-inner .marquee-part {
+  display: flex;
+  line-height: 1;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 8px 0;
+  color: var(--black-600);
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+}
+.marquee-area .marquee-inner .marquee-part .marquee-text {
+  font-family: "Asap", sans-serif;
+  font-weight: 500;
+  font-size: min(max(8vw, 32px), 60px);
+  white-space: nowrap;
+  margin: auto 0 auto 1.6vw;
+}
+.marquee-area .marquee-inner .marquee-part .text-star {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+  font-size: min(max(9vw, 36px), 64px);
+  margin: auto 0 auto 1.6vw;
+}
+.marquee-area .animate {
+  animation: animate 40s linear infinite;
+}
+.marquee-area .animate:nth-of-type(2) {
+  animation: animate2 40s -20s linear infinite;
+}
+.marquee-area:hover,
+.marquee-area :focus {
+  background: var(--black-600);
+}
+.marquee-area:hover .marquee-inner,
+.marquee-area :focus .marquee-inner {
+  animation-play-state: paused;
+}
+.marquee-area:hover .marquee-inner .marquee-part .marquee-text,
+.marquee-area:hover .marquee-inner .marquee-part .text-star,
+.marquee-area :focus .marquee-inner .marquee-part .marquee-text,
+.marquee-area :focus .marquee-inner .marquee-part .text-star {
+  background: transparent;
   color: var(--white);
 }
-.continuous-scroll:hover .scroll {
-  background-color: var(--black-600);
+.marquee-area:hover::before,
+.marquee-area :focus::before {
+  content: "";
+  z-index: 0;
+  background: transparent;
 }
 
 .footer-last {
@@ -187,14 +223,12 @@
   font-size: 18px;
   color: var(--black-500);
 }
-.footer-last .txt:not(:last-child) {
-  flex-basis: 136px;
-}
 .footer-last .txt:nth-child(2) {
   text-align: center;
 }
 .footer-last .txt-2023 {
-  max-width: 127px;
+  max-width: 123px;
+  width: 123px;
 }
 .footer-last .BTT {
   padding: 0;
@@ -211,8 +245,9 @@
 }
 .footer-last .BTT .icon {
   margin-left: 8px;
-  min-width: 24px;
-  height: 24px;
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: var(--black-500);
   position: relative;
@@ -222,9 +257,10 @@
 .footer-last .BTT .icon .fa-arrow-up {
   color: var(--white);
   position: absolute;
-  font-size: 16px;
-  left: 25%;
+  font-size: 12px;
+  left: 50%;
   top: 15%;
+  transform: translateX(-50%);
 }
 .footer-last .BTT:hover .txt {
   color: var(--black-600);
@@ -236,21 +272,20 @@
 .footer-last .BTT:hover .icon .fa-arrow-up {
   animation: BTT 1.5s linear infinite;
 }
-
 @keyframes animate {
   0% {
-    transform: translateX(100%);
+    transform: translateX(calc(100% - 0.51em));
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% - 0.51em));
   }
 }
 @keyframes animate2 {
   0% {
-    transform: translateX(0);
+    transform: translateX(calc(0% - 0.51em));
   }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(calc(-200% - 0.51em));
   }
 }
 @keyframes BTT {
@@ -280,7 +315,7 @@
 @media screen and (max-width: 991px) {
   .footer-area {
     width: auto;
-    margin: 60px 36px 24px 24px;
+    margin: 60px 24px 32px 24px;
     padding: 60px 0 0 0;
   }
   .footer-area .footer-content {
@@ -328,12 +363,6 @@
     height: 36px;
     background-size: 36px;
   }
-  .footer-area .continuous-scroll .scroll div {
-    font-size: 56px;
-  }
-  .footer-area .continuous-scroll a {
-    font-size: 56px;
-  }
   .footer-area .footer-last .txt {
     font-size: 16px;
   }
@@ -341,11 +370,13 @@
     max-width: 114px;
   }
   .footer-area .footer-last .BTT .icon {
-    min-width: 22px;
-    height: 22px;
+    min-width: 18px;
+    width: 18px;
+    height: 18px;
   }
   .footer-area .footer-last .BTT .icon .fa-arrow-up {
-    font-size: 14px;
+    font-size: 10px;
+    top: 18%;
   }
 }
 @media screen and (max-width: 820px) {
@@ -385,23 +416,49 @@
   .footer-area .footer-content .right-div .media-item .title {
     display: none;
   }
-  .footer-area .continuous-scroll .scroll {
+  .footer-area .marquee-area {
     border-radius: 8px;
   }
-  .footer-area .continuous-scroll .scroll div {
-    font-size: 52px;
+  .footer-area .marquee-area::before {
+    width: 16px;
   }
-  .footer-area .continuous-scroll .scroll::before {
-    width: 14px;
+  .footer-area .footer-last .BTT:hover .txt {
+    color: var(--black-500);
+    font-weight: 300;
   }
-  .footer-area .continuous-scroll a {
-    font-size: 52px;
+  .footer-area .footer-last .BTT:hover .icon {
+    background-color: var(--black-500);
+  }
+  .footer-area .footer-last .BTT:hover .icon .fa-arrow-up {
+    animation: none;
+  }
+  .footer-area .footer-last .BTT:active .txt {
+    color: var(--black-600);
+    font-weight: 500;
+  }
+  .footer-area .footer-last .BTT:active .icon {
+    background-color: var(--black-600);
+  }
+  .footer-area .footer-last .BTT:active .icon .fa-arrow-up {
+    animation: BTT 1.5s linear infinite;
   }
 }
 @media screen and (max-width: 490px) {
   .footer-area {
-    margin: 42px 12px 24px 12px;
+    margin: 42px 12px 32px 12px;
     padding: 42px 0 0 0;
+  }
+  .footer-area .footer-last .txt-love {
+    display: none;
+  }
+  .footer-area .footer-last .BTT .icon {
+    min-width: 16px;
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+  }
+  .footer-area .footer-last .BTT .icon .fa-arrow-up {
+    top: 15%;
   }
 }
 @media screen and (max-width: 458px) {
@@ -412,17 +469,11 @@
     font-size: 22px;
     margin-top: 20px;
   }
-  .footer-area .continuous-scroll .scroll {
+  .footer-area .marquee-area {
     border-radius: 6px;
   }
-  .footer-area .continuous-scroll .scroll div {
-    font-size: 48px;
-  }
-  .footer-area .continuous-scroll a {
-    font-size: 48px;
-  }
-  .footer-area .footer-last .txt-love {
-    display: none;
+  .footer-area .marquee-area::before {
+    width: 12px;
   }
 }
 @media screen and (max-width: 356px) {
@@ -450,25 +501,20 @@
     height: 34px;
     background-size: 34px;
   }
-  .footer-area .continuous-scroll {
+  .footer-area .marquee-area {
     margin-bottom: 24px;
-  }
-  .footer-area .continuous-scroll .scroll div {
-    font-size: 44px;
-  }
-  .footer-area .continuous-scroll a {
-    font-size: 44px;
   }
   .footer-area .footer-last .txt {
     font-size: 14px;
   }
   .footer-area .footer-last .BTT .icon {
-    min-width: 20px;
-    height: 20px;
+    min-width: 14px;
+    width: 14px;
+    height: 14px;
   }
   .footer-area .footer-last .BTT .icon .fa-arrow-up {
-    top: 20%;
-    font-size: 12px;
+    top: 18%;
+    font-size: 8px;
   }
 }
 @media screen and (max-width: 340px) {
@@ -477,11 +523,5 @@
   }
   .footer-area .footer-content .left-div h4 {
     font-size: 18px;
-  }
-  .footer-area .continuous-scroll .scroll div {
-    font-size: 40px;
-  }
-  .footer-area .continuous-scroll a {
-    font-size: 40px;
   }
 }/*# sourceMappingURL=footer.css.map */

@@ -37,6 +37,7 @@
       left: 0;
       .headline-EN {
         font-family: "Asap", sans-serif;
+        width: fit-content;
       }
       .headline-CH {
         font-family: "Noto Sans TC", sans-serif;
@@ -135,7 +136,7 @@
   align-items: center;
   position: fixed;
   bottom: 24px;
-  right: 36px;
+  right: 24px;
   background-color: rgba(233, 233, 233, 0.5);
   box-shadow: 0 5px 10px rgba(136, 136, 136, 0.5);
   backdrop-filter: blur(5px);
@@ -231,7 +232,7 @@
         margin-left: 24px;
       }
       &:last-child {
-        margin-right: 36px;
+        margin-right: 24px;
       }
     }
   }
@@ -305,59 +306,9 @@
     }
   }
   .slide-wrapper {
-    height: 444px;
+    height: fit-content;
     .slider {
-      width: 630px;
-    }
-  }
-}
-@media screen and (max-width: 699px) {
-  .slide-wrapper {
-    height: 404px;
-    .slider {
-      width: 570px;
-    }
-  }
-}
-@media screen and (max-width: 670px) {
-  .slide-wrapper {
-    height: 384px;
-    .slider {
-      width: 540px;
-    }
-  }
-}
-@media screen and (max-width: 640px) {
-  .slide-wrapper {
-    height: 364px;
-    .slider {
-      width: 510px;
-    }
-  }
-}
-
-// small screen
-@media screen and (max-width: 599px) {
-  .slide-wrapper {
-    height: 344px;
-    .slider {
-      width: 480px;
-    }
-  }
-}
-@media screen and (max-width: 576px) {
-  .slide-wrapper {
-    height: 324px;
-    .slider {
-      width: 450px;
-    }
-  }
-}
-@media screen and (max-width: 540px) {
-  .slide-wrapper {
-    height: 304px;
-    .slider {
-      width: 420px;
+      width: 85vw;
     }
   }
 }
@@ -374,9 +325,8 @@
     }
   }
   .slide-wrapper {
-    height: 284px;
     .slider {
-      width: 390px;
+      width: 90vw;
       &:not(:first-child) {
         margin-right: 12px;
       }
@@ -406,20 +356,6 @@
       }
     }
   }
-  .slide-wrapper {
-    height: 264px;
-    .slider {
-      width: 360px;
-    }
-  }
-}
-@media screen and (max-width: 420px) {
-  .slide-wrapper {
-    height: 244px;
-    .slider {
-      width: 330px;
-    }
-  }
 }
 
 @media screen and (max-width: 390px) {
@@ -439,17 +375,14 @@
     }
   }
   .slide-wrapper {
-    height: 234px;
     .slider {
-      width: 315px;
+      width: 88vw;
     }
   }
 }
 @media screen and (max-width: 340px) {
   .slide-wrapper {
-    height: 214px;
     .slider {
-      width: 285px;
       &:first-child {
         margin-right: 8px;
       }

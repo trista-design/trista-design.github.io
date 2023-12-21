@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Straywuo 浪窩:為浪浪找到屬於自己的窩 | 作品集 | TristaHung</title>
     <meta name="autor" content="Trista" />
+    <meta name="theme-color" content="#e8e8e8" />
     <!-- fav.io -->
     <link
       rel="apple-touch-icon"
@@ -59,6 +60,7 @@
     <!-- nav-CSS -->
     <link rel="stylesheet" href="/css/header_style/nav.css" />
     <!-- CSS -->
+    <link rel="stylesheet" href="/css/project_style/1_unistyle/unistyle.css" />
     <link rel="stylesheet" href="/css/project_style/straywuo/straywuo.css" />
     <!-- nextWork -->
     <link
@@ -108,7 +110,7 @@
         aria-valuenow="25"
         aria-valuemin="0"
         aria-valuemax="25"
-        style="height: 4px; border-radius: 0%"
+        style="height: 4px; border-radius: 0%; background-color: transparent"
       >
         <div
           class="progress-bar"
@@ -287,85 +289,101 @@
                     根據農委會的統計調查，全台遊蕩犬數量逼近十六萬隻，比前兩年多了將近四千隻。這不僅造成生態危機，也讓公立收容所和私人動物收容所面臨收容不足的危機，到了2023年，全台收容所平均容留比已高達近9成，其中包含台北市動物之家在內，一共有8個收容所超額收容。
                   </p>
                 </div>
-                <div
-                  class="search-card search-img-card"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#shelter-modal"
-                >
+                <div class="search-card search-img-card">
+                  <div class="img-modal">
+                    <!-- Button trigger modal -->
+                    <button
+                      class="modal-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#shelter-modal"
+                    ></button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="shelter-modal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close btn-close-white"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-img h-100">
+                              <img
+                                class="img"
+                                src="/img/project/UIUX/Pet/shelterRate.png"
+                                alt="shelter-search"
+                              />
+                            </div>
+                            <button
+                              class="mask-close"
+                              data-bs-dismiss="modal"
+                            ></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <img
                     src="/img/project/UIUX/Pet/shelterRate.png"
                     alt="shelter-search"
                   />
-                  <div
-                    class="modal fade"
-                    id="shelter-modal"
-                    tabindex="-1"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-fullscreen">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button
-                            type="button"
-                            class="btn-close btn-close-white"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="modal-img h-100">
-                            <img
-                              class="img"
-                              src="/img/project/UIUX/Pet/shelterRate.png"
-                              alt="shelter-search"
-                            />
+                </div>
+              </div>
+              <div class="research-content d-flex">
+                <div class="search-card search-img-card">
+                  <div class="img-modal">
+                    <!-- Button trigger modal -->
+                    <button
+                      class="modal-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#source-modal"
+                    ></button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="source-modal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close btn-close-white"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-img h-100">
+                              <img
+                                class="img"
+                                src="/img/project/UIUX/Pet/surveyPets.png"
+                                alt="source-search"
+                              />
+                            </div>
+                            <button
+                              class="mask-close"
+                              data-bs-dismiss="modal"
+                            ></button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="research-content d-flex">
-                <div
-                  class="search-card search-img-card"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#source-modal"
-                >
                   <img
                     src="/img/project/UIUX/Pet/surveyPets.png"
                     alt="source-search"
                   />
-                  <div
-                    class="modal fade"
-                    id="source-modal"
-                    tabindex="-1"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-fullscreen">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button
-                            type="button"
-                            class="btn-close btn-close-white"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="modal-img h-100">
-                            <img
-                              class="img"
-                              src="/img/project/UIUX/Pet/surveyPets.png"
-                              alt="source-search"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <div class="search-card search-txt-card">
                   <h5 class="search-title">寵物繁殖業逐年增加</h5>
@@ -508,7 +526,7 @@
             </p>
             <div class="main-page odd-page page d-flex">
               <div class="page-mockup-video">
-                <video autoplay muted loop>
+                <video autoplay muted loop defaultMuted playsinline>
                   <source
                     src="/img/project/UIUX/Pet/mainpage-video.mp4"
                     type="video/mp4"
@@ -516,44 +534,52 @@
                 </video>
               </div>
               <div class="page-content">
-                <div
-                  class="page-mockup-img"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#mockup1-modal"
-                >
-                  <img
-                    src="/img/project/UIUX/Pet/mainpage-img.jpg"
-                    alt="mainpage-img"
-                  />
-                  <div
-                    class="modal fade"
-                    id="mockup1-modal"
-                    tabindex="-1"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-fullscreen">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button
-                            type="button"
-                            class="btn-close btn-close-white"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="modal-img h-100">
-                            <img
-                              class="img"
-                              src="/img/project/UIUX/Pet/mainpage-img.jpg"
-                              alt="mainpage-img"
-                            />
+                <div class="page-mockup-img">
+                  <div class="img-modal">
+                    <!-- Button trigger modal -->
+                    <button
+                      class="modal-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#mockup1-modal"
+                    ></button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="mockup1-modal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close btn-close-white"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-img h-100">
+                              <img
+                                class="img"
+                                src="/img/project/UIUX/Pet/mainpage-img.jpg"
+                                alt="mainpage-img"
+                              />
+                            </div>
+                            <button
+                              class="mask-close"
+                              data-bs-dismiss="modal"
+                            ></button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <img
+                    src="/img/project/UIUX/Pet/mainpage-img.jpg"
+                    alt="mainpage-img"
+                  />
                 </div>
                 <div class="page-info">
                   <div class="page-title">
@@ -573,7 +599,7 @@
             </div>
             <div class="adopt-page even-page page d-flex">
               <div class="page-mockup-video">
-                <video autoplay muted loop>
+                <video autoplay muted loop defaultMuted playsinline>
                   <source
                     src="/img/project/UIUX/Pet/adoptpage-video.mp4"
                     type="video/mp4"
@@ -581,44 +607,52 @@
                 </video>
               </div>
               <div class="page-content">
-                <div
-                  class="page-mockup-img"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#mockup2-modal"
-                >
-                  <img
-                    src="/img/project/UIUX/Pet/adoptpage-img.jpg"
-                    alt="adoptpage-img"
-                  />
-                  <div
-                    class="modal fade"
-                    id="mockup2-modal"
-                    tabindex="-1"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-fullscreen">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button
-                            type="button"
-                            class="btn-close btn-close-white"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="modal-img h-100">
-                            <img
-                              class="img"
-                              src="/img/project/UIUX/Pet/adoptpage-img.jpg"
-                              alt="adoptpage-img"
-                            />
+                <div class="page-mockup-img">
+                  <div class="img-modal">
+                    <!-- Button trigger modal -->
+                    <button
+                      class="modal-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#mockup2-modal"
+                    ></button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="mockup2-modal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close btn-close-white"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-img h-100">
+                              <img
+                                class="img"
+                                src="/img/project/UIUX/Pet/adoptpage-img.jpg"
+                                alt="adoptpage-img"
+                              />
+                            </div>
+                            <button
+                              class="mask-close"
+                              data-bs-dismiss="modal"
+                            ></button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <img
+                    src="/img/project/UIUX/Pet/adoptpage-img.jpg"
+                    alt="adoptpage-img"
+                  />
                 </div>
                 <div class="page-info">
                   <div class="page-title">
@@ -638,7 +672,7 @@
             </div>
             <div class="vet-page odd-page page d-flex">
               <div class="page-mockup-video">
-                <video autoplay muted loop>
+                <video autoplay muted loop defaultMuted playsinline>
                   <source
                     src="/img/project/UIUX/Pet/vetpage-video.mp4"
                     type="video/mp4"
@@ -646,44 +680,52 @@
                 </video>
               </div>
               <div class="page-content">
-                <div
-                  class="page-mockup-img"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#mockup3-modal"
-                >
-                  <img
-                    src="/img/project/UIUX/Pet/vetpage-img.jpg"
-                    alt="vetpage-img"
-                  />
-                  <div
-                    class="modal fade"
-                    id="mockup3-modal"
-                    tabindex="-1"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-fullscreen">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button
-                            type="button"
-                            class="btn-close btn-close-white"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="modal-img h-100">
-                            <img
-                              class="img"
-                              src="/img/project/UIUX/Pet/vetpage-img.jpg"
-                              alt="vetpage-img"
-                            />
+                <div class="page-mockup-img">
+                  <div class="img-modal">
+                    <!-- Button trigger modal -->
+                    <button
+                      class="modal-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#mockup3-modal"
+                    ></button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="mockup3-modal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close btn-close-white"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-img h-100">
+                              <img
+                                class="img"
+                                src="/img/project/UIUX/Pet/vetpage-img.jpg"
+                                alt="vetpage-img"
+                              />
+                            </div>
+                            <button
+                              class="mask-close"
+                              data-bs-dismiss="modal"
+                            ></button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <img
+                    src="/img/project/UIUX/Pet/vetpage-img.jpg"
+                    alt="vetpage-img"
+                  />
                 </div>
                 <div class="page-info">
                   <div class="page-title">
@@ -703,7 +745,7 @@
             </div>
             <div class="care-page even-page page d-flex">
               <div class="page-mockup-video">
-                <video autoplay muted loop>
+                <video autoplay muted loop defaultMuted playsinline>
                   <source
                     src="/img/project/UIUX/Pet/carepage-video.mp4"
                     type="video/mp4"
@@ -711,12 +753,48 @@
                 </video>
               </div>
               <div class="page-content">
-                <div
-                  class="page-mockup-img"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#mockup4-modal"
-                >
+                <div class="page-mockup-img">
+                  <div class="img-modal">
+                    <!-- Button trigger modal -->
+                    <button
+                      class="modal-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#mockup4-modal"
+                    ></button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="mockup4-modal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="btn-close btn-close-white"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-img h-100">
+                              <img
+                                class="img"
+                                src="/img/project/UIUX/Pet/carepage-img.jpg"
+                                alt="acarepage-img"
+                              />
+                            </div>
+                            <button
+                              class="mask-close"
+                              data-bs-dismiss="modal"
+                            ></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <img
                     src="/img/project/UIUX/Pet/carepage-img.jpg"
                     alt="carepage-img"
@@ -826,40 +904,7 @@
               </div>
             </div>
             <div class="system-img inner-shadow">
-              <div
-                class="full-img"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#designSystem-img-modal"
-              >
-                <div
-                  class="modal fade"
-                  id="designSystem-img-modal"
-                  tabindex="-1"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button
-                          type="button"
-                          class="btn-close btn-close-white"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="modal-img h-100">
-                          <img
-                            src="/img/project/UIUX/Pet/designSystem.jpg"
-                            alt="designSystem-img"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="full-img"></div>
             </div>
           </div>
         </div>
@@ -897,12 +942,17 @@
         <h2 class="pj-title">{ Next Work }</h2>
         <div class="card-groups d-flex">
           <div class="card pj-card" id="pj-snakegame">
-            <img
-              class="pj-img"
-              src="/img/project/code/snakegame/slide-1.jpg"
-              alt="snakegame-code-project"
-            />
-            <a href="/project/snackgame/" class="btn pj-link">View ＋</a>
+            <a href="/project/snackgame/" class="btn pj-link"></a>
+            <div class="pj-img">
+              <img
+                class="pj-img"
+                src="/img/project/code/snakegame/slide-1.jpg"
+                alt="snakegame-code-project"
+              />
+            </div>
+            <div class="pj-mask">
+              <p class="view">View ＋</p>
+            </div>
             <div class="card-body pj-txt">
               <ul>
                 <li class="txt-first">
@@ -928,12 +978,17 @@
             </div>
           </div>
           <div class="card pj-card" id="pj-metro">
-            <img
-              class="pj-img"
-              src="/img/project/UIUX/Metro/metro-cover.jpg"
-              alt="metro-uiux-project"
-            />
-            <a href="/project/metro/" class="btn pj-link">View ＋</a>
+            <a href="/project/metro/" class="btn pj-link"></a>
+            <div class="pj-img">
+              <img
+                class="pj-img"
+                src="/img/project/UIUX/Metro/metro-cover.jpg"
+                alt="metro-uiux-project"
+              />
+            </div>
+            <div class="pj-mask">
+              <p class="view">View ＋</p>
+            </div>
             <div class="card-body pj-txt">
               <ul>
                 <li class="txt-first">
@@ -996,24 +1051,58 @@
           </div>
         </div>
       </section>
-      <section class="continuous-scroll row">
-        <a href="mailto: tristahung.design@gmail.com">Get in touch</a>
-        <div class="scroll">
-          <div class="first">
-            &nbsp;Get in touch <span>*</span> Get in touch <span>*</span> Get in
-            touch <span>*</span> Get in touch <span>*</span>
+      <section class="marquee-area">
+        <a href="mailto: tristahung.design@gmail.com"></a>
+        <div class="marquee-inner animate">
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
           </div>
-          <div class="second">
-            &nbsp;Get in touch <span>*</span> Get in touch <span>*</span> Get in
-            touch <span>*</span> Get in touch <span>*</span>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+        </div>
+        <div class="marquee-inner animate">
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
+          </div>
+          <div class="marquee-part">
+            <p class="marquee-text">Get In Touch</p>
+            <p class="text-star">*</p>
           </div>
         </div>
       </section>
       <section class="footer-last row d-flex">
-        <p class="txt">&copy 2023</p>
-        <p class="txt">Made with love</p>
-        <div class="BTT" onclick="BackToTop()">
-          <p class="txt">Back To Top</p>
+        <p class="txt txt-2023">&copy 2023</p>
+        <p class="txt txt-love">Made with love</p>
+        <div id="BTT-footer" class="BTT" onclick="BackToTop()">
+          <p class="txt txt-BTT">Back To Top</p>
           <div class="icon">
             <i class="fa-solid fa-arrow-up"></i>
           </div>
