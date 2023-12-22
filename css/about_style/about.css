@@ -817,7 +817,7 @@ body {
     height: 18px;
     background-color: var(--black-300);
     border-radius: 50%;
-    margin: 3px 16px 0 0;
+    margin: auto 16px auto 0;
   }
   .experience .ex-wrapper .pj-body .slide-wrapper .slider .com-header .com-right .circle::before {
     content: " ";
@@ -843,13 +843,14 @@ body {
   }
   .experience .ex-wrapper .pj-body .slide-wrapper .slider .com-header .com-right .com-time {
     width: 100%;
+    margin: 0 auto 0 0;
     position: relative;
   }
   .experience .ex-wrapper .pj-body .slide-wrapper .slider .com-header .com-right .com-time::after {
     content: " ";
     position: absolute;
-    top: 12px;
-    left: 140px;
+    top: 50%;
+    left: 144px;
     right: 0;
     background-color: var(--black-300);
     height: 1px;
@@ -1003,15 +1004,18 @@ body {
   .experience .ex-wrapper .pj-body .slide-wrapper .slider {
     margin-top: 40px;
   }
+  .experience .ex-wrapper .pj-body .slide-wrapper .slider .com-header .com-left {
+    margin-left: 26px;
+  }
   .experience .ex-wrapper .pj-body .slide-wrapper .slider .com-header .com-left .com-logo p {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     font-size: 16px;
-    line-height: 32px;
+    line-height: 28px;
   }
   .experience .ex-wrapper .pj-body .slide-wrapper .slider .com-header .com-left .logo-style2 img {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
   }
   .experience .ex-wrapper .pj-body .slide-wrapper .slider .com-header .com-left .com-name {
     font-size: 16px;
@@ -1022,11 +1026,20 @@ body {
   .experience .ex-wrapper .pj-body .slide-wrapper .slider .com-header .com-left .com-job {
     font-size: 16px;
   }
+  .experience .ex-wrapper .pj-body .slide-wrapper .slider .com-header .com-right {
+    margin-bottom: 20px;
+  }
+  .experience .ex-wrapper .pj-body .slide-wrapper .slider .com-header .com-right .circle {
+    margin-right: 8px;
+  }
   .experience .ex-wrapper .pj-body .slide-wrapper .slider .com-header .com-right .com-time {
     font-size: 14px;
   }
   .experience .ex-wrapper .pj-body .slide-wrapper .slider .com-header .com-right .com-time::after {
-    left: 120px;
+    left: 121px;
+  }
+  .experience .ex-wrapper .pj-body .slide-wrapper .slider .content-groups {
+    margin-left: 26px;
   }
   .experience .ex-wrapper .pj-body .slide-wrapper .slider .content-groups .com-content .top-arrow-icon {
     border-left: 8px solid var(--black-500);
