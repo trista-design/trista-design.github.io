@@ -17,6 +17,20 @@ function backToTopBTN() {
   }
 }
 
+function clickBTT() {
+  let BTT_button = document.getElementById("BTT-page");
+
+  if (!BTT_button.classList.contains("clicked")) {
+    BTT_button.classList.add("clicked");
+
+    console.log("BTT特效已執行");
+
+    setTimeout(function () {
+      BTT_button.classList.remove("clicked");
+    }, 300);
+  }
+}
+
 // footer
 function BackToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });

@@ -162,11 +162,19 @@
   position: absolute;
   top: 6px;
 }
-#BTT-page:hover > .icon {
+#BTT-page:hover .icon {
   animation: BTTarrow 1.5s infinite;
   color: var(--black-700);
 }
 #BTT-page:hover .txt {
+  color: var(--black-700);
+  font-weight: 500;
+}
+#BTT-page .clicked .icon {
+  animation: BTTarrow 1.5s linear;
+  color: var(--black-700);
+}
+#BTT-page .clicked .txt {
   color: var(--black-700);
   font-weight: 500;
 }
@@ -306,6 +314,14 @@
   }
   .slide-wrapper .slider {
     width: 85vw;
+  }
+  #BTT-page:hover .icon {
+    animation: none;
+    color: var(--black-500);
+  }
+  #BTT-page:hover .txt {
+    color: var(--black-500);
+    font-weight: 400;
   }
 }
 @media screen and (max-width: 490px) {
