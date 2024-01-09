@@ -5,7 +5,7 @@ let isAnimating = false;
 let prevWidth = window.innerWidth;
 
 window.addEventListener("DOMContentLoaded", () => {
-  CG();
+  P_trans();
 });
 
 window.addEventListener("resize", () => {
@@ -19,7 +19,7 @@ window.addEventListener("resize", () => {
       isAnimating = true;
       reshow();
       setTimeout(() => {
-        CG();
+        P_trans();
         isAnimating = false;
       }, 0);
       console.log(breakpoint + "px,轉場動畫！");
@@ -34,7 +34,7 @@ if (history.scrollRestoration) {
   history.scrollRestoration = "manual";
 }
 
-function CG() {
+function P_trans() {
   let l = document.querySelector(".boxL");
   let o = document.querySelector(".boxO");
   let a = document.querySelector(".boxA");
@@ -80,6 +80,27 @@ function reshow() {
   });
 }
 
+// restart footer animate
+function restartAnimation() {
+  const animate = document.querySelectorAll(".animate");
+
+  animate.forEach((animate) => {
+    animate.classList.remove("animate");
+    void animate.offsetWidth;
+    animate.classList.add("animate");
+  });
+}
+
+window.addEventListener("resize", restartAnimation);
+
+// body height
+const documentHeight = () => {
+  const doc = document.documentElement;
+  doc.style.setProperty("--app-height", `${window.innerHeight}px`);
+};
+window.addEventListener("resize", documentHeight);
+documentHeight();
+
 // bodyWidth - scrollbarWidth
 const getScrollbarWidth = () => {
   const container = document.createElement("div");
@@ -102,16 +123,3 @@ document.documentElement.style.setProperty(
 );
 
 console.log("bodyWidth = " + (document.body.clientWidth - scrollbarWidth));
-
-// restart footer animate
-function restartAnimation() {
-  const animate = document.querySelectorAll(".animate");
-
-  animate.forEach((animate) => {
-    animate.classList.remove("animate");
-    void animate.offsetWidth;
-    animate.classList.add("animate");
-  });
-}
-
-window.addEventListener("resize", restartAnimation);
