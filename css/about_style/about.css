@@ -335,6 +335,9 @@ body {
 .experience .ex-wrapper .pj-body .slide-wrapper .process-bar .circle:nth-of-type(4) {
   margin-left: 610px;
 }
+.experience .ex-wrapper .pj-body .slide-wrapper .process-bar .circle:nth-of-type(5) {
+  margin-left: 610px;
+}
 .experience .ex-wrapper .pj-body .slide-wrapper .slider {
   min-width: 600px;
   margin: 48px 32px 0 0;
